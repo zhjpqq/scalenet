@@ -1,5 +1,3 @@
-# ScaleNet  Source Code
-
 # ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
@@ -9,8 +7,16 @@ top: scalenet  bottom:densenet
 
 # How to Train ScaleNet
 
-## Train by commands in Terminal
-'run_main.py' is the entry function.
+model architecture params is in folder: ./arch_params
+
+model training configs is in folder: ./cfg_params 
+
+for example, when trainining ImageNet, net1 = 'vo21 || vo69 || vo72 || vo76',  
+check './arch_params/scalenet_imagenet_params.py'
+
+## Train by Terminal Commands
+
+Entry function is 'run_main.py'.
 
 It can be used as following:
 
@@ -25,7 +31,7 @@ nohup python run_main.py -name 'scalenet' -arch 'net1' -cfg 'cfgnet1' -exp 'exp.
 
 ```
 
-## Train by client in Pycharm
+## Train by Pycharm Client
 Find the following lines in 'run_main.py', and remove the comments on these lines:
 ```
 args.arch_name = 'scalenet'
@@ -36,24 +42,18 @@ args.gpu_ids = [0, 1, 2, 3, 5, 6]
 print('\n=> Your Args is :', args, '\n')
 ```
 
-model architecture params is in folder: ./arch_params
-
-model training configs is in folder: ./cfg_params 
-
-for example, when trainining ImageNet, net1 == 'vo21, vo69, vo72, vo76',  check './arch_params/scalenet_imagenet_params.py'
-
 # Other Features
 
 - Unified Training Framework for Classification.
--
+
 - Unified Data Factory, including CIFAR, IMAGENET, SVHN, LSV etc..
--
+
 - Unified Model Factory, including Pytorch-official models and New Models in 2019.  
--
+
 - New Models in 2019: ScaleNet, EfficientNet, MobieNet-V3, HighResolutionNet etc..
--
+
 - Many Usefull tools in xtils.py and /tools, eg CAM, FLOPS, Params etc ..
--
+
 
 # Pre-trained ScaleNet models on ImageNet
 uploading ... coming soon!
