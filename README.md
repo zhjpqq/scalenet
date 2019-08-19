@@ -36,6 +36,12 @@ args.gpu_ids = [0, 1, 2, 3, 5, 6]
 print('\n=> Your Args is :', args, '\n')
 ```
 
+model architecture params is in folder: ./arch_params
+
+model training configs is in folder: ./cfg_params 
+
+for example, when trainining ImageNet, net1 == 'vo21, vo69, vo72, vo76',  check './arch_params/scalenet_imagenet_params.py'
+
 # Other Features
 
 - Unified Training Framework for Classification.
@@ -50,4 +56,4 @@ print('\n=> Your Args is :', args, '\n')
 -
 
 # Pre-trained ScaleNet models on ImageNet
-preparing ... coming soon!
+uploading ... coming soon!

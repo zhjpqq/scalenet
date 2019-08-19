@@ -3,14 +3,14 @@ vo69 = {'stages': 1, 'branch': 1, 'rock': 'N', 'depth': 64, 'kldloss': False,
         'classify': (0,), 'expand': (), 'dfunc': (), 'afisok': False,
         'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
         'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
-        'last_expand': 1100 - 64, 'version': 3}  # 5.08M  9.53G  103L  0.65s  520fc  71.63%
+        'last_expand': 1100 - 64, 'version': 3}  # 5.08M  9.53G  103L  0.65s  520fc
 
 vo72 = {'stages': 3, 'branch': 1, 'rock': 'N', 'depth': 80, 'kldloss': False,
         'layers': (4, 5, 6), 'blocks': ('D', 'D', 'S'), 'slink': ('A', 'A', 'A'),
         'growth': (-8, -20, -50), 'classify': (0, 0, 0), 'expand': (1 * 120, 2 * 120), 'afisok': False,
         'dfunc': ('O', 'O'), 'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
         'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
-        'last_expand': 1700 - 440, 'version': 3}  # 30.51M  10.83G  59L  0.51s  1700fc  74.68%
+        'last_expand': 1700 - 440, 'version': 3}  # 30.51M  10.83G  59L  0.51s  1700fc
 
 vo76 = {'stages': 3, 'branch': 1, 'rock': 'N', 'depth': 80, 'kldloss': False,
         'layers': (4, 5, 6), 'blocks': ('D', 'D', 'S'), 'slink': ('A', 'A', 'A'),
@@ -24,5 +24,5 @@ vo21 = {'stages': 3, 'branch': 1, 'rock': 'U', 'depth': 80, 'kldloss': False,
         'growth': (0, 0, 0), 'classify': (0, 0, 0), 'expand': (1 * 80, 2 * 120), 'afisok': False,
         'dfunc': ('O', 'O'), 'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
         'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
-        'last_expand': 1746 - 400, 'version': 3}  # 25.01M  4.64G  54L  0.46s  1746fc  74.62%
+        'last_expand': 1746 - 400, 'version': 3}  # 25.01M  4.64G  54L  0.46s  1746fc
 
