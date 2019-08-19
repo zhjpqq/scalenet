@@ -6,7 +6,9 @@
 `top: scalenet  bottom:densenet`
 
 # Requirements
+
 Pytorch >= 0.4
+
 TensorboardX
 
 # How to Train ScaleNet
