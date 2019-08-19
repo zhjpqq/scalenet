@@ -1,13 +1,13 @@
 # ScaleNet  Source Code
 
-#ScaleNet Architecture
+# ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
-#the CAM Camparision between ScaleNet and DenseNet
+# the CAM Camparision between ScaleNet and DenseNet
 ![Multi-Scale Input](images/multi-scale-show-5.jpg)
 top: scalenet  bottom:densenet
 
-#How to Train ScaleNet
+# How to Train ScaleNet
 
 ## Train by commands in Terminal
 'run_main.py' is the entry function.
