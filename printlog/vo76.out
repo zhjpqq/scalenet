@@ -1,0 +1,132 @@
+nohup: ignoring input
+
+=> Your Args is : Namespace(arch_list=['vo76'], arch_name='scalenet', cfg_dict='cfgvo76', exp_version='exp.vo76', gpu_ids=[0, 1, 2, 3]) 
+
+Success: config dict has been moved into Config() class !
+------> True
+
+loading checkpoint file from /data1/zhangjp/classify/checkpoints/imagenet/scalenet/scalenet-exp.vo76/imagenet-scalenet57-ep0-it5004-acc23.65-best23.65-topv47.45-par20.02M-norm-exp.vo76.ckpt ...
+Warning: such keys in Config() not set in Dict(), they will be default!:device, resume, gpu_ids, exclude_keys
+Success: config dict has been moved into Config() class !
+loaded done at epoch 0 ......
+
+current training state: train_prec1-0.0000 val_prec1-0.0000 val-prec5-0.0000
+
+model will be saved at ckpt_dir: /data1/zhangjp/classify/checkpoints/imagenet/scalenet/scalenet-exp.vo76 ......
+
+log will be saved at log_dir: /data1/zhangjp/classify/runs/imagenet/scalenet-exp.vo76 ......
+
+
+Exp-exp.vo76 start ... 
+
+
+Train BatchNums-> 5005 : Val BatchNums-> 391 : Test BatchNums-> 391
+
+
+*** Number of params: 20.020908	million...
+
+  + Number of FLOPs: 7.61610G
+
+*** Number of layers: 57 , conv2d: 32, deconv2d: 24, fc: 1 ...
+
+
+=> loading model.pth from /data1/zhangjp/classify/checkpoints/imagenet/scalenet/scalenet-exp.vo76/imagenet-scalenet57-ep0-it5004-acc23.65-best23.65-topv47.45-par20.02M-norm-exp.vo76.ckpt 
+
+Success: loaded done from /data1/zhangjp/classify/checkpoints/imagenet/scalenet/scalenet-exp.vo76/imagenet-scalenet57-ep0-it5004-acc23.65-best23.65-topv47.45-par20.02M-norm-exp.vo76.ckpt 
+
+
+Warning: Train Val Test iterations will be start, please confirm your config at last!
+
+
+current config is: ...
+
+exp_version : exp.vo76
+train_val_test : (True, True, True)
+gpu_ids : [0, 1, 2, 3]
+arch_name : scalenet
+arch_kwargs : {'stages': 3, 'branch': 1, 'rock': 'N', 'depth': 80, 'kldloss': False, 'layers': (4, 5, 6), 'blocks': ('D', 'D', 'S'), 'slink': ('A', 'A', 'A'), 'growth': (-8, -8, -8), 'classify': (0, 0, 0), 'expand': (80, 160), 'afisok': False, 'dfunc': ('O', 'O'), 'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none', 'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E', 'last_expand': 1410, 'version': 3}
+resume : /data1/zhangjp/classify/checkpoints/imagenet/scalenet/scalenet-exp.vo76/imagenet-scalenet57-ep0-it5004-acc23.65-best23.65-topv47.45-par20.02M-norm-exp.vo76.ckpt
+resume_config : True
+resume_optimizer : True
+mgpus_to_sxpu : none
+dataset : imagenet
+data_info : {'train_size': 1281167, 'val_size': 50000, 'test_size': 50000}
+data_root : /ImageNet2012/
+data_augment : {'train': 'rotate-rresize-1crop', 'val': '1resize-1crop', 'imsize': 256, 'insize': 224, 'color': True, 'degree': (0, 0), 'scale': (0.08, 1), 'ratio': (0.75, 1.3333333333333333)}
+data_kwargs : {}
+data_workers : 12
+current_time : 
+ckpt_suffix : -norm
+ckpt_base_dir : /data1/zhangjp/classify/checkpoints
+ckpt_dir : /data1/zhangjp/classify/checkpoints/imagenet/scalenet/scalenet-exp.vo76
+log_base_dir : /data1/zhangjp/classify/runs
+log_dir : /data1/zhangjp/classify/runs/imagenet/scalenet-exp.vo76
+start_iter : 1
+max_iters : 500500
+start_epoch : 0
+max_epochs : 100
+bsize_train : 256
+bsize_val : 128
+batch_nums : 5005
+Unit : 5005
+BN : 5005
+optim_type : SGD
+optim_custom : False
+lr_start : 0.1
+lr_decay_policy : appoint
+lr_decay_appoint : ((150150, 0.1), (300300, 0.1), (450450, 0.1))
+momentum : 0.9
+weight_decay : 0.0001
+nesterov : False
+rmsprop_alpha : 
+rmsprop_centered : 
+best_prec : {'train_prec1': 0, 'train_prec5': 0, 'val_prec1': 0, 'val_prec5': 0, 'best_start': 3, 'best_ok': False}
+print_frequency : 50
+plot_frequency : 50
+val_frequency : (0, 5005)
+test_frequency : (4999995, 5005)
+save_frequency : (0, 5005)
+mode_custom : False
+train_which : []
+eval_which : []
+xfc_which : -1
+valid_total_time : 1.4200358192125957
+test_total_time : 0
+exp_tic : 1559787693.3590744
+exclude_keys : ('exclude_keys', 'gpu_ids', 'device', 'resume')
+device : cuda:0
+cfgs_check_done : True
+train_total_time : 2378.975301027298
+data_shuffle : False
+lr_end : 0.0
+lr_decay_start : 1
+lr_decay_rate : 0.1
+lr_decay_time : 15
+current_epoch : 0
+current_iter : 0
+curr_val_prec1 : 0
+best_val_prec1 : 0
+curr_train_prec1 : 0
+best_train_prec1 : 0
+curr_val_prec5 : 0
+best_val_prec5 : 0
+curr_train_prec5 : 0
+best_train_prec5 : 0
+Traceback (most recent call last):
+  File "run_main.py", line 84, in <module>
+    run_main_by_cfgs(cfg)
+  File "/datah/zhangjp/ClassifyNeXt/train_val_test.py", line 406, in run_main_by_cfgs
+    train_model(cfg)
+  File "/datah/zhangjp/ClassifyNeXt/train_val_test.py", line 142, in train_model
+    all_loss = [criterion(out, labels) for out in outputs]
+  File "/datah/zhangjp/ClassifyNeXt/train_val_test.py", line 142, in <listcomp>
+    all_loss = [criterion(out, labels) for out in outputs]
+  File "/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/torch/nn/modules/loss.py", line 862, in forward
+    ignore_index=self.ignore_index, reduction=self.reduction)
+  File "/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/torch/nn/functional.py", line 1550, in cross_entropy
+    return nll_loss(log_softmax(input, 1), target, weight, None, ignore_index, None, reduction)
+  File "/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/torch/nn/functional.py", line 1407, in nll_loss
+    return torch._C._nn.nll_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index)
+RuntimeError: Expected object of type torch.cuda.LongTensor but found type torch.LongTensor for argument #2 'target'

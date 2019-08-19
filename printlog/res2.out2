@@ -1,0 +1,784 @@
+nohup: ignoring input
+
+=> Your Args is : Namespace(arch_list=['res2'], arch_name='resnet', cfg_dict='cfgres2', exp_version='exp.res2', gpu_ids=[0, 1, 2, 3]) 
+
+Success: config dict has been moved into Config() class !
+
+loading checkpoint file from /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2/imagenet-resnet54-ep76-it385384-acc75.70-best75.71-topv92.69-par25.56M-norm-exp.res2.ckpt ...
+Warning: such keys in Config() not set in Dict(), they will be default!:gpu_ids, exclude_keys, device, resume
+Success: config dict has been moved into Config() class !
+loaded done at epoch 76 ......
+
+current training state: train_prec1-87.1094 val_prec1-75.7100 val-prec5-92.6900
+
+model will be saved at ckpt_dir: /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2 ......
+
+log will be saved at log_dir: /data1/zhangjp/classify/runs/imagenet/resnet-exp.res2 ......
+
+
+Exp-exp.res2 start ... 
+
+
+Train BatchNums-> 5005 : Val BatchNums-> 391 : Test BatchNums-> 391
+
+
+*** Number of params: 25.557032	million...
+
+  + Number of FLOPs: 8.20090G
+
+*** Number of layers: 54 , conv2d: 53, deconv2d: 0, fc: 1 ...
+
+
+=> loading model.pth from /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2/imagenet-resnet54-ep76-it385384-acc75.70-best75.71-topv92.69-par25.56M-norm-exp.res2.ckpt 
+
+Success: loaded done from /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2/imagenet-resnet54-ep76-it385384-acc75.70-best75.71-topv92.69-par25.56M-norm-exp.res2.ckpt 
+
+
+Warning: Train Val Test iterations will be start, please confirm your config at last!
+
+
+current config is: ...
+
+exp_version : exp.res2
+train_val_test : (True, True, True)
+gpu_ids : [0, 1, 2, 3]
+arch_name : resnet
+arch_kwargs : {'arch': 'resnet50', 'cfg': '', 'model_path': ''}
+resume : /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2/imagenet-resnet54-ep76-it385384-acc75.70-best75.71-topv92.69-par25.56M-norm-exp.res2.ckpt
+resume_config : True
+resume_optimizer : True
+mgpus_to_sxpu : auto
+dataset : imagenet
+data_info : {'train_size': 1281167, 'val_size': 50000, 'test_size': 50000}
+data_root : /ImageNet2012/
+data_augment : {'train': 'rotate-rresize-1crop', 'val': '1resize-1crop', 'imsize': 256, 'insize': 224, 'color': True, 'interp': 'bilinear', 'degree': (0, 0), 'scale': (0.08, 1), 'ratio': (0.75, 1.3333333333333333)}
+data_kwargs : {}
+data_workers : 16
+current_time : 
+ckpt_suffix : -norm
+ckpt_base_dir : /data1/zhangjp/classify/checkpoints
+ckpt_dir : /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2
+log_base_dir : /data1/zhangjp/classify/runs
+log_dir : /data1/zhangjp/classify/runs/imagenet/resnet-exp.res2
+start_iter : 385385
+max_iters : 500500
+start_epoch : 0
+max_epochs : 100
+bsize_train : 256
+bsize_val : 128
+batch_nums : 5005
+Unit : 5005
+BN : 5005
+optim_type : SGD
+lr_start : 0.1
+lr_decay_policy : appoint
+lr_decay_appoint : ((150150, 0.1), (300300, 0.1), (450450, 0.1))
+momentum : 0.9
+weight_decay : 0.0001
+nesterov : False
+rmsprop_alpha : 
+rmsprop_centered : 
+best_prec : {'train_prec1': 0, 'train_prec5': 0, 'val_prec1': 75.71, 'val_prec5': 0, 'best_start': 3, 'best_ok': False}
+print_frequency : 50
+plot_frequency : 50
+val_frequency : (0, 5005)
+test_frequency : (4999995, 5005)
+save_frequency : (0, 5005)
+mode_custom : False
+train_which : []
+eval_which : []
+xfc_which : -1
+valid_total_time : 122.73746659755706
+test_total_time : 0
+exp_tic : 1560437116.5351698
+exclude_keys : ('exclude_keys', 'gpu_ids', 'device', 'resume')
+device : cuda:0
+cfgs_check_done : True
+current_iter : 385384
+current_epoch : 77
+train_total_time : 206229.51733374596
+curr_train_prec1 : 76.92308044433594
+curr_train_prec5 : 92.30769348144531
+best_val_prec1 : 75.71
+best_train_prec1 : 87.109375
+best_val_prec5 : 92.69
+best_train_prec5 : 97.65625
+curr_val_prec1 : 75.696
+curr_val_prec5 : 92.69
+data_shuffle : False
+optim_custom : False
+lr_end : 0.0
+lr_decay_start : 1
+lr_decay_rate : 0.1
+lr_decay_time : 15
+Epoch: [77/100][385399/500500 77.00%] BatchTime:0.3935s(2.5776s) DataTime:0.00037s(0.78927s) Loss-0.8771(0.9842) Prec@1-78.516(76.5104) Prec@5-92.188(91.2760) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385449/500500 77.01%] BatchTime:0.4075s(0.9071s) DataTime:0.00055s(0.18246s) Loss-0.9078(0.9700) Prec@1-73.828(76.5505) Prec@5-91.797(91.5805) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385499/500500 77.02%] BatchTime:0.4408s(0.6917s) DataTime:0.00032s(0.10332s) Loss-0.8417(0.9709) Prec@1-77.734(76.4130) Prec@5-94.141(91.5557) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385549/500500 77.03%] BatchTime:0.3940s(0.6066s) DataTime:0.00043s(0.07214s) Loss-0.8104(0.9706) Prec@1-81.641(76.4323) Prec@5-93.359(91.4844) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385599/500500 77.04%] BatchTime:0.4003s(0.5642s) DataTime:0.00041s(0.05546s) Loss-0.9725(0.9709) Prec@1-75.000(76.4480) Prec@5-92.188(91.5225) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385649/500500 77.05%] BatchTime:0.4026s(0.5360s) DataTime:0.00042s(0.04508s) Loss-1.0179(0.9704) Prec@1-74.609(76.4077) Prec@5-90.234(91.5198) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385699/500500 77.06%] BatchTime:0.4059s(0.5199s) DataTime:0.00047s(0.03799s) Loss-1.0221(0.9735) Prec@1-74.219(76.3517) Prec@5-90.625(91.4807) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385749/500500 77.07%] BatchTime:0.4033s(0.5062s) DataTime:0.00042s(0.03284s) Loss-0.9172(0.9717) Prec@1-79.688(76.3955) Prec@5-92.188(91.5347) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385799/500500 77.08%] BatchTime:0.4045s(0.4999s) DataTime:0.00033s(0.02894s) Loss-1.0998(0.9721) Prec@1-73.438(76.4110) Prec@5-89.844(91.5145) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385849/500500 77.09%] BatchTime:0.4043s(0.4935s) DataTime:0.00042s(0.02587s) Loss-1.0904(0.9728) Prec@1-75.391(76.4163) Prec@5-88.281(91.4793) lr-0.00100 57.3Hours EpochTime:0.03Minutes
+Epoch: [77/100][385899/500500 77.10%] BatchTime:0.4114s(0.4886s) DataTime:0.00033s(0.02340s) Loss-1.0356(0.9742) Prec@1-76.172(76.3592) Prec@5-91.797(91.4692) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][385949/500500 77.11%] BatchTime:0.4126s(0.4831s) DataTime:0.00048s(0.02136s) Loss-1.0226(0.9754) Prec@1-73.438(76.3143) Prec@5-91.797(91.4484) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][385999/500500 77.12%] BatchTime:0.4971s(0.4785s) DataTime:0.00041s(0.01966s) Loss-0.9843(0.9744) Prec@1-77.344(76.3650) Prec@5-92.969(91.4545) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386049/500500 77.13%] BatchTime:0.4202s(0.4744s) DataTime:0.00047s(0.01822s) Loss-0.9875(0.9737) Prec@1-76.562(76.3499) Prec@5-90.625(91.4509) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386099/500500 77.14%] BatchTime:0.4331s(0.4733s) DataTime:0.00045s(0.01697s) Loss-0.8950(0.9740) Prec@1-73.828(76.3467) Prec@5-94.922(91.4642) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386149/500500 77.15%] BatchTime:0.4912s(0.4714s) DataTime:0.00044s(0.01589s) Loss-1.0085(0.9737) Prec@1-75.781(76.3725) Prec@5-89.844(91.4767) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386199/500500 77.16%] BatchTime:0.4089s(0.4712s) DataTime:0.00034s(0.01494s) Loss-1.0912(0.9736) Prec@1-76.953(76.3828) Prec@5-88.281(91.4920) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386249/500500 77.17%] BatchTime:0.4260s(0.4682s) DataTime:0.00041s(0.01410s) Loss-1.1058(0.9738) Prec@1-73.828(76.3697) Prec@5-87.891(91.4744) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386299/500500 77.18%] BatchTime:0.4234s(0.4657s) DataTime:0.00043s(0.01335s) Loss-1.1755(0.9739) Prec@1-68.750(76.3678) Prec@5-89.453(91.4784) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386349/500500 77.19%] BatchTime:0.4180s(0.4663s) DataTime:0.00032s(0.01268s) Loss-1.0178(0.9729) Prec@1-73.438(76.3868) Prec@5-89.844(91.4824) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386399/500500 77.20%] BatchTime:0.4019s(0.4648s) DataTime:0.00045s(0.01208s) Loss-1.0321(0.9731) Prec@1-74.219(76.3766) Prec@5-89.062(91.4790) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386449/500500 77.21%] BatchTime:0.4152s(0.4648s) DataTime:0.00032s(0.01153s) Loss-0.9682(0.9732) Prec@1-78.906(76.3857) Prec@5-91.406(91.4708) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386499/500500 77.22%] BatchTime:0.4025s(0.4640s) DataTime:0.00043s(0.01103s) Loss-0.8826(0.9734) Prec@1-81.250(76.3838) Prec@5-90.625(91.4553) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386549/500500 77.23%] BatchTime:0.4092s(0.4621s) DataTime:0.00042s(0.01058s) Loss-1.1314(0.9740) Prec@1-70.703(76.3831) Prec@5-89.453(91.4462) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386599/500500 77.24%] BatchTime:0.4002s(0.4612s) DataTime:0.00044s(0.01016s) Loss-0.9782(0.9733) Prec@1-76.953(76.3982) Prec@5-89.844(91.4525) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386649/500500 77.25%] BatchTime:0.4117s(0.4600s) DataTime:0.00047s(0.00978s) Loss-1.0726(0.9738) Prec@1-73.828(76.3806) Prec@5-90.625(91.4390) lr-0.00100 57.4Hours EpochTime:0.03Minutes
+Epoch: [77/100][386699/500500 77.26%] BatchTime:0.5218s(0.4588s) DataTime:0.00043s(0.00942s) Loss-0.9799(0.9747) Prec@1-75.781(76.3647) Prec@5-91.406(91.4330) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][386749/500500 77.27%] BatchTime:0.4727s(0.4575s) DataTime:0.00041s(0.00909s) Loss-0.9768(0.9752) Prec@1-75.781(76.3504) Prec@5-91.797(91.4320) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][386799/500500 77.28%] BatchTime:0.4043s(0.4573s) DataTime:0.00046s(0.00878s) Loss-1.0076(0.9747) Prec@1-77.734(76.3574) Prec@5-90.234(91.4501) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][386849/500500 77.29%] BatchTime:0.4227s(0.4560s) DataTime:0.00051s(0.00850s) Loss-0.9015(0.9746) Prec@1-79.297(76.3601) Prec@5-92.578(91.4516) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][386899/500500 77.30%] BatchTime:0.4481s(0.4553s) DataTime:0.00041s(0.00823s) Loss-1.0627(0.9748) Prec@1-75.391(76.3490) Prec@5-89.062(91.4532) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][386949/500500 77.31%] BatchTime:0.4127s(0.4555s) DataTime:0.00042s(0.00798s) Loss-0.8548(0.9750) Prec@1-76.562(76.3359) Prec@5-93.359(91.4514) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][386999/500500 77.32%] BatchTime:0.4103s(0.4549s) DataTime:0.00032s(0.00775s) Loss-1.1275(0.9748) Prec@1-73.047(76.3426) Prec@5-89.453(91.4498) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387049/500500 77.33%] BatchTime:0.4079s(0.4540s) DataTime:0.00043s(0.00753s) Loss-0.9491(0.9748) Prec@1-76.562(76.3359) Prec@5-91.406(91.4487) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387099/500500 77.34%] BatchTime:0.4230s(0.4536s) DataTime:0.00040s(0.00732s) Loss-1.1635(0.9756) Prec@1-71.875(76.3268) Prec@5-88.672(91.4454) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387149/500500 77.35%] BatchTime:0.4249s(0.4526s) DataTime:0.00045s(0.00713s) Loss-1.0682(0.9761) Prec@1-74.219(76.3148) Prec@5-89.844(91.4352) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387199/500500 77.36%] BatchTime:0.4116s(0.4522s) DataTime:0.00034s(0.00694s) Loss-0.9491(0.9757) Prec@1-77.344(76.3305) Prec@5-93.750(91.4441) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387249/500500 77.37%] BatchTime:0.4152s(0.4516s) DataTime:0.00042s(0.00677s) Loss-1.0300(0.9758) Prec@1-77.344(76.3382) Prec@5-90.234(91.4469) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387299/500500 77.38%] BatchTime:0.4219s(0.4514s) DataTime:0.00033s(0.00660s) Loss-0.9561(0.9757) Prec@1-76.172(76.3506) Prec@5-89.844(91.4517) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387349/500500 77.39%] BatchTime:0.4630s(0.4511s) DataTime:0.00047s(0.00644s) Loss-1.0286(0.9759) Prec@1-74.609(76.3410) Prec@5-90.625(91.4496) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387399/500500 77.40%] BatchTime:0.4076s(0.4506s) DataTime:0.00041s(0.00629s) Loss-0.8075(0.9755) Prec@1-82.031(76.3529) Prec@5-91.797(91.4510) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387449/500500 77.41%] BatchTime:0.4198s(0.4505s) DataTime:0.00043s(0.00615s) Loss-0.8946(0.9750) Prec@1-77.344(76.3637) Prec@5-94.141(91.4602) lr-0.00100 57.5Hours EpochTime:0.03Minutes
+Epoch: [77/100][387499/500500 77.42%] BatchTime:0.5819s(0.4506s) DataTime:0.00042s(0.00602s) Loss-0.9302(0.9750) Prec@1-79.297(76.3573) Prec@5-93.750(91.4602) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387549/500500 77.43%] BatchTime:0.4177s(0.4505s) DataTime:0.00048s(0.00589s) Loss-1.0288(0.9760) Prec@1-74.609(76.3408) Prec@5-91.016(91.4533) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387599/500500 77.44%] BatchTime:0.4142s(0.4498s) DataTime:0.00038s(0.00576s) Loss-1.1080(0.9755) Prec@1-70.703(76.3565) Prec@5-89.453(91.4607) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387649/500500 77.45%] BatchTime:0.4072s(0.4498s) DataTime:0.00032s(0.00565s) Loss-0.9263(0.9754) Prec@1-75.000(76.3526) Prec@5-92.969(91.4642) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387699/500500 77.46%] BatchTime:0.4876s(0.4495s) DataTime:0.00039s(0.00553s) Loss-0.7929(0.9744) Prec@1-84.375(76.3771) Prec@5-93.750(91.4754) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387749/500500 77.47%] BatchTime:0.4261s(0.4490s) DataTime:0.00038s(0.00542s) Loss-1.0304(0.9744) Prec@1-75.781(76.3803) Prec@5-89.453(91.4793) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387799/500500 77.48%] BatchTime:0.4270s(0.4493s) DataTime:0.00039s(0.00532s) Loss-0.9138(0.9740) Prec@1-76.172(76.3821) Prec@5-93.359(91.4818) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387849/500500 77.49%] BatchTime:0.4053s(0.4491s) DataTime:0.00044s(0.00522s) Loss-0.9437(0.9742) Prec@1-76.562(76.3822) Prec@5-92.578(91.4771) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387899/500500 77.50%] BatchTime:0.8567s(0.4491s) DataTime:0.00042s(0.00512s) Loss-0.9528(0.9744) Prec@1-75.391(76.3744) Prec@5-93.359(91.4716) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387949/500500 77.51%] BatchTime:0.4224s(0.4487s) DataTime:0.00041s(0.00504s) Loss-0.9589(0.9745) Prec@1-77.344(76.3717) Prec@5-91.797(91.4705) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][387999/500500 77.52%] BatchTime:0.5210s(0.4484s) DataTime:0.00041s(0.00495s) Loss-1.1110(0.9745) Prec@1-73.828(76.3679) Prec@5-89.844(91.4720) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][388049/500500 77.53%] BatchTime:0.4062s(0.4481s) DataTime:0.00038s(0.00487s) Loss-0.8322(0.9744) Prec@1-77.734(76.3620) Prec@5-91.797(91.4765) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][388099/500500 77.54%] BatchTime:0.4046s(0.4477s) DataTime:0.00044s(0.00479s) Loss-0.9642(0.9743) Prec@1-78.125(76.3553) Prec@5-91.797(91.4792) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][388149/500500 77.55%] BatchTime:0.4265s(0.4473s) DataTime:0.00033s(0.00471s) Loss-0.8208(0.9741) Prec@1-78.906(76.3568) Prec@5-95.703(91.4838) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][388199/500500 77.56%] BatchTime:0.4036s(0.4470s) DataTime:0.00043s(0.00463s) Loss-1.0087(0.9744) Prec@1-76.172(76.3414) Prec@5-91.016(91.4798) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][388249/500500 77.57%] BatchTime:0.4093s(0.4465s) DataTime:0.00045s(0.00456s) Loss-0.8419(0.9746) Prec@1-76.172(76.3430) Prec@5-94.922(91.4781) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][388299/500500 77.58%] BatchTime:0.4434s(0.4468s) DataTime:0.00033s(0.00449s) Loss-0.9595(0.9745) Prec@1-76.172(76.3417) Prec@5-93.359(91.4832) lr-0.00100 57.6Hours EpochTime:0.03Minutes
+Epoch: [77/100][388349/500500 77.59%] BatchTime:0.4017s(0.4464s) DataTime:0.00033s(0.00442s) Loss-1.0486(0.9745) Prec@1-74.219(76.3334) Prec@5-89.453(91.4842) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388399/500500 77.60%] BatchTime:0.4037s(0.4466s) DataTime:0.00045s(0.00435s) Loss-0.8985(0.9744) Prec@1-76.562(76.3311) Prec@5-92.578(91.4818) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388449/500500 77.61%] BatchTime:0.4042s(0.4464s) DataTime:0.00047s(0.00429s) Loss-0.9381(0.9741) Prec@1-75.000(76.3418) Prec@5-94.141(91.4841) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388499/500500 77.62%] BatchTime:0.4308s(0.4462s) DataTime:0.00044s(0.00423s) Loss-0.9914(0.9734) Prec@1-73.047(76.3576) Prec@5-92.188(91.4889) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388549/500500 77.63%] BatchTime:0.4111s(0.4457s) DataTime:0.00045s(0.00417s) Loss-1.0421(0.9731) Prec@1-73.047(76.3642) Prec@5-91.406(91.4930) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388599/500500 77.64%] BatchTime:0.4160s(0.4454s) DataTime:0.00044s(0.00411s) Loss-0.8264(0.9730) Prec@1-80.859(76.3738) Prec@5-94.141(91.4931) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388649/500500 77.65%] BatchTime:0.4488s(0.4451s) DataTime:0.00053s(0.00405s) Loss-1.2855(0.9731) Prec@1-71.875(76.3710) Prec@5-87.500(91.4923) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388699/500500 77.66%] BatchTime:0.4024s(0.4451s) DataTime:0.00042s(0.00400s) Loss-0.9965(0.9731) Prec@1-75.391(76.3721) Prec@5-91.406(91.4911) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388749/500500 77.67%] BatchTime:0.4031s(0.4449s) DataTime:0.00043s(0.00394s) Loss-0.9957(0.9729) Prec@1-76.562(76.3750) Prec@5-91.406(91.4977) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388799/500500 77.68%] BatchTime:0.4451s(0.4446s) DataTime:0.00042s(0.00389s) Loss-0.8813(0.9732) Prec@1-78.516(76.3751) Prec@5-91.797(91.4973) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388849/500500 77.69%] BatchTime:0.4380s(0.4444s) DataTime:0.00050s(0.00384s) Loss-0.7801(0.9732) Prec@1-78.516(76.3751) Prec@5-93.750(91.4973) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388899/500500 77.70%] BatchTime:0.4018s(0.4443s) DataTime:0.00042s(0.00379s) Loss-0.9027(0.9731) Prec@1-80.469(76.3739) Prec@5-91.016(91.4978) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388949/500500 77.71%] BatchTime:0.4371s(0.4441s) DataTime:0.00045s(0.00375s) Loss-0.9438(0.9728) Prec@1-76.562(76.3747) Prec@5-92.188(91.5031) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][388999/500500 77.72%] BatchTime:0.4251s(0.4439s) DataTime:0.00037s(0.00370s) Loss-1.2430(0.9731) Prec@1-70.703(76.3688) Prec@5-89.844(91.5017) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][389049/500500 77.73%] BatchTime:0.4136s(0.4441s) DataTime:0.00031s(0.00365s) Loss-1.0961(0.9736) Prec@1-75.781(76.3592) Prec@5-88.672(91.4945) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][389099/500500 77.74%] BatchTime:0.4043s(0.4444s) DataTime:0.00041s(0.00361s) Loss-0.8663(0.9734) Prec@1-78.906(76.3615) Prec@5-92.969(91.4956) lr-0.00100 57.7Hours EpochTime:0.03Minutes
+Epoch: [77/100][389149/500500 77.75%] BatchTime:0.4535s(0.4440s) DataTime:0.00043s(0.00357s) Loss-0.8782(0.9730) Prec@1-76.953(76.3670) Prec@5-93.359(91.4991) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389199/500500 77.76%] BatchTime:0.4078s(0.4442s) DataTime:0.00046s(0.00353s) Loss-1.0106(0.9730) Prec@1-79.297(76.3714) Prec@5-92.969(91.4989) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389249/500500 77.77%] BatchTime:0.4068s(0.4442s) DataTime:0.00048s(0.00349s) Loss-1.0883(0.9735) Prec@1-72.266(76.3626) Prec@5-87.109(91.4944) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389299/500500 77.78%] BatchTime:0.4078s(0.4442s) DataTime:0.00042s(0.00345s) Loss-1.0795(0.9732) Prec@1-76.562(76.3674) Prec@5-88.672(91.4949) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389349/500500 77.79%] BatchTime:0.4267s(0.4444s) DataTime:0.00043s(0.00341s) Loss-0.8725(0.9731) Prec@1-78.906(76.3712) Prec@5-93.750(91.4987) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389399/500500 77.80%] BatchTime:0.4118s(0.4442s) DataTime:0.00045s(0.00337s) Loss-1.2144(0.9733) Prec@1-69.531(76.3659) Prec@5-88.672(91.4985) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389449/500500 77.81%] BatchTime:0.4293s(0.4442s) DataTime:0.00042s(0.00334s) Loss-0.7302(0.9735) Prec@1-80.078(76.3598) Prec@5-94.141(91.4962) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389499/500500 77.82%] BatchTime:0.4104s(0.4442s) DataTime:0.00043s(0.00330s) Loss-1.0234(0.9737) Prec@1-73.828(76.3568) Prec@5-91.016(91.4948) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389549/500500 77.83%] BatchTime:0.4184s(0.4443s) DataTime:0.00041s(0.00327s) Loss-0.7108(0.9740) Prec@1-81.641(76.3503) Prec@5-94.922(91.4923) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389599/500500 77.84%] BatchTime:0.5446s(0.4441s) DataTime:0.00048s(0.00323s) Loss-0.8764(0.9740) Prec@1-79.297(76.3481) Prec@5-92.969(91.4900) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389649/500500 77.85%] BatchTime:0.4078s(0.4440s) DataTime:0.00043s(0.00320s) Loss-1.0515(0.9741) Prec@1-76.562(76.3455) Prec@5-91.797(91.4883) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389699/500500 77.86%] BatchTime:0.4227s(0.4439s) DataTime:0.00049s(0.00317s) Loss-1.0212(0.9742) Prec@1-73.828(76.3432) Prec@5-91.016(91.4873) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389749/500500 77.87%] BatchTime:0.4335s(0.4438s) DataTime:0.00046s(0.00313s) Loss-0.9851(0.9744) Prec@1-76.953(76.3377) Prec@5-91.406(91.4855) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389799/500500 77.88%] BatchTime:0.4170s(0.4439s) DataTime:0.00045s(0.00310s) Loss-0.8885(0.9748) Prec@1-79.297(76.3274) Prec@5-92.188(91.4825) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389849/500500 77.89%] BatchTime:0.4099s(0.4437s) DataTime:0.00046s(0.00307s) Loss-0.8747(0.9748) Prec@1-79.297(76.3275) Prec@5-91.797(91.4842) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389899/500500 77.90%] BatchTime:0.4051s(0.4438s) DataTime:0.00042s(0.00304s) Loss-0.9669(0.9746) Prec@1-75.781(76.3279) Prec@5-90.625(91.4871) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389949/500500 77.91%] BatchTime:0.4161s(0.4438s) DataTime:0.00044s(0.00302s) Loss-0.9272(0.9750) Prec@1-73.828(76.3173) Prec@5-93.750(91.4845) lr-0.00100 57.8Hours EpochTime:0.03Minutes
+Epoch: [77/100][389999/500500 77.92%] BatchTime:0.4119s(0.4437s) DataTime:0.00035s(0.00299s) Loss-1.0683(0.9752) Prec@1-74.609(76.3171) Prec@5-89.453(91.4825) lr-0.00100 57.9Hours EpochTime:0.03Minutes
+Epoch: [77/100][390049/500500 77.93%] BatchTime:0.4027s(0.4435s) DataTime:0.00042s(0.00296s) Loss-0.8643(0.9754) Prec@1-77.734(76.3084) Prec@5-93.359(91.4815) lr-0.00100 57.9Hours EpochTime:0.03Minutes
+Epoch: [77/100][390099/500500 77.94%] BatchTime:0.4057s(0.4434s) DataTime:0.00043s(0.00293s) Loss-0.9232(0.9755) Prec@1-73.047(76.2997) Prec@5-91.406(91.4792) lr-0.00100 57.9Hours EpochTime:0.03Minutes
+Epoch: [77/100][390149/500500 77.95%] BatchTime:0.4087s(0.4432s) DataTime:0.00047s(0.00291s) Loss-0.9714(0.9755) Prec@1-75.391(76.2978) Prec@5-92.188(91.4758) lr-0.00100 57.9Hours EpochTime:0.03Minutes
+Epoch: [77/100][390199/500500 77.96%] BatchTime:0.5202s(0.4430s) DataTime:0.00034s(0.00288s) Loss-0.8514(0.9757) Prec@1-79.297(76.2935) Prec@5-91.406(91.4707) lr-0.00100 57.9Hours EpochTime:0.03Minutes
+Epoch: [77/100][390249/500500 77.97%] BatchTime:0.4054s(0.4429s) DataTime:0.00042s(0.00286s) Loss-0.9765(0.9758) Prec@1-77.344(76.2893) Prec@5-90.625(91.4677) lr-0.00100 57.9Hours EpochTime:0.03Minutes
+Epoch: [77/100][390299/500500 77.98%] BatchTime:0.4036s(0.4427s) DataTime:0.00041s(0.00283s) Loss-1.1518(0.9759) Prec@1-72.266(76.2907) Prec@5-90.234(91.4674) lr-0.00100 57.9Hours EpochTime:0.03Minutes
+Epoch: [77/100][390349/500500 77.99%] BatchTime:0.4105s(0.4427s) DataTime:0.00033s(0.00281s) Loss-1.0044(0.9757) Prec@1-80.078(76.2984) Prec@5-89.062(91.4672) lr-0.00100 57.9Hours EpochTime:0.03Minutes
+
+Validate Iteration <390389> --> prec@1-75.812 prec@5-92.704 Loss 0.966	 CurrentValidTime 1.4375 minutes	 TotalValidTime 124.1749 minutes ****** 
+
+
+ *** Model will be saved at: /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2 ..., imagenet-resnet54-ep77-it390389-acc75.81-best75.81-topv92.70-par25.56M-best-exp.res2.ckpt 
+
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 1835008 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 19660800 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 18481152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 37093376 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 39976960 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 34865152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+Epoch: [78/100][390399/500500 78.00%] BatchTime:0.4459s(1.3443s) DataTime:0.00078s(0.61055s) Loss-0.9912(1.0267) Prec@1-78.125(75.1562) Prec@5-91.406(90.9766) lr-0.00100 57.9Hours EpochTime:38.53Minutes
+Epoch: [78/100][390449/500500 78.01%] BatchTime:0.4055s(0.5888s) DataTime:0.00043s(0.10242s) Loss-1.0254(0.9716) Prec@1-73.828(76.4128) Prec@5-93.359(91.6471) lr-0.00100 57.9Hours EpochTime:38.53Minutes
+Epoch: [78/100][390499/500500 78.02%] BatchTime:0.4075s(0.5109s) DataTime:0.00050s(0.05607s) Loss-1.1563(0.9787) Prec@1-73.438(76.2784) Prec@5-89.453(91.6158) lr-0.00100 57.9Hours EpochTime:38.53Minutes
+Epoch: [78/100][390549/500500 78.03%] BatchTime:0.5388s(0.4820s) DataTime:0.00044s(0.03869s) Loss-0.9029(0.9730) Prec@1-79.297(76.4087) Prec@5-91.797(91.6504) lr-0.00100 57.9Hours EpochTime:38.53Minutes
+Epoch: [78/100][390599/500500 78.04%] BatchTime:0.4024s(0.4670s) DataTime:0.00045s(0.02958s) Loss-0.8950(0.9687) Prec@1-78.906(76.5532) Prec@5-91.797(91.6518) lr-0.00100 57.9Hours EpochTime:38.53Minutes
+Epoch: [78/100][390649/500500 78.05%] BatchTime:0.4078s(0.4619s) DataTime:0.00043s(0.02397s) Loss-0.9785(0.9694) Prec@1-75.000(76.5159) Prec@5-90.625(91.6121) lr-0.00100 57.9Hours EpochTime:38.53Minutes
+Epoch: [78/100][390699/500500 78.06%] BatchTime:0.4032s(0.4591s) DataTime:0.00044s(0.02018s) Loss-0.9865(0.9712) Prec@1-80.078(76.5360) Prec@5-89.062(91.5839) lr-0.00100 57.9Hours EpochTime:38.53Minutes
+Epoch: [78/100][390749/500500 78.07%] BatchTime:0.4051s(0.4542s) DataTime:0.00044s(0.01744s) Loss-1.1596(0.9699) Prec@1-72.266(76.5115) Prec@5-89.844(91.6059) lr-0.00100 57.9Hours EpochTime:38.53Minutes
+Epoch: [78/100][390799/500500 78.08%] BatchTime:0.4054s(0.4501s) DataTime:0.00047s(0.01536s) Loss-1.0363(0.9720) Prec@1-75.000(76.4386) Prec@5-89.453(91.5654) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][390849/500500 78.09%] BatchTime:0.4076s(0.4501s) DataTime:0.00043s(0.01374s) Loss-1.0664(0.9719) Prec@1-76.562(76.4326) Prec@5-90.234(91.5795) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][390899/500500 78.10%] BatchTime:1.7322s(0.4501s) DataTime:0.00046s(0.01243s) Loss-1.0797(0.9739) Prec@1-71.875(76.3725) Prec@5-91.797(91.5541) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][390949/500500 78.11%] BatchTime:0.4141s(0.4542s) DataTime:0.00018s(0.01136s) Loss-1.0169(0.9732) Prec@1-75.781(76.3993) Prec@5-91.406(91.5534) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][390999/500500 78.12%] BatchTime:0.4010s(0.4512s) DataTime:0.00043s(0.01046s) Loss-1.1268(0.9746) Prec@1-75.000(76.3614) Prec@5-90.625(91.5298) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391049/500500 78.13%] BatchTime:0.4003s(0.4495s) DataTime:0.00039s(0.00970s) Loss-1.0663(0.9739) Prec@1-74.219(76.3885) Prec@5-90.625(91.5305) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391099/500500 78.14%] BatchTime:0.4028s(0.4496s) DataTime:0.00043s(0.00905s) Loss-1.0048(0.9752) Prec@1-75.781(76.3771) Prec@5-90.625(91.5075) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391149/500500 78.15%] BatchTime:0.4036s(0.4478s) DataTime:0.00041s(0.00848s) Loss-1.0506(0.9745) Prec@1-78.125(76.4011) Prec@5-91.016(91.5085) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391199/500500 78.16%] BatchTime:0.4014s(0.4472s) DataTime:0.00048s(0.00799s) Loss-0.9007(0.9744) Prec@1-77.344(76.4207) Prec@5-92.188(91.5090) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391249/500500 78.17%] BatchTime:0.5185s(0.4475s) DataTime:0.00050s(0.00755s) Loss-0.9212(0.9732) Prec@1-77.734(76.4281) Prec@5-91.406(91.5012) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391299/500500 78.18%] BatchTime:0.4045s(0.4461s) DataTime:0.00045s(0.00715s) Loss-0.8802(0.9739) Prec@1-78.516(76.4020) Prec@5-91.406(91.4870) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391349/500500 78.19%] BatchTime:0.4043s(0.4448s) DataTime:0.00045s(0.00680s) Loss-0.9974(0.9737) Prec@1-75.391(76.3989) Prec@5-91.016(91.4921) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391399/500500 78.20%] BatchTime:0.4126s(0.4444s) DataTime:0.00046s(0.00649s) Loss-0.9205(0.9733) Prec@1-78.516(76.4128) Prec@5-90.234(91.4867) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391449/500500 78.21%] BatchTime:0.4035s(0.4442s) DataTime:0.00044s(0.00620s) Loss-1.0757(0.9724) Prec@1-74.219(76.4317) Prec@5-90.625(91.4917) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391499/500500 78.22%] BatchTime:0.4047s(0.4432s) DataTime:0.00043s(0.00594s) Loss-0.7584(0.9712) Prec@1-82.812(76.4661) Prec@5-94.531(91.5175) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391549/500500 78.23%] BatchTime:0.4037s(0.4424s) DataTime:0.00042s(0.00571s) Loss-0.9425(0.9714) Prec@1-79.297(76.4487) Prec@5-92.188(91.5130) lr-0.00100 58.0Hours EpochTime:38.53Minutes
+Epoch: [78/100][391599/500500 78.24%] BatchTime:0.4042s(0.4415s) DataTime:0.00044s(0.00549s) Loss-0.9226(0.9716) Prec@1-74.609(76.4385) Prec@5-92.969(91.5234) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][391649/500500 78.25%] BatchTime:0.4077s(0.4425s) DataTime:0.00032s(0.00529s) Loss-0.8742(0.9716) Prec@1-78.125(76.4388) Prec@5-92.969(91.5203) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][391699/500500 78.26%] BatchTime:0.4097s(0.4423s) DataTime:0.00042s(0.00510s) Loss-0.9964(0.9716) Prec@1-73.828(76.4337) Prec@5-92.188(91.5243) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][391749/500500 78.27%] BatchTime:0.4011s(0.4422s) DataTime:0.00045s(0.00493s) Loss-1.0692(0.9712) Prec@1-71.094(76.4462) Prec@5-91.406(91.5266) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][391799/500500 78.28%] BatchTime:0.4009s(0.4424s) DataTime:0.00033s(0.00477s) Loss-0.9693(0.9709) Prec@1-74.609(76.4464) Prec@5-91.797(91.5281) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][391849/500500 78.29%] BatchTime:0.4148s(0.4425s) DataTime:0.00050s(0.00462s) Loss-1.0287(0.9707) Prec@1-75.391(76.4434) Prec@5-89.844(91.5317) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][391899/500500 78.30%] BatchTime:0.4255s(0.4420s) DataTime:0.00048s(0.00448s) Loss-0.8161(0.9715) Prec@1-80.469(76.4145) Prec@5-95.312(91.5198) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][391949/500500 78.31%] BatchTime:0.4089s(0.4421s) DataTime:0.00043s(0.00435s) Loss-1.0229(0.9715) Prec@1-76.953(76.4225) Prec@5-89.844(91.5287) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][391999/500500 78.32%] BatchTime:0.4023s(0.4422s) DataTime:0.00044s(0.00423s) Loss-0.9388(0.9714) Prec@1-73.047(76.4162) Prec@5-92.188(91.5295) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][392049/500500 78.33%] BatchTime:0.4449s(0.4428s) DataTime:0.00041s(0.00412s) Loss-1.0590(0.9714) Prec@1-72.266(76.4173) Prec@5-89.844(91.5329) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][392099/500500 78.34%] BatchTime:0.4143s(0.4423s) DataTime:0.00043s(0.00401s) Loss-1.0153(0.9712) Prec@1-76.562(76.4245) Prec@5-90.234(91.5307) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][392149/500500 78.35%] BatchTime:0.4006s(0.4424s) DataTime:0.00042s(0.00391s) Loss-0.7558(0.9705) Prec@1-79.297(76.4451) Prec@5-94.531(91.5323) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][392199/500500 78.36%] BatchTime:0.4005s(0.4427s) DataTime:0.00037s(0.00381s) Loss-0.8228(0.9703) Prec@1-80.078(76.4492) Prec@5-93.359(91.5327) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][392249/500500 78.37%] BatchTime:0.4597s(0.4421s) DataTime:0.00044s(0.00372s) Loss-1.0382(0.9699) Prec@1-77.344(76.4571) Prec@5-90.625(91.5352) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][392299/500500 78.38%] BatchTime:0.4074s(0.4418s) DataTime:0.00047s(0.00363s) Loss-0.8684(0.9698) Prec@1-78.125(76.4566) Prec@5-91.406(91.5400) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][392349/500500 78.39%] BatchTime:0.4294s(0.4425s) DataTime:0.00062s(0.00355s) Loss-0.9447(0.9697) Prec@1-74.219(76.4545) Prec@5-93.359(91.5416) lr-0.00100 58.1Hours EpochTime:38.53Minutes
+Epoch: [78/100][392399/500500 78.40%] BatchTime:0.4069s(0.4429s) DataTime:0.00043s(0.00347s) Loss-0.8284(0.9698) Prec@1-81.250(76.4465) Prec@5-93.750(91.5448) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392449/500500 78.41%] BatchTime:0.4177s(0.4432s) DataTime:0.00034s(0.00340s) Loss-0.9040(0.9695) Prec@1-77.344(76.4502) Prec@5-91.797(91.5470) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392499/500500 78.42%] BatchTime:0.4137s(0.4427s) DataTime:0.00044s(0.00333s) Loss-1.0117(0.9693) Prec@1-75.391(76.4599) Prec@5-90.234(91.5486) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392549/500500 78.43%] BatchTime:0.4081s(0.4423s) DataTime:0.00042s(0.00326s) Loss-0.8446(0.9691) Prec@1-80.078(76.4681) Prec@5-93.750(91.5446) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392599/500500 78.44%] BatchTime:0.4256s(0.4418s) DataTime:0.00048s(0.00320s) Loss-0.8470(0.9691) Prec@1-76.953(76.4720) Prec@5-92.969(91.5416) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392649/500500 78.45%] BatchTime:0.4387s(0.4416s) DataTime:0.00047s(0.00314s) Loss-0.9163(0.9695) Prec@1-76.172(76.4666) Prec@5-91.406(91.5331) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392699/500500 78.46%] BatchTime:0.5650s(0.4412s) DataTime:0.00043s(0.00308s) Loss-0.8871(0.9699) Prec@1-79.688(76.4592) Prec@5-92.578(91.5238) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392749/500500 78.47%] BatchTime:0.4279s(0.4414s) DataTime:0.00048s(0.00302s) Loss-1.0490(0.9701) Prec@1-73.828(76.4581) Prec@5-90.625(91.5234) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392799/500500 78.48%] BatchTime:0.4090s(0.4418s) DataTime:0.00046s(0.00297s) Loss-0.9701(0.9703) Prec@1-76.562(76.4568) Prec@5-90.234(91.5244) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392849/500500 78.49%] BatchTime:0.4102s(0.4415s) DataTime:0.00042s(0.00292s) Loss-0.9729(0.9704) Prec@1-77.344(76.4599) Prec@5-90.625(91.5195) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392899/500500 78.50%] BatchTime:0.4065s(0.4417s) DataTime:0.00047s(0.00287s) Loss-0.8494(0.9705) Prec@1-80.078(76.4666) Prec@5-92.969(91.5097) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392949/500500 78.51%] BatchTime:0.4205s(0.4415s) DataTime:0.00044s(0.00282s) Loss-0.9237(0.9711) Prec@1-77.734(76.4557) Prec@5-91.016(91.5009) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][392999/500500 78.52%] BatchTime:0.4070s(0.4414s) DataTime:0.00047s(0.00277s) Loss-1.0870(0.9711) Prec@1-73.438(76.4538) Prec@5-89.453(91.4998) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][393049/500500 78.53%] BatchTime:0.4028s(0.4421s) DataTime:0.00044s(0.00273s) Loss-0.7888(0.9714) Prec@1-82.031(76.4463) Prec@5-92.969(91.4958) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][393099/500500 78.54%] BatchTime:0.4190s(0.4416s) DataTime:0.00034s(0.00269s) Loss-0.8737(0.9710) Prec@1-80.859(76.4587) Prec@5-92.578(91.4949) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][393149/500500 78.55%] BatchTime:0.4030s(0.4417s) DataTime:0.00041s(0.00265s) Loss-0.9624(0.9708) Prec@1-79.688(76.4637) Prec@5-91.797(91.4981) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][393199/500500 78.56%] BatchTime:0.4061s(0.4416s) DataTime:0.00042s(0.00261s) Loss-0.8990(0.9707) Prec@1-76.562(76.4626) Prec@5-94.141(91.4998) lr-0.00100 58.2Hours EpochTime:38.53Minutes
+Epoch: [78/100][393249/500500 78.57%] BatchTime:0.4050s(0.4412s) DataTime:0.00047s(0.00257s) Loss-0.9091(0.9709) Prec@1-78.906(76.4550) Prec@5-90.625(91.4975) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393299/500500 78.58%] BatchTime:0.4242s(0.4417s) DataTime:0.00031s(0.00253s) Loss-0.9038(0.9711) Prec@1-78.516(76.4492) Prec@5-92.969(91.4927) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393349/500500 78.59%] BatchTime:0.4215s(0.4419s) DataTime:0.00044s(0.00250s) Loss-1.0194(0.9713) Prec@1-71.875(76.4445) Prec@5-91.406(91.4886) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393399/500500 78.60%] BatchTime:0.4242s(0.4415s) DataTime:0.00048s(0.00246s) Loss-0.8430(0.9715) Prec@1-78.906(76.4408) Prec@5-92.578(91.4850) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393449/500500 78.61%] BatchTime:0.5736s(0.4416s) DataTime:0.00045s(0.00243s) Loss-1.1581(0.9715) Prec@1-72.656(76.4343) Prec@5-89.453(91.4804) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393499/500500 78.62%] BatchTime:0.4265s(0.4413s) DataTime:0.00042s(0.00240s) Loss-1.0666(0.9715) Prec@1-73.438(76.4366) Prec@5-90.234(91.4829) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393549/500500 78.63%] BatchTime:0.4079s(0.4416s) DataTime:0.00045s(0.00236s) Loss-0.8446(0.9716) Prec@1-78.125(76.4311) Prec@5-94.531(91.4813) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393599/500500 78.64%] BatchTime:0.4312s(0.4413s) DataTime:0.00045s(0.00233s) Loss-0.8218(0.9717) Prec@1-80.078(76.4268) Prec@5-93.750(91.4787) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393649/500500 78.65%] BatchTime:0.4056s(0.4414s) DataTime:0.00042s(0.00230s) Loss-0.8762(0.9715) Prec@1-78.906(76.4285) Prec@5-92.578(91.4805) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393699/500500 78.66%] BatchTime:0.4040s(0.4415s) DataTime:0.00044s(0.00228s) Loss-0.9601(0.9710) Prec@1-76.953(76.4359) Prec@5-91.016(91.4906) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393749/500500 78.67%] BatchTime:0.4114s(0.4413s) DataTime:0.00043s(0.00225s) Loss-0.9569(0.9710) Prec@1-77.344(76.4400) Prec@5-91.797(91.4879) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393799/500500 78.68%] BatchTime:0.4113s(0.4414s) DataTime:0.00037s(0.00222s) Loss-1.0641(0.9706) Prec@1-73.438(76.4522) Prec@5-90.234(91.4946) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393849/500500 78.69%] BatchTime:0.4371s(0.4416s) DataTime:0.00040s(0.00220s) Loss-1.1267(0.9707) Prec@1-71.875(76.4461) Prec@5-89.453(91.4969) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393899/500500 78.70%] BatchTime:0.4225s(0.4414s) DataTime:0.00199s(0.00217s) Loss-1.0174(0.9709) Prec@1-77.734(76.4401) Prec@5-90.234(91.4941) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393949/500500 78.71%] BatchTime:0.4237s(0.4417s) DataTime:0.00041s(0.00215s) Loss-0.9711(0.9711) Prec@1-75.781(76.4382) Prec@5-90.234(91.4926) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][393999/500500 78.72%] BatchTime:0.4129s(0.4417s) DataTime:0.00042s(0.00212s) Loss-0.8250(0.9710) Prec@1-79.688(76.4436) Prec@5-92.188(91.4910) lr-0.00100 58.3Hours EpochTime:38.53Minutes
+Epoch: [78/100][394049/500500 78.73%] BatchTime:0.4135s(0.4415s) DataTime:0.00052s(0.00210s) Loss-0.9166(0.9709) Prec@1-78.516(76.4481) Prec@5-91.406(91.4918) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394099/500500 78.74%] BatchTime:1.2604s(0.4417s) DataTime:0.00043s(0.00208s) Loss-0.8675(0.9713) Prec@1-78.906(76.4388) Prec@5-91.406(91.4876) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394149/500500 78.75%] BatchTime:0.4170s(0.4416s) DataTime:0.00041s(0.00206s) Loss-1.0995(0.9713) Prec@1-75.391(76.4421) Prec@5-87.500(91.4891) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394199/500500 78.76%] BatchTime:0.4336s(0.4415s) DataTime:0.00048s(0.00203s) Loss-1.0196(0.9713) Prec@1-73.828(76.4465) Prec@5-89.453(91.4895) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394249/500500 78.77%] BatchTime:0.4113s(0.4413s) DataTime:0.00045s(0.00201s) Loss-1.0600(0.9713) Prec@1-74.609(76.4408) Prec@5-89.844(91.4888) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394299/500500 78.78%] BatchTime:0.4789s(0.4414s) DataTime:0.00046s(0.00199s) Loss-1.1619(0.9714) Prec@1-71.875(76.4412) Prec@5-88.281(91.4928) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394349/500500 78.79%] BatchTime:0.4683s(0.4413s) DataTime:0.00032s(0.00197s) Loss-1.0633(0.9715) Prec@1-77.344(76.4385) Prec@5-91.016(91.4909) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394399/500500 78.80%] BatchTime:0.4046s(0.4413s) DataTime:0.00045s(0.00195s) Loss-0.8203(0.9714) Prec@1-79.688(76.4445) Prec@5-95.312(91.4942) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394449/500500 78.81%] BatchTime:0.4075s(0.4413s) DataTime:0.00039s(0.00194s) Loss-0.8583(0.9713) Prec@1-78.125(76.4441) Prec@5-93.359(91.4958) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394499/500500 78.82%] BatchTime:0.4014s(0.4413s) DataTime:0.00044s(0.00192s) Loss-1.2111(0.9714) Prec@1-72.266(76.4429) Prec@5-89.062(91.4954) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394549/500500 78.83%] BatchTime:0.4060s(0.4411s) DataTime:0.00051s(0.00190s) Loss-0.8398(0.9714) Prec@1-78.906(76.4394) Prec@5-92.188(91.4963) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394599/500500 78.84%] BatchTime:0.4148s(0.4409s) DataTime:0.00043s(0.00188s) Loss-0.9138(0.9713) Prec@1-74.609(76.4412) Prec@5-91.016(91.4945) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394649/500500 78.85%] BatchTime:0.4044s(0.4410s) DataTime:0.00043s(0.00186s) Loss-0.9526(0.9712) Prec@1-74.219(76.4353) Prec@5-91.797(91.4972) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394699/500500 78.86%] BatchTime:0.4119s(0.4410s) DataTime:0.00027s(0.00185s) Loss-0.9700(0.9711) Prec@1-73.047(76.4308) Prec@5-92.578(91.4970) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394749/500500 78.87%] BatchTime:0.4090s(0.4408s) DataTime:0.00049s(0.00183s) Loss-0.9119(0.9711) Prec@1-77.734(76.4300) Prec@5-91.016(91.4975) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394799/500500 78.88%] BatchTime:0.5927s(0.4406s) DataTime:0.00044s(0.00182s) Loss-0.8768(0.9709) Prec@1-77.344(76.4318) Prec@5-93.359(91.4976) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394849/500500 78.89%] BatchTime:0.4273s(0.4404s) DataTime:0.00042s(0.00180s) Loss-1.1440(0.9709) Prec@1-73.047(76.4316) Prec@5-88.281(91.5013) lr-0.00100 58.4Hours EpochTime:38.53Minutes
+Epoch: [78/100][394899/500500 78.90%] BatchTime:0.3997s(0.4404s) DataTime:0.00042s(0.00179s) Loss-0.9243(0.9705) Prec@1-78.906(76.4418) Prec@5-90.625(91.5044) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][394949/500500 78.91%] BatchTime:0.4060s(0.4402s) DataTime:0.00072s(0.00177s) Loss-1.0105(0.9704) Prec@1-75.391(76.4432) Prec@5-91.797(91.5069) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][394999/500500 78.92%] BatchTime:0.4134s(0.4406s) DataTime:0.00052s(0.00176s) Loss-0.9235(0.9705) Prec@1-76.953(76.4350) Prec@5-92.969(91.5058) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][395049/500500 78.93%] BatchTime:0.4187s(0.4406s) DataTime:0.00041s(0.00174s) Loss-0.9416(0.9708) Prec@1-77.344(76.4266) Prec@5-92.188(91.5038) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][395099/500500 78.94%] BatchTime:0.4051s(0.4404s) DataTime:0.00046s(0.00173s) Loss-0.9621(0.9711) Prec@1-78.125(76.4161) Prec@5-90.234(91.5000) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][395149/500500 78.95%] BatchTime:0.4172s(0.4403s) DataTime:0.00045s(0.00171s) Loss-0.9421(0.9712) Prec@1-78.125(76.4166) Prec@5-92.188(91.4982) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][395199/500500 78.96%] BatchTime:0.4068s(0.4403s) DataTime:0.00035s(0.00170s) Loss-0.9351(0.9713) Prec@1-77.344(76.4172) Prec@5-89.453(91.4987) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][395249/500500 78.97%] BatchTime:0.4023s(0.4405s) DataTime:0.00049s(0.00169s) Loss-0.9650(0.9713) Prec@1-75.391(76.4176) Prec@5-89.844(91.4995) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][395299/500500 78.98%] BatchTime:0.4033s(0.4408s) DataTime:0.00044s(0.00167s) Loss-1.0087(0.9713) Prec@1-76.172(76.4177) Prec@5-91.406(91.4994) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+Epoch: [78/100][395349/500500 78.99%] BatchTime:0.4024s(0.4409s) DataTime:0.00040s(0.00166s) Loss-0.8181(0.9713) Prec@1-79.297(76.4201) Prec@5-91.797(91.4982) lr-0.00100 58.5Hours EpochTime:38.53Minutes
+
+Validate Iteration <395394> --> prec@1-75.702 prec@5-92.804 Loss 0.962	 CurrentValidTime 1.3985 minutes	 TotalValidTime 125.5734 minutes ****** 
+
+
+ *** Model will be saved at: /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2 ..., imagenet-resnet54-ep78-it395394-acc75.70-best75.81-topv92.80-par25.56M-norm-exp.res2.ckpt 
+
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 19660800 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 18481152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 37093376 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 39976960 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 34865152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 1835008 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+Epoch: [79/100][395399/500500 79.00%] BatchTime:0.4330s(1.9988s) DataTime:0.00043s(1.15753s) Loss-0.9543(0.9435) Prec@1-75.781(76.4062) Prec@5-92.188(92.3438) lr-0.00100 58.5Hours EpochTime:38.17Minutes
+Epoch: [79/100][395449/500500 79.01%] BatchTime:0.4752s(0.5893s) DataTime:0.00059s(0.10624s) Loss-0.8940(0.9647) Prec@1-76.953(76.8040) Prec@5-94.141(91.5199) lr-0.00100 58.5Hours EpochTime:38.17Minutes
+Epoch: [79/100][395499/500500 79.02%] BatchTime:0.3975s(0.5135s) DataTime:0.00043s(0.05592s) Loss-0.9864(0.9622) Prec@1-75.000(76.8415) Prec@5-91.406(91.6629) lr-0.00100 58.5Hours EpochTime:38.17Minutes
+Epoch: [79/100][395549/500500 79.03%] BatchTime:0.3959s(0.4841s) DataTime:0.00047s(0.03803s) Loss-0.9160(0.9605) Prec@1-78.516(76.7843) Prec@5-92.188(91.6356) lr-0.00100 58.5Hours EpochTime:38.17Minutes
+Epoch: [79/100][395599/500500 79.04%] BatchTime:0.4054s(0.4760s) DataTime:0.00048s(0.02886s) Loss-0.8968(0.9554) Prec@1-79.297(76.8845) Prec@5-91.797(91.7207) lr-0.00100 58.5Hours EpochTime:38.17Minutes
+Epoch: [79/100][395649/500500 79.05%] BatchTime:0.4059s(0.4647s) DataTime:0.00041s(0.02328s) Loss-0.8386(0.9571) Prec@1-80.859(76.7816) Prec@5-93.750(91.6743) lr-0.00100 58.5Hours EpochTime:38.17Minutes
+Epoch: [79/100][395699/500500 79.06%] BatchTime:0.4104s(0.4597s) DataTime:0.00036s(0.01954s) Loss-1.0272(0.9545) Prec@1-75.391(76.8840) Prec@5-90.625(91.7021) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][395749/500500 79.07%] BatchTime:0.4106s(0.4573s) DataTime:0.00045s(0.01686s) Loss-1.1274(0.9575) Prec@1-71.484(76.7947) Prec@5-89.062(91.6736) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][395799/500500 79.08%] BatchTime:0.4057s(0.4524s) DataTime:0.00046s(0.01483s) Loss-1.1058(0.9582) Prec@1-73.047(76.7265) Prec@5-89.453(91.6667) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][395849/500500 79.09%] BatchTime:0.5878s(0.4510s) DataTime:0.00043s(0.01325s) Loss-0.8672(0.9581) Prec@1-79.688(76.7033) Prec@5-92.969(91.6870) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][395899/500500 79.10%] BatchTime:0.4026s(0.4535s) DataTime:0.00044s(0.01198s) Loss-0.9182(0.9592) Prec@1-77.344(76.6801) Prec@5-93.750(91.6592) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][395949/500500 79.11%] BatchTime:0.4036s(0.4509s) DataTime:0.00068s(0.01094s) Loss-0.9910(0.9552) Prec@1-76.172(76.7314) Prec@5-90.625(91.7173) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][395999/500500 79.12%] BatchTime:0.4412s(0.4496s) DataTime:0.00034s(0.01007s) Loss-0.8190(0.9560) Prec@1-80.078(76.7058) Prec@5-94.141(91.7162) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396049/500500 79.13%] BatchTime:0.4124s(0.4480s) DataTime:0.00047s(0.00933s) Loss-1.0876(0.9568) Prec@1-73.438(76.6848) Prec@5-90.234(91.7015) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396099/500500 79.14%] BatchTime:0.4086s(0.4488s) DataTime:0.00044s(0.00870s) Loss-1.0450(0.9574) Prec@1-75.391(76.6927) Prec@5-89.453(91.6750) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396149/500500 79.15%] BatchTime:0.3997s(0.4480s) DataTime:0.00043s(0.00815s) Loss-0.9564(0.9575) Prec@1-76.172(76.6975) Prec@5-89.844(91.6794) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396199/500500 79.16%] BatchTime:0.4178s(0.4491s) DataTime:0.00033s(0.00767s) Loss-1.1585(0.9573) Prec@1-71.094(76.7168) Prec@5-88.281(91.6576) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396249/500500 79.17%] BatchTime:1.3047s(0.4495s) DataTime:0.00045s(0.00725s) Loss-0.8181(0.9560) Prec@1-81.641(76.7484) Prec@5-93.750(91.6854) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396299/500500 79.18%] BatchTime:0.4121s(0.4502s) DataTime:0.00045s(0.00687s) Loss-1.0440(0.9570) Prec@1-74.609(76.7377) Prec@5-89.062(91.6769) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396349/500500 79.19%] BatchTime:0.4019s(0.4489s) DataTime:0.00050s(0.00654s) Loss-1.1170(0.9572) Prec@1-71.484(76.7359) Prec@5-91.016(91.6713) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396399/500500 79.20%] BatchTime:0.4549s(0.4500s) DataTime:0.00044s(0.00623s) Loss-0.8879(0.9564) Prec@1-80.078(76.7537) Prec@5-92.578(91.6877) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396449/500500 79.21%] BatchTime:1.0057s(0.4506s) DataTime:0.00034s(0.00596s) Loss-0.8669(0.9562) Prec@1-78.125(76.7339) Prec@5-92.969(91.6965) lr-0.00100 58.6Hours EpochTime:38.17Minutes
+Epoch: [79/100][396499/500500 79.22%] BatchTime:0.4622s(0.4504s) DataTime:0.00041s(0.00570s) Loss-0.9825(0.9571) Prec@1-75.000(76.7085) Prec@5-89.844(91.6838) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396549/500500 79.23%] BatchTime:0.4272s(0.4495s) DataTime:0.00045s(0.00548s) Loss-1.0439(0.9575) Prec@1-76.172(76.7191) Prec@5-90.625(91.6822) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396599/500500 79.24%] BatchTime:0.6276s(0.4489s) DataTime:0.00049s(0.00527s) Loss-0.9499(0.9575) Prec@1-78.125(76.7239) Prec@5-92.969(91.6847) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396649/500500 79.25%] BatchTime:0.4097s(0.4496s) DataTime:0.00045s(0.00507s) Loss-1.0742(0.9584) Prec@1-74.609(76.7225) Prec@5-91.406(91.6624) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396699/500500 79.26%] BatchTime:0.4107s(0.4489s) DataTime:0.00045s(0.00490s) Loss-1.1685(0.9577) Prec@1-71.875(76.7454) Prec@5-88.672(91.6688) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396749/500500 79.27%] BatchTime:0.4135s(0.4496s) DataTime:0.00044s(0.00473s) Loss-1.0633(0.9577) Prec@1-76.172(76.7352) Prec@5-88.672(91.6663) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396799/500500 79.28%] BatchTime:0.4024s(0.4493s) DataTime:0.00050s(0.00458s) Loss-0.8220(0.9585) Prec@1-79.297(76.7096) Prec@5-92.578(91.6551) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396849/500500 79.29%] BatchTime:0.4077s(0.4495s) DataTime:0.00040s(0.00444s) Loss-0.8882(0.9584) Prec@1-80.469(76.7102) Prec@5-92.188(91.6594) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396899/500500 79.30%] BatchTime:0.3985s(0.4490s) DataTime:0.00040s(0.00430s) Loss-0.8697(0.9591) Prec@1-79.688(76.6964) Prec@5-91.797(91.6484) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396949/500500 79.31%] BatchTime:0.4017s(0.4489s) DataTime:0.00037s(0.00418s) Loss-1.0760(0.9593) Prec@1-76.562(76.6873) Prec@5-89.453(91.6532) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][396999/500500 79.32%] BatchTime:0.4126s(0.4492s) DataTime:0.00053s(0.00406s) Loss-0.9508(0.9598) Prec@1-78.906(76.6827) Prec@5-90.625(91.6494) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][397049/500500 79.33%] BatchTime:0.4015s(0.4485s) DataTime:0.00038s(0.00395s) Loss-0.9959(0.9603) Prec@1-76.562(76.6770) Prec@5-91.797(91.6468) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][397099/500500 79.34%] BatchTime:0.4268s(0.4481s) DataTime:0.00043s(0.00385s) Loss-0.8605(0.9606) Prec@1-79.297(76.6615) Prec@5-94.141(91.6470) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][397149/500500 79.35%] BatchTime:0.4079s(0.4484s) DataTime:0.00043s(0.00375s) Loss-0.9853(0.9607) Prec@1-74.219(76.6569) Prec@5-91.016(91.6460) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][397199/500500 79.36%] BatchTime:0.4062s(0.4478s) DataTime:0.00048s(0.00366s) Loss-1.0855(0.9612) Prec@1-73.438(76.6430) Prec@5-91.406(91.6331) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][397249/500500 79.37%] BatchTime:0.4027s(0.4470s) DataTime:0.00045s(0.00357s) Loss-1.0904(0.9615) Prec@1-75.000(76.6370) Prec@5-90.234(91.6299) lr-0.00100 58.7Hours EpochTime:38.17Minutes
+Epoch: [79/100][397299/500500 79.38%] BatchTime:0.4136s(0.4469s) DataTime:0.00043s(0.00349s) Loss-0.9889(0.9626) Prec@1-75.391(76.6236) Prec@5-91.797(91.6140) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397349/500500 79.39%] BatchTime:0.4290s(0.4461s) DataTime:0.00042s(0.00341s) Loss-1.0639(0.9628) Prec@1-75.000(76.6214) Prec@5-90.234(91.6063) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397399/500500 79.40%] BatchTime:0.4177s(0.4458s) DataTime:0.00045s(0.00334s) Loss-1.0516(0.9627) Prec@1-72.656(76.6202) Prec@5-90.234(91.6048) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397449/500500 79.41%] BatchTime:0.6306s(0.4458s) DataTime:0.00182s(0.00327s) Loss-1.0571(0.9632) Prec@1-76.172(76.6165) Prec@5-87.500(91.6001) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397499/500500 79.42%] BatchTime:0.4136s(0.4456s) DataTime:0.00046s(0.00320s) Loss-1.0821(0.9631) Prec@1-73.828(76.6122) Prec@5-89.844(91.6026) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397549/500500 79.43%] BatchTime:0.4027s(0.4454s) DataTime:0.00045s(0.00314s) Loss-0.8874(0.9629) Prec@1-79.297(76.6239) Prec@5-93.359(91.6069) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397599/500500 79.44%] BatchTime:0.4076s(0.4450s) DataTime:0.00044s(0.00308s) Loss-0.9966(0.9630) Prec@1-73.438(76.6199) Prec@5-91.797(91.6057) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397649/500500 79.45%] BatchTime:0.5772s(0.4458s) DataTime:0.00049s(0.00302s) Loss-0.8014(0.9631) Prec@1-82.812(76.6191) Prec@5-92.578(91.6072) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397699/500500 79.46%] BatchTime:0.4160s(0.4457s) DataTime:0.00044s(0.00296s) Loss-1.0402(0.9638) Prec@1-76.562(76.6011) Prec@5-90.234(91.5989) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397749/500500 79.47%] BatchTime:0.4023s(0.4455s) DataTime:0.00054s(0.00291s) Loss-0.9665(0.9635) Prec@1-78.125(76.6106) Prec@5-92.578(91.6003) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397799/500500 79.48%] BatchTime:0.4609s(0.4456s) DataTime:0.00038s(0.00286s) Loss-1.0190(0.9636) Prec@1-76.172(76.6112) Prec@5-91.016(91.6025) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397849/500500 79.49%] BatchTime:0.4141s(0.4458s) DataTime:0.00046s(0.00281s) Loss-0.9406(0.9635) Prec@1-75.781(76.6088) Prec@5-91.797(91.6026) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397899/500500 79.50%] BatchTime:0.4108s(0.4457s) DataTime:0.00044s(0.00276s) Loss-0.8343(0.9638) Prec@1-76.172(76.6027) Prec@5-94.922(91.5988) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397949/500500 79.51%] BatchTime:0.4066s(0.4453s) DataTime:0.00032s(0.00272s) Loss-1.0006(0.9643) Prec@1-77.734(76.5949) Prec@5-90.234(91.5911) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][397999/500500 79.52%] BatchTime:0.4213s(0.4457s) DataTime:0.00045s(0.00267s) Loss-0.9555(0.9642) Prec@1-79.688(76.5935) Prec@5-89.844(91.5926) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][398049/500500 79.53%] BatchTime:0.4315s(0.4462s) DataTime:0.00035s(0.00263s) Loss-0.8439(0.9640) Prec@1-76.562(76.5875) Prec@5-91.016(91.5882) lr-0.00100 58.8Hours EpochTime:38.17Minutes
+Epoch: [79/100][398099/500500 79.54%] BatchTime:0.4063s(0.4457s) DataTime:0.00046s(0.00259s) Loss-0.9921(0.9640) Prec@1-74.219(76.5842) Prec@5-91.406(91.5883) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398149/500500 79.55%] BatchTime:0.4114s(0.4455s) DataTime:0.00033s(0.00255s) Loss-1.1100(0.9641) Prec@1-73.828(76.5842) Prec@5-89.453(91.5884) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398199/500500 79.56%] BatchTime:0.4063s(0.4455s) DataTime:0.00046s(0.00251s) Loss-1.1430(0.9644) Prec@1-75.000(76.5814) Prec@5-89.844(91.5789) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398249/500500 79.57%] BatchTime:0.4160s(0.4452s) DataTime:0.00024s(0.00248s) Loss-1.0039(0.9646) Prec@1-78.125(76.5770) Prec@5-92.188(91.5766) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398299/500500 79.58%] BatchTime:0.4032s(0.4453s) DataTime:0.00046s(0.00244s) Loss-1.1852(0.9648) Prec@1-74.609(76.5720) Prec@5-88.672(91.5757) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398349/500500 79.59%] BatchTime:0.4084s(0.4449s) DataTime:0.00037s(0.00241s) Loss-0.9996(0.9648) Prec@1-76.562(76.5768) Prec@5-89.453(91.5739) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398399/500500 79.60%] BatchTime:0.4233s(0.4450s) DataTime:0.00045s(0.00237s) Loss-1.2125(0.9650) Prec@1-72.656(76.5706) Prec@5-88.281(91.5733) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398449/500500 79.61%] BatchTime:0.4034s(0.4453s) DataTime:0.00044s(0.00234s) Loss-0.9988(0.9655) Prec@1-75.000(76.5562) Prec@5-89.844(91.5658) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398499/500500 79.62%] BatchTime:0.4028s(0.4450s) DataTime:0.00035s(0.00231s) Loss-0.9789(0.9655) Prec@1-74.219(76.5536) Prec@5-90.234(91.5673) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398549/500500 79.63%] BatchTime:0.4053s(0.4453s) DataTime:0.00045s(0.00228s) Loss-0.9080(0.9657) Prec@1-76.172(76.5500) Prec@5-92.969(91.5618) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398599/500500 79.64%] BatchTime:0.4045s(0.4454s) DataTime:0.00044s(0.00225s) Loss-1.0046(0.9664) Prec@1-75.391(76.5380) Prec@5-92.188(91.5514) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398649/500500 79.65%] BatchTime:0.4047s(0.4453s) DataTime:0.00042s(0.00223s) Loss-0.8286(0.9665) Prec@1-78.516(76.5264) Prec@5-92.188(91.5493) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398699/500500 79.66%] BatchTime:0.4304s(0.4449s) DataTime:0.00048s(0.00220s) Loss-0.9446(0.9664) Prec@1-78.125(76.5294) Prec@5-91.797(91.5504) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398749/500500 79.67%] BatchTime:0.4030s(0.4454s) DataTime:0.00033s(0.00217s) Loss-0.9486(0.9665) Prec@1-78.125(76.5341) Prec@5-91.016(91.5483) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398799/500500 79.68%] BatchTime:0.3961s(0.4453s) DataTime:0.00045s(0.00215s) Loss-0.7491(0.9664) Prec@1-79.297(76.5391) Prec@5-95.312(91.5495) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398849/500500 79.69%] BatchTime:0.4023s(0.4455s) DataTime:0.00045s(0.00212s) Loss-0.9508(0.9664) Prec@1-76.953(76.5395) Prec@5-93.750(91.5531) lr-0.00100 58.9Hours EpochTime:38.17Minutes
+Epoch: [79/100][398899/500500 79.70%] BatchTime:0.4158s(0.4452s) DataTime:0.00047s(0.00210s) Loss-1.2941(0.9665) Prec@1-68.359(76.5436) Prec@5-86.719(91.5500) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][398949/500500 79.71%] BatchTime:0.4028s(0.4448s) DataTime:0.00046s(0.00207s) Loss-1.0062(0.9662) Prec@1-78.516(76.5498) Prec@5-92.578(91.5547) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][398999/500500 79.72%] BatchTime:0.4099s(0.4446s) DataTime:0.00049s(0.00205s) Loss-0.9508(0.9665) Prec@1-78.125(76.5409) Prec@5-89.062(91.5542) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399049/500500 79.73%] BatchTime:0.4032s(0.4445s) DataTime:0.00036s(0.00203s) Loss-0.7790(0.9667) Prec@1-78.906(76.5367) Prec@5-94.531(91.5522) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399099/500500 79.74%] BatchTime:0.4189s(0.4445s) DataTime:0.00033s(0.00201s) Loss-0.9581(0.9668) Prec@1-76.953(76.5395) Prec@5-90.234(91.5474) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399149/500500 79.75%] BatchTime:0.4102s(0.4443s) DataTime:0.00036s(0.00199s) Loss-1.0104(0.9669) Prec@1-79.688(76.5378) Prec@5-89.062(91.5478) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399199/500500 79.76%] BatchTime:0.4019s(0.4442s) DataTime:0.00045s(0.00197s) Loss-1.2162(0.9670) Prec@1-73.438(76.5337) Prec@5-89.453(91.5479) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399249/500500 79.77%] BatchTime:0.4018s(0.4443s) DataTime:0.00044s(0.00195s) Loss-1.0963(0.9671) Prec@1-75.391(76.5342) Prec@5-90.625(91.5481) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399299/500500 79.78%] BatchTime:0.4035s(0.4442s) DataTime:0.00050s(0.00193s) Loss-0.9116(0.9672) Prec@1-75.391(76.5299) Prec@5-92.578(91.5474) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399349/500500 79.79%] BatchTime:0.4033s(0.4441s) DataTime:0.00043s(0.00191s) Loss-0.8242(0.9671) Prec@1-79.297(76.5273) Prec@5-92.188(91.5505) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399399/500500 79.80%] BatchTime:0.4195s(0.4440s) DataTime:0.00048s(0.00189s) Loss-0.8925(0.9671) Prec@1-77.734(76.5261) Prec@5-91.797(91.5512) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399449/500500 79.81%] BatchTime:0.4157s(0.4441s) DataTime:0.00046s(0.00187s) Loss-0.8025(0.9671) Prec@1-81.250(76.5216) Prec@5-94.922(91.5516) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399499/500500 79.82%] BatchTime:0.4140s(0.4440s) DataTime:0.00043s(0.00185s) Loss-0.8121(0.9670) Prec@1-79.297(76.5230) Prec@5-93.359(91.5529) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399549/500500 79.83%] BatchTime:0.4011s(0.4441s) DataTime:0.00044s(0.00184s) Loss-0.8591(0.9667) Prec@1-78.125(76.5271) Prec@5-92.578(91.5601) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399599/500500 79.84%] BatchTime:0.4391s(0.4439s) DataTime:0.00050s(0.00182s) Loss-1.0799(0.9666) Prec@1-74.219(76.5301) Prec@5-89.844(91.5598) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399649/500500 79.85%] BatchTime:0.4134s(0.4437s) DataTime:0.00033s(0.00180s) Loss-1.1045(0.9666) Prec@1-74.219(76.5235) Prec@5-89.062(91.5621) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399699/500500 79.86%] BatchTime:0.4096s(0.4437s) DataTime:0.00049s(0.00179s) Loss-0.9620(0.9668) Prec@1-76.953(76.5164) Prec@5-91.797(91.5606) lr-0.00100 59.0Hours EpochTime:38.17Minutes
+Epoch: [79/100][399749/500500 79.87%] BatchTime:0.4144s(0.4436s) DataTime:0.00033s(0.00177s) Loss-1.2761(0.9668) Prec@1-70.703(76.5098) Prec@5-85.938(91.5595) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][399799/500500 79.88%] BatchTime:0.4217s(0.4438s) DataTime:0.00043s(0.00176s) Loss-0.9512(0.9671) Prec@1-76.172(76.5076) Prec@5-92.188(91.5531) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][399849/500500 79.89%] BatchTime:0.4198s(0.4439s) DataTime:0.00035s(0.00174s) Loss-0.8125(0.9668) Prec@1-82.031(76.5144) Prec@5-92.188(91.5567) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][399899/500500 79.90%] BatchTime:0.4379s(0.4438s) DataTime:0.00047s(0.00173s) Loss-0.8692(0.9669) Prec@1-76.172(76.5127) Prec@5-92.578(91.5547) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][399949/500500 79.91%] BatchTime:0.6507s(0.4439s) DataTime:0.00048s(0.00171s) Loss-0.9326(0.9667) Prec@1-76.172(76.5142) Prec@5-91.016(91.5562) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][399999/500500 79.92%] BatchTime:0.4093s(0.4438s) DataTime:0.00045s(0.00170s) Loss-0.9232(0.9667) Prec@1-75.000(76.5120) Prec@5-91.797(91.5572) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][400049/500500 79.93%] BatchTime:0.4148s(0.4439s) DataTime:0.00046s(0.00169s) Loss-1.0352(0.9670) Prec@1-74.219(76.5048) Prec@5-90.234(91.5549) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][400099/500500 79.94%] BatchTime:0.4011s(0.4437s) DataTime:0.00053s(0.00167s) Loss-0.9069(0.9669) Prec@1-75.000(76.5045) Prec@5-91.797(91.5584) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][400149/500500 79.95%] BatchTime:0.4016s(0.4437s) DataTime:0.00036s(0.00166s) Loss-1.0797(0.9670) Prec@1-74.609(76.5053) Prec@5-90.625(91.5572) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][400199/500500 79.96%] BatchTime:0.6271s(0.4437s) DataTime:0.00034s(0.00165s) Loss-0.9875(0.9670) Prec@1-75.781(76.5048) Prec@5-89.453(91.5579) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][400249/500500 79.97%] BatchTime:0.4106s(0.4440s) DataTime:0.00046s(0.00164s) Loss-0.8586(0.9670) Prec@1-76.953(76.5034) Prec@5-94.141(91.5579) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][400299/500500 79.98%] BatchTime:0.4119s(0.4439s) DataTime:0.00045s(0.00162s) Loss-1.0111(0.9670) Prec@1-74.219(76.5023) Prec@5-92.969(91.5606) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][400349/500500 79.99%] BatchTime:0.4231s(0.4437s) DataTime:0.00042s(0.00161s) Loss-1.0100(0.9670) Prec@1-76.172(76.5005) Prec@5-89.844(91.5607) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+Epoch: [79/100][400399/500500 80.00%] BatchTime:0.2499s(0.4437s) DataTime:0.00003s(0.00160s) Loss-1.2792(0.9670) Prec@1-71.329(76.4958) Prec@5-86.014(91.5627) lr-0.00100 59.1Hours EpochTime:38.17Minutes
+
+Validate Iteration <400399> --> prec@1-75.716 prec@5-92.734 Loss 0.965	 CurrentValidTime 1.3993 minutes	 TotalValidTime 126.9727 minutes ****** 
+
+
+ *** Model will be saved at: /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2 ..., imagenet-resnet54-ep79-it400399-acc75.72-best75.81-topv92.80-par25.56M-norm-exp.res2.ckpt 
+
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 19660800 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 18481152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 37093376 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 39976960 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 34865152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 1835008 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+Epoch: [80/100][400449/500500 80.01%] BatchTime:0.4145s(0.6036s) DataTime:0.00045s(0.11807s) Loss-0.8224(0.9574) Prec@1-78.125(76.8516) Prec@5-92.188(91.5547) lr-0.00100 59.1Hours EpochTime:38.42Minutes
+Epoch: [80/100][400499/500500 80.02%] BatchTime:0.3941s(0.5194s) DataTime:0.00046s(0.05925s) Loss-1.1286(0.9685) Prec@1-71.094(76.8477) Prec@5-90.234(91.4883) lr-0.00100 59.1Hours EpochTime:38.42Minutes
+Epoch: [80/100][400549/500500 80.03%] BatchTime:0.4039s(0.4853s) DataTime:0.00043s(0.03965s) Loss-0.9359(0.9587) Prec@1-76.172(76.8750) Prec@5-93.359(91.6354) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400599/500500 80.04%] BatchTime:0.4019s(0.4694s) DataTime:0.00033s(0.02985s) Loss-0.9645(0.9592) Prec@1-78.516(76.7852) Prec@5-92.969(91.6504) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400649/500500 80.05%] BatchTime:0.4014s(0.4601s) DataTime:0.00034s(0.02397s) Loss-0.9076(0.9581) Prec@1-79.297(76.8109) Prec@5-91.797(91.6688) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400699/500500 80.06%] BatchTime:0.4276s(0.4541s) DataTime:0.00042s(0.02005s) Loss-0.6615(0.9600) Prec@1-83.594(76.7344) Prec@5-95.703(91.6628) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400749/500500 80.07%] BatchTime:0.4138s(0.4533s) DataTime:0.00033s(0.01725s) Loss-1.0172(0.9598) Prec@1-78.125(76.7946) Prec@5-88.672(91.6228) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400799/500500 80.08%] BatchTime:0.4250s(0.4510s) DataTime:0.00049s(0.01514s) Loss-1.1588(0.9580) Prec@1-73.047(76.7646) Prec@5-88.672(91.6602) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400849/500500 80.09%] BatchTime:0.5933s(0.4510s) DataTime:0.00050s(0.01351s) Loss-1.0731(0.9582) Prec@1-75.000(76.7752) Prec@5-89.453(91.6545) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400899/500500 80.10%] BatchTime:0.6351s(0.4510s) DataTime:0.00047s(0.01220s) Loss-0.9088(0.9567) Prec@1-76.953(76.7875) Prec@5-90.234(91.6820) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400949/500500 80.11%] BatchTime:0.3976s(0.4534s) DataTime:0.00036s(0.01113s) Loss-1.0995(0.9557) Prec@1-75.000(76.7869) Prec@5-89.062(91.6790) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][400999/500500 80.12%] BatchTime:0.4181s(0.4523s) DataTime:0.00034s(0.01024s) Loss-0.9115(0.9531) Prec@1-80.078(76.8717) Prec@5-90.625(91.7005) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][401049/500500 80.13%] BatchTime:0.4258s(0.4505s) DataTime:0.00034s(0.00948s) Loss-1.1038(0.9530) Prec@1-75.000(76.8552) Prec@5-90.234(91.7067) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][401099/500500 80.14%] BatchTime:0.4027s(0.4512s) DataTime:0.00033s(0.00884s) Loss-0.9569(0.9526) Prec@1-77.344(76.8627) Prec@5-92.578(91.7238) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][401149/500500 80.15%] BatchTime:1.5158s(0.4509s) DataTime:0.00044s(0.00828s) Loss-0.9124(0.9533) Prec@1-79.688(76.8385) Prec@5-92.578(91.7062) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][401199/500500 80.16%] BatchTime:0.4040s(0.4496s) DataTime:0.00056s(0.00779s) Loss-0.6919(0.9535) Prec@1-81.641(76.8457) Prec@5-94.922(91.7056) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][401249/500500 80.17%] BatchTime:0.4036s(0.4495s) DataTime:0.00042s(0.00735s) Loss-0.8722(0.9550) Prec@1-78.516(76.7969) Prec@5-93.750(91.6916) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][401299/500500 80.18%] BatchTime:0.4052s(0.4506s) DataTime:0.00036s(0.00697s) Loss-1.1713(0.9560) Prec@1-74.219(76.7847) Prec@5-88.281(91.6749) lr-0.00100 59.2Hours EpochTime:38.42Minutes
+Epoch: [80/100][401349/500500 80.19%] BatchTime:0.4029s(0.4506s) DataTime:0.00046s(0.00662s) Loss-0.8620(0.9560) Prec@1-76.562(76.7825) Prec@5-93.359(91.6686) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401399/500500 80.20%] BatchTime:0.4698s(0.4505s) DataTime:0.00036s(0.00631s) Loss-0.9955(0.9570) Prec@1-73.828(76.7672) Prec@5-91.406(91.6691) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401449/500500 80.21%] BatchTime:0.4120s(0.4502s) DataTime:0.00044s(0.00603s) Loss-1.0185(0.9555) Prec@1-73.047(76.7902) Prec@5-91.797(91.6920) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401499/500500 80.22%] BatchTime:0.4042s(0.4501s) DataTime:0.00034s(0.00578s) Loss-0.8904(0.9559) Prec@1-80.078(76.7926) Prec@5-92.578(91.6864) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401549/500500 80.23%] BatchTime:0.4025s(0.4497s) DataTime:0.00044s(0.00555s) Loss-1.1473(0.9562) Prec@1-72.266(76.7829) Prec@5-90.234(91.6926) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401599/500500 80.24%] BatchTime:0.4085s(0.4489s) DataTime:0.00044s(0.00533s) Loss-1.0547(0.9559) Prec@1-75.391(76.7930) Prec@5-88.672(91.6947) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401649/500500 80.25%] BatchTime:0.4034s(0.4481s) DataTime:0.00047s(0.00514s) Loss-1.0404(0.9550) Prec@1-75.391(76.8125) Prec@5-91.406(91.7053) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401699/500500 80.26%] BatchTime:0.4031s(0.4479s) DataTime:0.00049s(0.00496s) Loss-1.0527(0.9552) Prec@1-74.609(76.8047) Prec@5-91.016(91.7058) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401749/500500 80.27%] BatchTime:0.4058s(0.4472s) DataTime:0.00032s(0.00479s) Loss-0.8618(0.9549) Prec@1-78.906(76.8163) Prec@5-93.359(91.7086) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401799/500500 80.28%] BatchTime:0.4026s(0.4472s) DataTime:0.00045s(0.00463s) Loss-1.0871(0.9553) Prec@1-72.656(76.8172) Prec@5-90.625(91.7020) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401849/500500 80.29%] BatchTime:0.4390s(0.4466s) DataTime:0.00035s(0.00449s) Loss-0.9865(0.9554) Prec@1-77.344(76.8103) Prec@5-90.625(91.7015) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401899/500500 80.30%] BatchTime:0.4092s(0.4462s) DataTime:0.00047s(0.00435s) Loss-0.9111(0.9559) Prec@1-76.562(76.7854) Prec@5-91.406(91.6917) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401949/500500 80.31%] BatchTime:0.4137s(0.4458s) DataTime:0.00043s(0.00423s) Loss-0.9751(0.9564) Prec@1-77.344(76.7845) Prec@5-92.188(91.6774) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][401999/500500 80.32%] BatchTime:0.4340s(0.4459s) DataTime:0.00101s(0.00411s) Loss-0.8918(0.9572) Prec@1-77.344(76.7683) Prec@5-92.188(91.6638) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][402049/500500 80.33%] BatchTime:0.4030s(0.4454s) DataTime:0.00044s(0.00400s) Loss-1.0595(0.9574) Prec@1-73.047(76.7607) Prec@5-90.234(91.6541) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][402099/500500 80.34%] BatchTime:0.4559s(0.4454s) DataTime:0.00042s(0.00390s) Loss-1.1163(0.9580) Prec@1-71.875(76.7518) Prec@5-89.062(91.6475) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][402149/500500 80.35%] BatchTime:0.7051s(0.4449s) DataTime:0.00044s(0.00380s) Loss-0.9629(0.9582) Prec@1-78.125(76.7446) Prec@5-91.016(91.6511) lr-0.00100 59.3Hours EpochTime:38.42Minutes
+Epoch: [80/100][402199/500500 80.36%] BatchTime:0.4081s(0.4444s) DataTime:0.00045s(0.00370s) Loss-1.0362(0.9582) Prec@1-76.172(76.7530) Prec@5-91.016(91.6500) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402249/500500 80.37%] BatchTime:0.4179s(0.4445s) DataTime:0.00033s(0.00361s) Loss-0.9936(0.9579) Prec@1-75.000(76.7578) Prec@5-89.453(91.6497) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402299/500500 80.38%] BatchTime:0.4039s(0.4443s) DataTime:0.00052s(0.00353s) Loss-0.9444(0.9578) Prec@1-75.781(76.7634) Prec@5-90.625(91.6503) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402349/500500 80.39%] BatchTime:0.4096s(0.4442s) DataTime:0.00043s(0.00345s) Loss-1.0348(0.9582) Prec@1-74.609(76.7420) Prec@5-92.969(91.6474) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402399/500500 80.40%] BatchTime:0.4176s(0.4440s) DataTime:0.00054s(0.00338s) Loss-0.9450(0.9578) Prec@1-77.734(76.7424) Prec@5-91.797(91.6574) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402449/500500 80.41%] BatchTime:0.4011s(0.4436s) DataTime:0.00045s(0.00331s) Loss-0.9807(0.9587) Prec@1-77.734(76.7231) Prec@5-91.797(91.6444) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402499/500500 80.42%] BatchTime:0.4534s(0.4437s) DataTime:0.00042s(0.00324s) Loss-0.8977(0.9589) Prec@1-75.391(76.7173) Prec@5-94.531(91.6432) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402549/500500 80.43%] BatchTime:0.4203s(0.4432s) DataTime:0.00389s(0.00317s) Loss-0.8850(0.9593) Prec@1-74.609(76.7097) Prec@5-93.750(91.6415) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402599/500500 80.44%] BatchTime:0.4160s(0.4434s) DataTime:0.00040s(0.00311s) Loss-1.0458(0.9593) Prec@1-74.609(76.7037) Prec@5-91.406(91.6380) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402649/500500 80.45%] BatchTime:0.4018s(0.4445s) DataTime:0.00046s(0.00305s) Loss-1.0706(0.9595) Prec@1-70.703(76.6958) Prec@5-87.891(91.6361) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402699/500500 80.46%] BatchTime:0.4084s(0.4441s) DataTime:0.00042s(0.00299s) Loss-0.9483(0.9591) Prec@1-78.125(76.7074) Prec@5-91.797(91.6430) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402749/500500 80.47%] BatchTime:0.4551s(0.4446s) DataTime:0.00034s(0.00294s) Loss-1.0256(0.9590) Prec@1-76.172(76.7144) Prec@5-91.016(91.6446) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402799/500500 80.48%] BatchTime:0.4077s(0.4449s) DataTime:0.00044s(0.00289s) Loss-0.9923(0.9591) Prec@1-78.516(76.7165) Prec@5-92.969(91.6447) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402849/500500 80.49%] BatchTime:0.4100s(0.4449s) DataTime:0.00036s(0.00284s) Loss-0.9787(0.9595) Prec@1-76.562(76.7042) Prec@5-91.406(91.6400) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402899/500500 80.50%] BatchTime:0.4083s(0.4446s) DataTime:0.00043s(0.00279s) Loss-0.9143(0.9598) Prec@1-76.172(76.6942) Prec@5-92.578(91.6364) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402949/500500 80.51%] BatchTime:0.4017s(0.4448s) DataTime:0.00042s(0.00274s) Loss-0.9854(0.9598) Prec@1-74.609(76.6939) Prec@5-92.188(91.6392) lr-0.00100 59.4Hours EpochTime:38.42Minutes
+Epoch: [80/100][402999/500500 80.52%] BatchTime:0.4068s(0.4446s) DataTime:0.00043s(0.00270s) Loss-1.0370(0.9599) Prec@1-75.781(76.6889) Prec@5-90.234(91.6346) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403049/500500 80.53%] BatchTime:0.4206s(0.4448s) DataTime:0.00032s(0.00266s) Loss-0.8432(0.9594) Prec@1-77.344(76.6947) Prec@5-92.578(91.6464) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403099/500500 80.54%] BatchTime:0.4096s(0.4448s) DataTime:0.00048s(0.00261s) Loss-0.8541(0.9593) Prec@1-77.344(76.6859) Prec@5-94.531(91.6467) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403149/500500 80.55%] BatchTime:0.4176s(0.4448s) DataTime:0.00035s(0.00257s) Loss-1.0244(0.9592) Prec@1-76.172(76.6922) Prec@5-89.844(91.6443) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403199/500500 80.56%] BatchTime:0.4033s(0.4445s) DataTime:0.00046s(0.00254s) Loss-1.0095(0.9593) Prec@1-75.781(76.6899) Prec@5-92.188(91.6449) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403249/500500 80.57%] BatchTime:0.4102s(0.4442s) DataTime:0.00045s(0.00250s) Loss-0.8540(0.9591) Prec@1-79.688(76.6919) Prec@5-91.797(91.6519) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403299/500500 80.58%] BatchTime:0.4126s(0.4441s) DataTime:0.00043s(0.00246s) Loss-0.9617(0.9595) Prec@1-77.344(76.6796) Prec@5-91.406(91.6514) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403349/500500 80.59%] BatchTime:0.4056s(0.4445s) DataTime:0.00044s(0.00243s) Loss-1.0515(0.9596) Prec@1-73.438(76.6785) Prec@5-91.797(91.6466) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403399/500500 80.60%] BatchTime:0.4077s(0.4442s) DataTime:0.00044s(0.00240s) Loss-1.0043(0.9597) Prec@1-77.344(76.6831) Prec@5-91.016(91.6434) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403449/500500 80.61%] BatchTime:0.4157s(0.4442s) DataTime:0.00047s(0.00236s) Loss-0.9789(0.9599) Prec@1-78.125(76.6717) Prec@5-91.797(91.6401) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403499/500500 80.62%] BatchTime:0.4117s(0.4439s) DataTime:0.00043s(0.00233s) Loss-0.7475(0.9600) Prec@1-80.859(76.6691) Prec@5-93.750(91.6327) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403549/500500 80.63%] BatchTime:0.4055s(0.4437s) DataTime:0.00045s(0.00230s) Loss-0.9560(0.9600) Prec@1-74.609(76.6656) Prec@5-91.406(91.6301) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403599/500500 80.64%] BatchTime:0.4079s(0.4434s) DataTime:0.00033s(0.00228s) Loss-0.9063(0.9598) Prec@1-77.344(76.6665) Prec@5-92.969(91.6307) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403649/500500 80.65%] BatchTime:0.4024s(0.4431s) DataTime:0.00043s(0.00225s) Loss-1.1757(0.9598) Prec@1-73.438(76.6704) Prec@5-89.844(91.6297) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403699/500500 80.66%] BatchTime:0.4077s(0.4431s) DataTime:0.00044s(0.00222s) Loss-0.9272(0.9596) Prec@1-78.125(76.6668) Prec@5-92.578(91.6352) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403749/500500 80.67%] BatchTime:0.4080s(0.4430s) DataTime:0.00048s(0.00219s) Loss-1.0558(0.9599) Prec@1-75.781(76.6663) Prec@5-89.844(91.6293) lr-0.00100 59.5Hours EpochTime:38.42Minutes
+Epoch: [80/100][403799/500500 80.68%] BatchTime:0.4065s(0.4431s) DataTime:0.00044s(0.00217s) Loss-0.9891(0.9601) Prec@1-75.391(76.6662) Prec@5-89.844(91.6236) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][403849/500500 80.69%] BatchTime:0.5405s(0.4435s) DataTime:0.00047s(0.00214s) Loss-0.9353(0.9601) Prec@1-76.172(76.6669) Prec@5-92.969(91.6278) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][403899/500500 80.70%] BatchTime:0.4091s(0.4432s) DataTime:0.00045s(0.00212s) Loss-1.1692(0.9603) Prec@1-72.656(76.6581) Prec@5-88.672(91.6233) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][403949/500500 80.71%] BatchTime:0.4029s(0.4429s) DataTime:0.00044s(0.00209s) Loss-1.1318(0.9604) Prec@1-73.438(76.6548) Prec@5-87.891(91.6243) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][403999/500500 80.72%] BatchTime:0.4080s(0.4428s) DataTime:0.00047s(0.00207s) Loss-0.9863(0.9608) Prec@1-75.000(76.6480) Prec@5-89.844(91.6212) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404049/500500 80.73%] BatchTime:0.5206s(0.4427s) DataTime:0.00043s(0.00205s) Loss-1.0374(0.9607) Prec@1-75.000(76.6539) Prec@5-88.672(91.6218) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404099/500500 80.74%] BatchTime:0.4134s(0.4426s) DataTime:0.00037s(0.00203s) Loss-1.0225(0.9606) Prec@1-75.391(76.6609) Prec@5-89.453(91.6210) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404149/500500 80.75%] BatchTime:0.5558s(0.4425s) DataTime:0.00035s(0.00201s) Loss-1.1286(0.9606) Prec@1-73.438(76.6642) Prec@5-88.672(91.6189) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404199/500500 80.76%] BatchTime:0.4097s(0.4424s) DataTime:0.00042s(0.00199s) Loss-1.1800(0.9608) Prec@1-73.438(76.6627) Prec@5-89.062(91.6148) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404249/500500 80.77%] BatchTime:0.4017s(0.4425s) DataTime:0.00048s(0.00197s) Loss-0.7690(0.9611) Prec@1-80.469(76.6556) Prec@5-95.312(91.6107) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404299/500500 80.78%] BatchTime:0.6193s(0.4427s) DataTime:0.00043s(0.00195s) Loss-0.8575(0.9613) Prec@1-77.734(76.6483) Prec@5-92.578(91.6090) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404349/500500 80.79%] BatchTime:0.4018s(0.4429s) DataTime:0.00047s(0.00193s) Loss-0.9395(0.9612) Prec@1-75.000(76.6525) Prec@5-91.406(91.6103) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404399/500500 80.80%] BatchTime:0.4100s(0.4427s) DataTime:0.00044s(0.00191s) Loss-1.0779(0.9611) Prec@1-70.312(76.6520) Prec@5-91.406(91.6111) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404449/500500 80.81%] BatchTime:0.4022s(0.4430s) DataTime:0.00047s(0.00189s) Loss-1.0619(0.9615) Prec@1-76.953(76.6406) Prec@5-91.406(91.6104) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404499/500500 80.82%] BatchTime:0.4022s(0.4428s) DataTime:0.00048s(0.00187s) Loss-0.8768(0.9617) Prec@1-78.125(76.6368) Prec@5-92.969(91.6112) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404549/500500 80.83%] BatchTime:0.7310s(0.4431s) DataTime:0.00037s(0.00185s) Loss-0.9545(0.9614) Prec@1-76.953(76.6352) Prec@5-90.625(91.6162) lr-0.00100 59.6Hours EpochTime:38.42Minutes
+Epoch: [80/100][404599/500500 80.84%] BatchTime:0.4032s(0.4428s) DataTime:0.00047s(0.00184s) Loss-0.8175(0.9617) Prec@1-80.469(76.6293) Prec@5-92.578(91.6124) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][404649/500500 80.85%] BatchTime:0.4239s(0.4431s) DataTime:0.00033s(0.00182s) Loss-1.0039(0.9617) Prec@1-76.562(76.6301) Prec@5-89.844(91.6108) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][404699/500500 80.86%] BatchTime:0.6023s(0.4432s) DataTime:0.00039s(0.00180s) Loss-0.8848(0.9619) Prec@1-79.297(76.6284) Prec@5-92.578(91.6095) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][404749/500500 80.87%] BatchTime:0.4150s(0.4432s) DataTime:0.00045s(0.00179s) Loss-1.1316(0.9618) Prec@1-71.875(76.6312) Prec@5-87.109(91.6090) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][404799/500500 80.88%] BatchTime:0.5022s(0.4433s) DataTime:0.00048s(0.00177s) Loss-0.8819(0.9620) Prec@1-79.688(76.6233) Prec@5-91.797(91.6080) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][404849/500500 80.89%] BatchTime:0.7103s(0.4431s) DataTime:0.00044s(0.00176s) Loss-1.1775(0.9621) Prec@1-74.219(76.6257) Prec@5-90.234(91.6092) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][404899/500500 80.90%] BatchTime:0.4246s(0.4431s) DataTime:0.00034s(0.00174s) Loss-1.0109(0.9619) Prec@1-73.828(76.6280) Prec@5-91.406(91.6091) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][404949/500500 80.91%] BatchTime:0.4021s(0.4429s) DataTime:0.00044s(0.00173s) Loss-1.0234(0.9620) Prec@1-76.562(76.6266) Prec@5-91.016(91.6092) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][404999/500500 80.92%] BatchTime:0.4111s(0.4429s) DataTime:0.00033s(0.00172s) Loss-1.0638(0.9623) Prec@1-72.656(76.6163) Prec@5-90.234(91.6059) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][405049/500500 80.93%] BatchTime:0.4043s(0.4427s) DataTime:0.00044s(0.00170s) Loss-0.7307(0.9623) Prec@1-82.031(76.6154) Prec@5-94.141(91.6048) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][405099/500500 80.94%] BatchTime:0.4267s(0.4427s) DataTime:0.00051s(0.00169s) Loss-1.0955(0.9625) Prec@1-74.219(76.6065) Prec@5-89.844(91.6035) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][405149/500500 80.95%] BatchTime:0.4040s(0.4426s) DataTime:0.00045s(0.00168s) Loss-1.0384(0.9627) Prec@1-73.828(76.6003) Prec@5-91.797(91.5983) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][405199/500500 80.96%] BatchTime:0.4033s(0.4426s) DataTime:0.00044s(0.00166s) Loss-0.9194(0.9629) Prec@1-79.297(76.5964) Prec@5-90.234(91.5937) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][405249/500500 80.97%] BatchTime:0.4018s(0.4427s) DataTime:0.00045s(0.00165s) Loss-1.0397(0.9627) Prec@1-73.438(76.5976) Prec@5-89.453(91.5956) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][405299/500500 80.98%] BatchTime:0.3953s(0.4428s) DataTime:0.00032s(0.00164s) Loss-0.9673(0.9629) Prec@1-76.172(76.5954) Prec@5-91.406(91.5920) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][405349/500500 80.99%] BatchTime:0.4182s(0.4427s) DataTime:0.00048s(0.00162s) Loss-0.7740(0.9627) Prec@1-83.594(76.5971) Prec@5-94.141(91.5953) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+Epoch: [80/100][405399/500500 81.00%] BatchTime:0.4132s(0.4428s) DataTime:0.00005s(0.00161s) Loss-0.9870(0.9629) Prec@1-76.172(76.5920) Prec@5-91.797(91.5921) lr-0.00100 59.7Hours EpochTime:38.42Minutes
+
+Validate Iteration <405404> --> prec@1-75.740 prec@5-92.776 Loss 0.966	 CurrentValidTime 1.4086 minutes	 TotalValidTime 128.3812 minutes ****** 
+
+
+ *** Model will be saved at: /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2 ..., imagenet-resnet54-ep80-it405404-acc75.74-best75.81-topv92.80-par25.56M-norm-exp.res2.ckpt 
+
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 19660800 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 18481152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 37093376 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 39976960 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 34865152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 1835008 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+Epoch: [81/100][405449/500500 81.01%] BatchTime:0.4436s(0.6469s) DataTime:0.00045s(0.14918s) Loss-0.8633(0.9379) Prec@1-78.516(77.0660) Prec@5-91.406(91.7795) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405499/500500 81.02%] BatchTime:0.4307s(0.5307s) DataTime:0.00043s(0.07094s) Loss-0.9761(0.9466) Prec@1-77.734(76.8914) Prec@5-92.578(91.7887) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405549/500500 81.03%] BatchTime:0.3992s(0.4946s) DataTime:0.00047s(0.04663s) Loss-0.9306(0.9516) Prec@1-76.953(76.7969) Prec@5-91.406(91.8615) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405599/500500 81.04%] BatchTime:0.4566s(0.4756s) DataTime:0.00044s(0.03479s) Loss-0.9136(0.9535) Prec@1-78.125(76.7348) Prec@5-92.188(91.7588) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405649/500500 81.05%] BatchTime:0.4018s(0.4672s) DataTime:0.00045s(0.02778s) Loss-0.8639(0.9527) Prec@1-78.516(76.7985) Prec@5-92.969(91.7156) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405699/500500 81.06%] BatchTime:0.7389s(0.4638s) DataTime:0.00035s(0.02314s) Loss-1.1431(0.9578) Prec@1-71.484(76.8141) Prec@5-88.281(91.6618) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405749/500500 81.07%] BatchTime:0.4073s(0.4592s) DataTime:0.00045s(0.01985s) Loss-1.0772(0.9592) Prec@1-75.391(76.8105) Prec@5-89.453(91.6418) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405799/500500 81.08%] BatchTime:0.4086s(0.4559s) DataTime:0.00042s(0.01740s) Loss-0.9398(0.9601) Prec@1-74.609(76.7207) Prec@5-91.406(91.6367) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405849/500500 81.09%] BatchTime:0.4190s(0.4556s) DataTime:0.00036s(0.01549s) Loss-0.9288(0.9580) Prec@1-77.344(76.7714) Prec@5-92.578(91.6634) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405899/500500 81.10%] BatchTime:0.4073s(0.4531s) DataTime:0.00044s(0.01397s) Loss-1.0955(0.9563) Prec@1-75.000(76.7921) Prec@5-90.625(91.6911) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405949/500500 81.11%] BatchTime:0.4086s(0.4513s) DataTime:0.00049s(0.01273s) Loss-1.0244(0.9578) Prec@1-77.734(76.7582) Prec@5-91.016(91.6535) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][405999/500500 81.12%] BatchTime:0.4299s(0.4490s) DataTime:0.00046s(0.01170s) Loss-0.9635(0.9591) Prec@1-78.906(76.7522) Prec@5-92.188(91.6354) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][406049/500500 81.13%] BatchTime:0.4092s(0.4514s) DataTime:0.00043s(0.01083s) Loss-1.0135(0.9596) Prec@1-74.609(76.7024) Prec@5-92.578(91.6418) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][406099/500500 81.14%] BatchTime:0.4076s(0.4516s) DataTime:0.00037s(0.01008s) Loss-0.8664(0.9590) Prec@1-81.641(76.7390) Prec@5-92.578(91.6389) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][406149/500500 81.15%] BatchTime:0.4059s(0.4501s) DataTime:0.00041s(0.00944s) Loss-0.8591(0.9582) Prec@1-80.469(76.7518) Prec@5-92.578(91.6501) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][406199/500500 81.16%] BatchTime:0.4029s(0.4513s) DataTime:0.00031s(0.00887s) Loss-0.9359(0.9593) Prec@1-75.781(76.7310) Prec@5-93.359(91.6549) lr-0.00100 59.8Hours EpochTime:38.35Minutes
+Epoch: [81/100][406249/500500 81.17%] BatchTime:0.4025s(0.4499s) DataTime:0.00034s(0.00837s) Loss-1.0213(0.9598) Prec@1-74.219(76.6989) Prec@5-91.406(91.6503) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406299/500500 81.18%] BatchTime:0.4203s(0.4490s) DataTime:0.00036s(0.00793s) Loss-0.8838(0.9596) Prec@1-80.469(76.6995) Prec@5-92.188(91.6520) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406349/500500 81.19%] BatchTime:0.4368s(0.4481s) DataTime:0.00050s(0.00753s) Loss-0.9772(0.9590) Prec@1-76.562(76.7026) Prec@5-92.188(91.6708) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406399/500500 81.20%] BatchTime:0.4072s(0.4474s) DataTime:0.00043s(0.00718s) Loss-1.1181(0.9584) Prec@1-76.562(76.7129) Prec@5-89.844(91.6787) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406449/500500 81.21%] BatchTime:0.4042s(0.4476s) DataTime:0.00035s(0.00685s) Loss-0.9980(0.9592) Prec@1-76.172(76.6956) Prec@5-91.016(91.6653) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406499/500500 81.22%] BatchTime:0.4073s(0.4467s) DataTime:0.00045s(0.00656s) Loss-0.9731(0.9600) Prec@1-77.734(76.6931) Prec@5-92.188(91.6592) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406549/500500 81.23%] BatchTime:0.4052s(0.4471s) DataTime:0.00058s(0.00629s) Loss-0.8882(0.9606) Prec@1-74.609(76.6717) Prec@5-91.406(91.6536) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406599/500500 81.24%] BatchTime:0.4344s(0.4471s) DataTime:0.00048s(0.00605s) Loss-0.8551(0.9598) Prec@1-78.906(76.6772) Prec@5-93.750(91.6596) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406649/500500 81.25%] BatchTime:0.4142s(0.4476s) DataTime:0.00047s(0.00582s) Loss-0.8758(0.9589) Prec@1-77.344(76.7081) Prec@5-93.359(91.6761) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406699/500500 81.26%] BatchTime:0.4238s(0.4488s) DataTime:0.00036s(0.00561s) Loss-0.9543(0.9586) Prec@1-75.000(76.7094) Prec@5-91.797(91.6768) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406749/500500 81.27%] BatchTime:0.4025s(0.4476s) DataTime:0.00044s(0.00542s) Loss-0.8274(0.9581) Prec@1-79.297(76.7095) Prec@5-93.359(91.6784) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406799/500500 81.28%] BatchTime:0.4024s(0.4479s) DataTime:0.00047s(0.00524s) Loss-0.8876(0.9568) Prec@1-78.516(76.7297) Prec@5-92.578(91.6961) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406849/500500 81.29%] BatchTime:0.4147s(0.4474s) DataTime:0.00044s(0.00508s) Loss-0.8981(0.9569) Prec@1-76.953(76.7288) Prec@5-92.188(91.6917) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406899/500500 81.30%] BatchTime:0.4099s(0.4482s) DataTime:0.00042s(0.00492s) Loss-0.9537(0.9570) Prec@1-76.172(76.7161) Prec@5-91.797(91.6890) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406949/500500 81.31%] BatchTime:0.4021s(0.4481s) DataTime:0.00035s(0.00477s) Loss-1.0089(0.9570) Prec@1-77.344(76.7182) Prec@5-90.234(91.6922) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][406999/500500 81.32%] BatchTime:0.4171s(0.4480s) DataTime:0.00042s(0.00464s) Loss-1.1654(0.9570) Prec@1-72.656(76.7148) Prec@5-89.062(91.6970) lr-0.00100 59.9Hours EpochTime:38.35Minutes
+Epoch: [81/100][407049/500500 81.33%] BatchTime:0.4131s(0.4475s) DataTime:0.00043s(0.00451s) Loss-0.8324(0.9572) Prec@1-80.469(76.7119) Prec@5-93.750(91.6957) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407099/500500 81.34%] BatchTime:0.4215s(0.4482s) DataTime:0.00033s(0.00439s) Loss-1.0416(0.9574) Prec@1-73.047(76.7028) Prec@5-92.188(91.6925) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407149/500500 81.35%] BatchTime:0.4007s(0.4480s) DataTime:0.00034s(0.00428s) Loss-1.0203(0.9574) Prec@1-75.781(76.7015) Prec@5-89.453(91.6937) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407199/500500 81.36%] BatchTime:0.7717s(0.4478s) DataTime:0.00048s(0.00417s) Loss-0.8185(0.9580) Prec@1-79.688(76.6826) Prec@5-93.750(91.6865) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407249/500500 81.37%] BatchTime:0.4157s(0.4480s) DataTime:0.00046s(0.00407s) Loss-0.9676(0.9578) Prec@1-77.734(76.6919) Prec@5-89.453(91.6838) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407299/500500 81.38%] BatchTime:0.4203s(0.4476s) DataTime:0.00041s(0.00397s) Loss-1.1060(0.9577) Prec@1-73.047(76.6988) Prec@5-91.797(91.6827) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407349/500500 81.39%] BatchTime:0.4080s(0.4478s) DataTime:0.00052s(0.00388s) Loss-0.9961(0.9584) Prec@1-73.047(76.6858) Prec@5-92.188(91.6730) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407399/500500 81.40%] BatchTime:0.4086s(0.4474s) DataTime:0.00053s(0.00380s) Loss-1.0275(0.9583) Prec@1-72.656(76.6859) Prec@5-91.797(91.6761) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407449/500500 81.41%] BatchTime:0.6460s(0.4475s) DataTime:0.00041s(0.00371s) Loss-0.8876(0.9580) Prec@1-77.734(76.6903) Prec@5-91.797(91.6769) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407499/500500 81.42%] BatchTime:0.4085s(0.4476s) DataTime:0.00040s(0.00364s) Loss-0.9041(0.9580) Prec@1-80.078(76.6867) Prec@5-94.141(91.6615) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407549/500500 81.43%] BatchTime:0.4289s(0.4473s) DataTime:0.00045s(0.00356s) Loss-0.8154(0.9579) Prec@1-80.078(76.6907) Prec@5-92.969(91.6648) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407599/500500 81.44%] BatchTime:0.4070s(0.4474s) DataTime:0.00045s(0.00349s) Loss-1.0572(0.9576) Prec@1-76.562(76.6915) Prec@5-89.062(91.6696) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407649/500500 81.45%] BatchTime:0.4082s(0.4477s) DataTime:0.00047s(0.00342s) Loss-0.9163(0.9582) Prec@1-78.516(76.6770) Prec@5-92.969(91.6610) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407699/500500 81.46%] BatchTime:0.7830s(0.4478s) DataTime:0.00051s(0.00336s) Loss-0.9363(0.9588) Prec@1-74.219(76.6558) Prec@5-92.578(91.6580) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407749/500500 81.47%] BatchTime:0.4128s(0.4473s) DataTime:0.00033s(0.00330s) Loss-0.8501(0.9589) Prec@1-78.125(76.6638) Prec@5-94.141(91.6558) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407799/500500 81.48%] BatchTime:0.4022s(0.4474s) DataTime:0.00044s(0.00324s) Loss-0.9717(0.9592) Prec@1-75.391(76.6571) Prec@5-92.969(91.6529) lr-0.00100 60.0Hours EpochTime:38.35Minutes
+Epoch: [81/100][407849/500500 81.49%] BatchTime:0.4085s(0.4470s) DataTime:0.00035s(0.00318s) Loss-1.0480(0.9593) Prec@1-78.125(76.6478) Prec@5-91.797(91.6524) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][407899/500500 81.50%] BatchTime:0.4101s(0.4468s) DataTime:0.00050s(0.00312s) Loss-1.1267(0.9597) Prec@1-71.484(76.6405) Prec@5-87.109(91.6464) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][407949/500500 81.51%] BatchTime:0.7442s(0.4472s) DataTime:0.00045s(0.00307s) Loss-0.7926(0.9598) Prec@1-81.250(76.6405) Prec@5-92.969(91.6463) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][407999/500500 81.52%] BatchTime:0.4042s(0.4473s) DataTime:0.00032s(0.00302s) Loss-1.1558(0.9599) Prec@1-70.703(76.6420) Prec@5-89.453(91.6429) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408049/500500 81.53%] BatchTime:0.4144s(0.4472s) DataTime:0.00050s(0.00297s) Loss-0.9447(0.9597) Prec@1-75.391(76.6434) Prec@5-92.969(91.6449) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408099/500500 81.54%] BatchTime:0.5371s(0.4472s) DataTime:0.00046s(0.00292s) Loss-1.0227(0.9599) Prec@1-76.172(76.6363) Prec@5-90.234(91.6382) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408149/500500 81.55%] BatchTime:0.4035s(0.4473s) DataTime:0.00050s(0.00288s) Loss-0.9659(0.9597) Prec@1-80.078(76.6457) Prec@5-92.578(91.6411) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408199/500500 81.56%] BatchTime:0.4264s(0.4473s) DataTime:0.00035s(0.00284s) Loss-0.8758(0.9599) Prec@1-78.906(76.6412) Prec@5-92.578(91.6378) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408249/500500 81.57%] BatchTime:0.4116s(0.4473s) DataTime:0.00034s(0.00279s) Loss-0.8254(0.9600) Prec@1-76.953(76.6376) Prec@5-94.531(91.6358) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408299/500500 81.58%] BatchTime:0.4064s(0.4471s) DataTime:0.00058s(0.00275s) Loss-0.8562(0.9604) Prec@1-76.562(76.6332) Prec@5-94.141(91.6341) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408349/500500 81.59%] BatchTime:0.4058s(0.4467s) DataTime:0.00045s(0.00271s) Loss-0.7974(0.9601) Prec@1-80.859(76.6396) Prec@5-93.359(91.6355) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408399/500500 81.60%] BatchTime:0.4085s(0.4469s) DataTime:0.00044s(0.00267s) Loss-0.9289(0.9607) Prec@1-76.562(76.6271) Prec@5-91.797(91.6291) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408449/500500 81.61%] BatchTime:0.4040s(0.4466s) DataTime:0.00036s(0.00264s) Loss-0.8566(0.9606) Prec@1-79.297(76.6282) Prec@5-93.750(91.6311) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408499/500500 81.62%] BatchTime:1.0993s(0.4466s) DataTime:0.00046s(0.00260s) Loss-0.7790(0.9606) Prec@1-80.078(76.6301) Prec@5-94.922(91.6295) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408549/500500 81.63%] BatchTime:0.4740s(0.4466s) DataTime:0.00050s(0.00257s) Loss-0.9756(0.9604) Prec@1-76.562(76.6329) Prec@5-91.016(91.6345) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408599/500500 81.64%] BatchTime:0.4029s(0.4468s) DataTime:0.00042s(0.00253s) Loss-0.9741(0.9602) Prec@1-78.906(76.6412) Prec@5-92.578(91.6352) lr-0.00100 60.1Hours EpochTime:38.35Minutes
+Epoch: [81/100][408649/500500 81.65%] BatchTime:0.4117s(0.4470s) DataTime:0.00041s(0.00250s) Loss-0.8908(0.9601) Prec@1-79.688(76.6436) Prec@5-91.406(91.6356) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][408699/500500 81.66%] BatchTime:0.4120s(0.4469s) DataTime:0.00048s(0.00247s) Loss-1.1772(0.9599) Prec@1-73.828(76.6466) Prec@5-88.281(91.6416) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][408749/500500 81.67%] BatchTime:0.4347s(0.4473s) DataTime:0.00048s(0.00244s) Loss-1.0180(0.9598) Prec@1-78.125(76.6470) Prec@5-91.406(91.6448) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][408799/500500 81.68%] BatchTime:0.4056s(0.4472s) DataTime:0.00046s(0.00241s) Loss-0.9096(0.9595) Prec@1-76.953(76.6548) Prec@5-92.969(91.6478) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][408849/500500 81.69%] BatchTime:0.4089s(0.4468s) DataTime:0.00036s(0.00238s) Loss-0.7464(0.9592) Prec@1-80.469(76.6564) Prec@5-94.531(91.6525) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][408899/500500 81.70%] BatchTime:0.4247s(0.4467s) DataTime:0.00051s(0.00235s) Loss-1.1468(0.9590) Prec@1-71.875(76.6591) Prec@5-89.062(91.6539) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][408949/500500 81.71%] BatchTime:0.4069s(0.4470s) DataTime:0.00046s(0.00233s) Loss-0.8181(0.9591) Prec@1-79.297(76.6574) Prec@5-93.359(91.6488) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][408999/500500 81.72%] BatchTime:0.4098s(0.4467s) DataTime:0.00043s(0.00230s) Loss-0.8472(0.9591) Prec@1-79.297(76.6572) Prec@5-93.750(91.6470) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409049/500500 81.73%] BatchTime:0.4065s(0.4468s) DataTime:0.00033s(0.00227s) Loss-0.9848(0.9588) Prec@1-75.781(76.6636) Prec@5-91.016(91.6492) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409099/500500 81.74%] BatchTime:0.4095s(0.4466s) DataTime:0.00050s(0.00225s) Loss-0.9988(0.9590) Prec@1-74.609(76.6565) Prec@5-91.406(91.6490) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409149/500500 81.75%] BatchTime:0.4004s(0.4469s) DataTime:0.00042s(0.00223s) Loss-0.6586(0.9590) Prec@1-81.641(76.6565) Prec@5-97.266(91.6456) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409199/500500 81.76%] BatchTime:0.4198s(0.4468s) DataTime:0.00042s(0.00220s) Loss-0.8837(0.9591) Prec@1-76.562(76.6565) Prec@5-93.750(91.6433) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409249/500500 81.77%] BatchTime:0.4060s(0.4467s) DataTime:0.00037s(0.00218s) Loss-1.0988(0.9595) Prec@1-74.609(76.6535) Prec@5-89.844(91.6382) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409299/500500 81.78%] BatchTime:0.4461s(0.4470s) DataTime:0.00044s(0.00216s) Loss-1.0622(0.9599) Prec@1-73.828(76.6465) Prec@5-90.234(91.6317) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409349/500500 81.79%] BatchTime:0.7804s(0.4469s) DataTime:0.00050s(0.00214s) Loss-0.8576(0.9602) Prec@1-77.734(76.6386) Prec@5-93.359(91.6294) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409399/500500 81.80%] BatchTime:0.4209s(0.4469s) DataTime:0.00044s(0.00211s) Loss-0.8235(0.9604) Prec@1-80.078(76.6316) Prec@5-94.141(91.6285) lr-0.00100 60.2Hours EpochTime:38.35Minutes
+Epoch: [81/100][409449/500500 81.81%] BatchTime:0.5840s(0.4471s) DataTime:0.00050s(0.00209s) Loss-1.0273(0.9602) Prec@1-76.953(76.6300) Prec@5-88.281(91.6310) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409499/500500 81.82%] BatchTime:0.4176s(0.4469s) DataTime:0.00050s(0.00207s) Loss-0.8711(0.9602) Prec@1-78.516(76.6306) Prec@5-92.578(91.6277) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409549/500500 81.83%] BatchTime:0.4287s(0.4468s) DataTime:0.00044s(0.00205s) Loss-0.8981(0.9603) Prec@1-81.641(76.6293) Prec@5-90.625(91.6267) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409599/500500 81.84%] BatchTime:0.8119s(0.4467s) DataTime:0.00043s(0.00203s) Loss-0.8919(0.9607) Prec@1-78.906(76.6214) Prec@5-92.969(91.6241) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409649/500500 81.85%] BatchTime:0.4203s(0.4464s) DataTime:0.00047s(0.00202s) Loss-1.1454(0.9607) Prec@1-71.875(76.6173) Prec@5-90.625(91.6279) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409699/500500 81.86%] BatchTime:0.4022s(0.4465s) DataTime:0.00046s(0.00200s) Loss-1.1986(0.9608) Prec@1-73.828(76.6183) Prec@5-88.672(91.6275) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409749/500500 81.87%] BatchTime:0.4074s(0.4463s) DataTime:0.00044s(0.00198s) Loss-0.9146(0.9607) Prec@1-77.734(76.6253) Prec@5-89.844(91.6286) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409799/500500 81.88%] BatchTime:0.4232s(0.4461s) DataTime:0.00045s(0.00196s) Loss-1.2378(0.9607) Prec@1-69.922(76.6281) Prec@5-87.891(91.6248) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409849/500500 81.89%] BatchTime:0.7892s(0.4464s) DataTime:0.00035s(0.00195s) Loss-1.0994(0.9606) Prec@1-75.391(76.6293) Prec@5-90.234(91.6274) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409899/500500 81.90%] BatchTime:0.4175s(0.4463s) DataTime:0.00044s(0.00193s) Loss-1.0046(0.9605) Prec@1-74.219(76.6329) Prec@5-89.062(91.6312) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409949/500500 81.91%] BatchTime:0.4038s(0.4462s) DataTime:0.00043s(0.00191s) Loss-1.0306(0.9606) Prec@1-74.219(76.6328) Prec@5-90.625(91.6306) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][409999/500500 81.92%] BatchTime:0.4577s(0.4461s) DataTime:0.00047s(0.00190s) Loss-1.0871(0.9607) Prec@1-74.219(76.6275) Prec@5-89.844(91.6319) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][410049/500500 81.93%] BatchTime:0.4113s(0.4462s) DataTime:0.00044s(0.00188s) Loss-1.0895(0.9606) Prec@1-72.266(76.6307) Prec@5-90.234(91.6337) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][410099/500500 81.94%] BatchTime:0.4002s(0.4461s) DataTime:0.00046s(0.00186s) Loss-0.9973(0.9603) Prec@1-73.047(76.6339) Prec@5-91.797(91.6385) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][410149/500500 81.95%] BatchTime:0.4041s(0.4460s) DataTime:0.00034s(0.00185s) Loss-0.9575(0.9606) Prec@1-79.297(76.6270) Prec@5-91.406(91.6322) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][410199/500500 81.96%] BatchTime:0.4088s(0.4459s) DataTime:0.00061s(0.00183s) Loss-1.0445(0.9607) Prec@1-76.953(76.6310) Prec@5-92.188(91.6295) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][410249/500500 81.97%] BatchTime:0.4164s(0.4458s) DataTime:0.00041s(0.00182s) Loss-1.0709(0.9607) Prec@1-71.875(76.6317) Prec@5-91.016(91.6318) lr-0.00100 60.3Hours EpochTime:38.35Minutes
+Epoch: [81/100][410299/500500 81.98%] BatchTime:0.5594s(0.4462s) DataTime:0.00056s(0.00181s) Loss-0.9115(0.9609) Prec@1-78.516(76.6304) Prec@5-92.969(91.6303) lr-0.00100 60.4Hours EpochTime:38.35Minutes
+Epoch: [81/100][410349/500500 81.99%] BatchTime:0.4001s(0.4462s) DataTime:0.00038s(0.00179s) Loss-0.8989(0.9612) Prec@1-78.516(76.6221) Prec@5-93.359(91.6246) lr-0.00100 60.4Hours EpochTime:38.35Minutes
+Epoch: [81/100][410399/500500 82.00%] BatchTime:0.4169s(0.4461s) DataTime:0.00004s(0.00178s) Loss-0.8907(0.9613) Prec@1-79.688(76.6222) Prec@5-91.797(91.6229) lr-0.00100 60.4Hours EpochTime:38.35Minutes
+
+Validate Iteration <410409> --> prec@1-75.758 prec@5-92.772 Loss 0.969	 CurrentValidTime 1.4083 minutes	 TotalValidTime 129.7896 minutes ****** 
+
+
+ *** Model will be saved at: /data1/zhangjp/classify/checkpoints/imagenet/resnet/resnet-exp.res2 ..., imagenet-resnet54-ep81-it410409-acc75.76-best75.81-topv92.80-par25.56M-norm-exp.res2.ckpt 
+
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 1835008 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 19660800 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 18481152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 37093376 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 39976960 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 34865152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/home/zhangjp/miniconda2/envs/pth04/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))

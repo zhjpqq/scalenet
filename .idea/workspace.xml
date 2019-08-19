@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45f460cc-0106-4ea0-b860-1ea05f297f7d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ScaleNet$xfc_acc_semantic.coverage" NAME="xfc-acc-semantic Coverage Results" MODIFIED="1556669205589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/ScaleNet$compare_params_efficiency.coverage" NAME="compare_params_efficiency Coverage Results" MODIFIED="1552932766454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$plot_error_loss.coverage" NAME="plot-error-loss Coverage Results" MODIFIED="1566202894334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/ScaleNet$mobilev3.coverage" NAME="mobilev3 Coverage Results" MODIFIED="1558975746082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar10_richnet.coverage" NAME="find_cifar10_richnet Coverage Results" MODIFIED="1553715870928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$run_main.coverage" NAME="run_main Coverage Results" MODIFIED="1559906574101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$gradient_camera_block.coverage" NAME="gradient-camera-block Coverage Results" MODIFIED="1566206463111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/ScaleNet$scalenet.coverage" NAME="scalenet Coverage Results" MODIFIED="1558702653546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$densenet.coverage" NAME="densenet Coverage Results" MODIFIED="1552046987712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$gradient_camera_block.coverage" NAME="gradient-camera-block Coverage Results" MODIFIED="1557732215159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WaveNet$resnet_v2.coverage" NAME="resnet_v2 Coverage Results" MODIFIED="1550542687439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_imgnet_dxnet.coverage" NAME="find_imgnet_dxnet Coverage Results" MODIFIED="1558825555580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$run_main_cifar10_bp.coverage" NAME="run_main_cifar10_bp Coverage Results" MODIFIED="1553697063919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$tvm_densenet.coverage" NAME="tvm_densenet Coverage Results" MODIFIED="1559899213889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$wavenet.coverage" NAME="wavenet Coverage Results" MODIFIED="1555071866547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$how_to_plot_XYY_curves.coverage" NAME="how-to-plot-XYY-curves Coverage Results" MODIFIED="1554544664168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/ScaleNet$run_main.coverage" NAME="run_main Coverage Results" MODIFIED="1554703166165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$load_image_and_resize_it.coverage" NAME="load_image_and_resize_it Coverage Results" MODIFIED="1556972672025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$relu_func.coverage" NAME="relu_func Coverage Results" MODIFIED="1563867227382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodules" />
+    <SUITE FILE_PATH="coverage/ScaleNet$tvm_densenet.coverage" NAME="tvm_densenet Coverage Results" MODIFIED="1558945773491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$hrnet.coverage" NAME="hrnet Coverage Results" MODIFIED="1559803530492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$run_main_demo.coverage" NAME="run_main_demo Coverage Results" MODIFIED="1551884822074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$dxnet.coverage" NAME="dxnet Coverage Results" MODIFIED="1558830741651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$fishnet.coverage" NAME="fishnet Coverage Results" MODIFIED="1558700271525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar100_nameinet.coverage" NAME="find_cifar100_nameinet Coverage Results" MODIFIED="1555600127970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$model_factory.coverage" NAME="model_factory Coverage Results" MODIFIED="1553696080665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/factory" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$params_compare.coverage" NAME="params_compare Coverage Results" MODIFIED="1564212576035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/ScaleNet$xresnet.coverage" NAME="xresnet Coverage Results" MODIFIED="1558633492461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$resnet_v2.coverage" NAME="resnet_v2 Coverage Results" MODIFIED="1552702676289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$train_val_error_loss.coverage" NAME="train-val-error-loss Coverage Results" MODIFIED="1554534725439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/ScaleNet$check_model_config.coverage" NAME="check_model_config Coverage Results" MODIFIED="1554024152202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$data_factory.coverage" NAME="data_factory Coverage Results" MODIFIED="1553993890259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/factory" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$plot_error_loss_2.coverage" NAME="plot-error-loss-2 Coverage Results" MODIFIED="1566204864534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$time_memory_compare.coverage" NAME="time_memory_compare Coverage Results" MODIFIED="1559984425189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$activeresnet.coverage" NAME="activeresnet Coverage Results" MODIFIED="1564110355254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$check_config.coverage" NAME="check_config Coverage Results" MODIFIED="1552476829599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$time_memory_compare.coverage" NAME="time_memory_compare Coverage Results" MODIFIED="1558738208776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_svhn_scalenet.coverage" NAME="find_svhn_scalenet Coverage Results" MODIFIED="1554107341404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$flops_compare.coverage" NAME="flops_compare Coverage Results" MODIFIED="1558701110673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$tvm_resnet.coverage" NAME="tvm_resnet Coverage Results" MODIFIED="1559897112697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$mobilev3z.coverage" NAME="mobilev3z Coverage Results" MODIFIED="1558880246247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar10_vivonet.coverage" NAME="find_cifar10_vivonet Coverage Results" MODIFIED="1553687131765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WaveNet$scalenet.coverage" NAME="scalenet Coverage Results" MODIFIED="1551189396152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_imgnet.coverage" NAME="find_imgnet Coverage Results" MODIFIED="1553650471506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$flops_compare__1_.coverage" NAME="flops_compare (1) Coverage Results" MODIFIED="1557897266947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/WaveNet$wavenet_v2.coverage" NAME="wavenet_v2 Coverage Results" MODIFIED="1551168946939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$params_compare.coverage" NAME="params_compare Coverage Results" MODIFIED="1557833898195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/MMResNet-paper" />
+    <SUITE FILE_PATH="coverage/ScaleNet$evaluate_model.coverage" NAME="evaluate_model Coverage Results" MODIFIED="1553001939260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_vivo_net.coverage" NAME="find_vivo_net Coverage Results" MODIFIED="1553358313293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$rockblock.coverage" NAME="rockblock Coverage Results" MODIFIED="1555892612059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodules" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar10.coverage" NAME="find_cifar10 Coverage Results" MODIFIED="1553568418724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_imgnet_nameinet.coverage" NAME="find_imgnet_nameinet Coverage Results" MODIFIED="1555601431572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WaveNet$cifar10_cfg.coverage" NAME="cifar10_cfg Coverage Results" MODIFIED="1550056065996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfg_params" />
+    <SUITE FILE_PATH="coverage/WaveNet$wavedensenet.coverage" NAME="wavedensenet Coverage Results" MODIFIED="1551168815127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$fishnet.coverage" NAME="fishnet Coverage Results" MODIFIED="1559892532920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$preresnet.coverage" NAME="preresnet Coverage Results" MODIFIED="1556073847745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_imgnet_scalenet.coverage" NAME="find_imgnet_scalenet Coverage Results" MODIFIED="1558774207292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar100_wavenet.coverage" NAME="find_cifar100_wavenet Coverage Results" MODIFIED="1555140575769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_imgnet_richnet.coverage" NAME="find_imgnet_richnet Coverage Results" MODIFIED="1553724093395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WaveNet$waveresnet.coverage" NAME="waveresnet Coverage Results" MODIFIED="1550592049861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$mobilev3y.coverage" NAME="mobilev3y Coverage Results" MODIFIED="1558880272125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/WaveNet$couplenet.coverage" NAME="couplenet Coverage Results" MODIFIED="1551185274495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$flops_compare.coverage" NAME="flops_compare Coverage Results" MODIFIED="1564212533198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/WaveNet$scaleconvnet.coverage" NAME="scaleconvnet Coverage Results" MODIFIED="1550592223135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$check_transform.coverage" NAME="check_transform Coverage Results" MODIFIED="1557614233711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar100.coverage" NAME="find_cifar100 Coverage Results" MODIFIED="1553568321361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WaveNet$affineblock.coverage" NAME="affineblock Coverage Results" MODIFIED="1550588587684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodules" />
+    <SUITE FILE_PATH="coverage/ScaleNet$utils.coverage" NAME="utils Coverage Results" MODIFIED="1556094847627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$plot_error_loss.coverage" NAME="plot-error-loss Coverage Results" MODIFIED="1555305654578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/ScaleNet$classifier.coverage" NAME="classifier Coverage Results" MODIFIED="1556083502951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodules" />
+    <SUITE FILE_PATH="coverage/WaveNet$configure.coverage" NAME="configure Coverage Results" MODIFIED="1550625886908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$plot_error_loss__1_.coverage" NAME="plot-error-loss (1) Coverage Results" MODIFIED="1566204937768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/WaveNet$wavenet.coverage" NAME="wavenet Coverage Results" MODIFIED="1551180112129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$acc_width.coverage" NAME="acc-width Coverage Results" MODIFIED="1563881302469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/ScaleNet$richnet.coverage" NAME="richnet Coverage Results" MODIFIED="1553675825183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$mobilev3x.coverage" NAME="mobilev3x Coverage Results" MODIFIED="1558880281299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$check_image_and_resize_it.coverage" NAME="check_image_and_resize_it Coverage Results" MODIFIED="1558256521617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$nameinet.coverage" NAME="nameinet Coverage Results" MODIFIED="1555636512842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar10_nameinet.coverage" NAME="find_cifar10_nameinet Coverage Results" MODIFIED="1555600207999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar10_xresnet.coverage" NAME="find_cifar10_xresnet Coverage Results" MODIFIED="1558639171259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$evaluate_single_image.coverage" NAME="evaluate_single_image Coverage Results" MODIFIED="1556457827993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$plot_active_curve.coverage" NAME="plot_active_curve Coverage Results" MODIFIED="1556110498199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$efficientnet.coverage" NAME="efficientnet Coverage Results" MODIFIED="1564282397398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$activenet.coverage" NAME="activenet Coverage Results" MODIFIED="1563869245282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$pytest_in_mobilev3_py.coverage" NAME="pytest in mobilev3.py Coverage Results" MODIFIED="1558837675233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/WaveNet$train_val_test.coverage" NAME="train_val_test Coverage Results" MODIFIED="1550058807749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar10_wavenet.coverage" NAME="find_cifar10_wavenet Coverage Results" MODIFIED="1555577486579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$xfc_acc_feature_semantic.coverage" NAME="xfc-acc-feature-semantic Coverage Results" MODIFIED="1558603518897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/WaveNet$ScaleNet.coverage" NAME="ScaleNet Coverage Results" MODIFIED="1550594225602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$evaluate_ckpt_model.coverage" NAME="evaluate_ckpt_model Coverage Results" MODIFIED="1552837691868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$collections.coverage" NAME="collections Coverage Results" MODIFIED="1553243676351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Miniconda3/envs/pth04/Lib/site-packages/matplotlib" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$configure.coverage" NAME="configure Coverage Results" MODIFIED="1559898390984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar10_scalenet.coverage" NAME="find_cifar10_scalenet Coverage Results" MODIFIED="1557442525812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$scalenet_cifar_archs.coverage" NAME="scalenet_cifar_archs Coverage Results" MODIFIED="1563840216241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/arch_params" />
+    <SUITE FILE_PATH="coverage/WaveNet$wavenet_v1.coverage" NAME="wavenet_v1 Coverage Results" MODIFIED="1551167004544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ScaleNet$find_cifar100_scalenet.coverage" NAME="find_cifar100_scalenet Coverage Results" MODIFIED="1557442132098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ScaleNet$params_compare__1_.coverage" NAME="params_compare (1) Coverage Results" MODIFIED="1558597209988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/WaveNet$CoupleNet.coverage" NAME="CoupleNet Coverage Results" MODIFIED="1551152169984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$xfc_acc_feature_semantic.coverage" NAME="xfc-acc-feature-semantic Coverage Results" MODIFIED="1563840222521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+    <SUITE FILE_PATH="coverage/ClassifyNeXt$mobilev3.coverage" NAME="mobilev3 Coverage Results" MODIFIED="1559893136214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xmodels" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/gradient-camera-block.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1319">
+              <caret line="331" column="53" lean-forward="true" selection-start-line="331" selection-start-column="53" selection-end-line="331" selection-end-column="53" />
+              <folding>
+                <element signature="e#723#5871#0" />
+                <element signature="e#723#914#1" />
+                <element signature="e#969#1142#0" />
+                <element signature="e#1187#1214#0" />
+                <element signature="e#1253#1274#0" />
+                <element signature="e#1311#5871#0" />
+                <element signature="e#1368#1396#0" />
+                <element signature="e#1549#2610#0" />
+                <element signature="e#1614#2461#0" />
+                <element signature="e#1766#2014#0" />
+                <element signature="e#2111#2461#0" />
+                <element signature="e#2240#2322#0" />
+                <element signature="e#2373#2461#0" />
+                <element signature="e#2652#4043#0" />
+                <element signature="e#2717#3894#0" />
+                <element signature="e#2869#3080#0" />
+                <element signature="e#3146#3838#0" />
+                <element signature="e#3209#3838#0" />
+                <element signature="e#3437#3838#0" />
+                <element signature="e#3585#3675#0" />
+                <element signature="e#3742#3838#0" />
+                <element signature="e#4085#5871#0" />
+                <element signature="e#4150#5722#0" />
+                <element signature="e#4302#4513#0" />
+                <element signature="e#4579#5666#0" />
+                <element signature="e#4642#5666#0" />
+                <element signature="e#4824#5598#0" />
+                <element signature="e#4889#5598#0" />
+                <element signature="e#5146#5598#0" />
+                <element signature="e#5313#5411#0" />
+                <element signature="e#5494#5598#0" />
+                <element signature="e#5901#8498#0" />
+                <element signature="e#5998#6238#0" />
+                <element signature="e#6278#6302#0" />
+                <element signature="e#6373#8498#0" />
+                <element signature="e#7036#7184#0" />
+                <element signature="e#7194#7218#0" />
+                <element signature="e#7456#7472#0" />
+                <element signature="e#7813#7846#0" />
+                <element signature="e#8532#9075#0" />
+                <element signature="e#8673#8809#0" />
+                <element signature="e#9166#9690#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cfgms7</find>
+      <find>depth</find>
+      <find>nknown data augment po</find>
+      <find>ci7</find>
+      <find>version</find>
+      <find>'stages': 1</find>
+      <find>xfc_std</find>
+      <find>laye</find>
+      <find>xfc</find>
+      <find>ao</find>
+      <find>new(): data must be a sequence</find>
+      <find>abc_names</find>
+      <find>bias</find>
+      <find>abc_after</find>
+      <find>abc_relu</find>
+      <find>abc_prior</find>
+      <find>abc_num</find>
+      <find>BasicBlock</find>
+      <find>relu</find>
+      <find>model_zoo</find>
+      <find>nn.ReLU(inplace=True)</find>
+      <find>ResNet</find>
+      <find>Net</find>
+      <find>ActiveNet</find>
+      <find>num_classes</find>
+      <find>inplanes</find>
+      <find>channels[3]</find>
+      <find>abc_nums=3</find>
+      <find>args.device</find>
+      <find>fontsize</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>imsize</replace>
+      <replace>bsize_val</replace>
+      <replace>titan</replace>
+      <replace>cfg.best_val_prec1</replace>
+      <replace>cfg.curr_val_prec1</replace>
+      <replace>cfg.curr_train_prec1</replace>
+      <replace>cfg.best_train_prec1</replace>
+      <replace>cfg.curr_val_prec5</replace>
+      <replace>cfg.best_val_prec5</replace>
+      <replace>cfg.curr_train_prec5</replace>
+      <replace>cfg.best_train_prec5</replace>
+      <replace>model</replace>
+      <replace>effnet</replace>
+      <replace>model_name_map</replace>
+      <replace>model_ckpt_map</replace>
+      <replace>interp</replace>
+      <replace>with_fc=True</replace>
+      <replace>True</replace>
+      <replace>active_fc=False</replace>
+      <replace>ms1</replace>
+      <replace>name_which</replace>
+      <replace>net</replace>
+      <replace>bo</replace>
+      <replace>abc_attr</replace>
+      <replace>abc_prior</replace>
+      <replace>abc_nums</replace>
+      <replace>AdaReLU(abc_nums=3, abc_val=0.001, abc_bias=0, abc_relu=1, abc_addx=True)</replace>
+      <replace>ActiveNet</replace>
+      <replace>ActiveRes</replace>
+      <replace>abc_nums=0</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/xmodels/tvm_densenet.py" />
+        <option value="$PROJECT_DIR$/xmodels/fishnet.py" />
+        <option value="$PROJECT_DIR$/xmodels/hrnet.py" />
+        <option value="$PROJECT_DIR$/xmodels/mobilev3.py" />
+        <option value="$PROJECT_DIR$/arch_params/res_dense_fish_mobile_hrnet.py" />
+        <option value="$PROJECT_DIR$/xmodels/crossnet.py" />
+        <option value="$PROJECT_DIR$/tools/check_model_memory_time.py" />
+        <option value="$PROJECT_DIR$/plot_curves/time_memory_compare.py" />
+        <option value="$PROJECT_DIR$/xmodels/efficientnet.py" />
+        <option value="$PROJECT_DIR$/factory/model_factory.py" />
+        <option value="$PROJECT_DIR$/train_val_test_bk.py" />
+        <option value="$PROJECT_DIR$/factory/data_factory.py" />
+        <option value="$PROJECT_DIR$/arch_params/github_imagenet_archs.py" />
+        <option value="$PROJECT_DIR$/xmodules/classifier.py" />
+        <option value="$PROJECT_DIR$/cfg_params/github_imagenet_cfg.py" />
+        <option value="$PROJECT_DIR$/xmodels/msnet-bk1.py" />
+        <option value="$PROJECT_DIR$/cfg_params/scalenet_imagenet_cfg.py" />
+        <option value="$USER_HOME$/miniconda2/envs/pth04/lib/python3.6/site-packages/torch/nn/modules/upsampling.py" />
+        <option value="$PROJECT_DIR$/xmodels/msnet.py" />
+        <option value="$PROJECT_DIR$/arch_params/msnet_imagenet_archs.py" />
+        <option value="$PROJECT_DIR$/cfg_params/msnet_imagenet_cfg.py" />
+        <option value="$PROJECT_DIR$/arch_params/srnet_imagenet_archs.py" />
+        <option value="$PROJECT_DIR$/xmodels/scale_resnet.py" />
+        <option value="$PROJECT_DIR$/cfg_params/srnet_imagetnet_cfg.py" />
+        <option value="$PROJECT_DIR$/cfg_params/scalenet_cifar10_cfg.py" />
+        <option value="$PROJECT_DIR$/arch_params/scalenet_imagenet_archs.py" />
+        <option value="$PROJECT_DIR$/find_models/find_cifar10_scalenet.py" />
+        <option value="$PROJECT_DIR$/run_main.py" />
+        <option value="$PROJECT_DIR$/cfg_params/scalenet_cifar_cfg.py" />
+        <option value="$PROJECT_DIR$/find_models/find_cifar100_scalenet.py" />
+        <option value="$PROJECT_DIR$/arch_params/scalenet_cifar_archs.py" />
+        <option value="$PROJECT_DIR$/xmodels/tvm_resnet.py" />
+        <option value="$PROJECT_DIR$/xmodules/relu_func.py" />
+        <option value="$PROJECT_DIR$/xmodels/activenet.py" />
+        <option value="$PROJECT_DIR$/xmodels/_init_model.py" />
+        <option value="$PROJECT_DIR$/arch_params/actres_imagenet_archs.py" />
+        <option value="$PROJECT_DIR$/arch_params/__init__.py" />
+        <option value="$PROJECT_DIR$/cfg_params/actres_cifar_cfg.py" />
+        <option value="$PROJECT_DIR$/cfg_params/__init__.py" />
+        <option value="$PROJECT_DIR$/arch_params/actres_cifar_archs.py" />
+        <option value="$PROJECT_DIR$/plot_curves/ScaleNet-paper/acc-width.py" />
+        <option value="$PROJECT_DIR$/config/configure.py" />
+        <option value="$PROJECT_DIR$/train_val_test.py" />
+        <option value="$PROJECT_DIR$/xmodels/activeresnet.py" />
+        <option value="$PROJECT_DIR$/plot_curves/ScaleNet-paper/params_compare.py" />
+        <option value="$PROJECT_DIR$/plot_curves/ScaleNet-paper/flops_compare.py" />
+        <option value="$PROJECT_DIR$/tools/gradient-camera-block.py" />
+        <option value="$PROJECT_DIR$/xtils.py" />
+        <option value="$PROJECT_DIR$/plot_curves/ScaleNet-paper/plot-error-loss.py" />
+        <option value="$PROJECT_DIR$/plot_curves/plot-error-loss-2.py" />
+        <option value="$PROJECT_DIR$/plot_curves/plot-error-loss.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="66" />
+    <option name="y" value="-12" />
+    <option name="width" value="1920" />
+    <option name="height" value="1017" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ClassifyNeXt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassifyNeXt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassifyNeXt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassifyNeXt" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassifyNeXt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassifyNeXt" type="462c0819:PsiDirectoryNode" />
+              <item name="plot_curves" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/old_files" />
+      <recent name="E:\ClassifyTask\ClassifyNeXt\tools" />
+      <recent name="E:\ClassifyTask\ClassifyNeXt\find_model" />
+      <recent name="E:\ClassifyTask\ScaleNet\plot_curves\ScaleNet-paper" />
+      <recent name="E:\ClassifyTask\ScaleNet\plot_curves\WaveResNet-paper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ClassifyTask\ClassifyNeXt\plot_curves" />
+      <recent name="$PROJECT_DIR$/arch_params" />
+      <recent name="$PROJECT_DIR$/xmodels" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/cfg_params" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.gradient-camera-block">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="WaveNet-titanx-v2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration name="efficientnet" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WaveNet-titanx-v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xmodels" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xmodels/efficientnet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gradient-camera-block" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WaveNet-titanx-v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/gradient-camera-block.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot-error-loss (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WaveNet-titanx-v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot_curves" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_curves/plot-error-loss.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot-error-loss-2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WaveNet-titanx-v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot_curves" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_curves/plot-error-loss-2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot-error-loss" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WaveNet-titanx-v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot_curves/ScaleNet-paper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_curves/ScaleNet-paper/plot-error-loss.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.efficientnet" />
+      <item itemvalue="Python.gradient-camera-block" />
+      <item itemvalue="Python.plot-error-loss" />
+      <item itemvalue="Python.plot-error-loss (1)" />
+      <item itemvalue="Python.plot-error-loss-2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.gradient-camera-block" />
+        <item itemvalue="Python.plot-error-loss (1)" />
+        <item itemvalue="Python.plot-error-loss-2" />
+        <item itemvalue="Python.plot-error-loss" />
+        <item itemvalue="Python.efficientnet" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45f460cc-0106-4ea0-b860-1ea05f297f7d" name="Default Changelist" comment="" />
+      <created>1549513278265</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549513278265</updated>
+      <workItem from="1550330116521" duration="375000" />
+      <workItem from="1550365453909" duration="5836000" />
+      <workItem from="1550450723031" duration="1363000" />
+      <workItem from="1550455655281" duration="1134000" />
+      <workItem from="1550458021705" duration="494000" />
+      <workItem from="1550536128706" duration="10332000" />
+      <workItem from="1550579345219" duration="16235000" />
+      <workItem from="1550617247769" duration="7724000" />
+      <workItem from="1550625777920" duration="24255000" />
+      <workItem from="1550708060672" duration="638000" />
+      <workItem from="1550735426232" duration="9774000" />
+      <workItem from="1550791081304" duration="28861000" />
+      <workItem from="1550978653039" duration="4163000" />
+      <workItem from="1550984708468" duration="2287000" />
+      <workItem from="1551955334372" duration="5064000" />
+      <workItem from="1552007273922" duration="31831000" />
+      <workItem from="1552096364271" duration="67000" />
+      <workItem from="1552102734862" duration="4378000" />
+      <workItem from="1552119247369" duration="53407000" />
+      <workItem from="1552353757244" duration="174859000" />
+      <workItem from="1553126083764" duration="1795000" />
+      <workItem from="1553184450196" duration="2023000" />
+      <workItem from="1553235193193" duration="52702000" />
+      <workItem from="1553393006899" duration="28184000" />
+      <workItem from="1553474399436" duration="218321000" />
+      <workItem from="1554537642872" duration="22013000" />
+      <workItem from="1554683404024" duration="3089000" />
+      <workItem from="1554692415366" duration="16919000" />
+      <workItem from="1554767001425" duration="72657000" />
+      <workItem from="1555284578812" duration="391160000" />
+      <workItem from="1558072439303" duration="46892000" />
+      <workItem from="1558597104899" duration="1587000" />
+      <workItem from="1558618541812" duration="216000" />
+      <workItem from="1558633093677" duration="16165000" />
+      <workItem from="1558736933913" duration="25110000" />
+      <workItem from="1558878983629" duration="18747000" />
+      <workItem from="1558996703325" duration="18763000" />
+      <workItem from="1559801613569" duration="39742000" />
+      <workItem from="1559895847113" duration="1799000" />
+      <workItem from="1559907479227" duration="17980000" />
+      <workItem from="1563320682198" duration="686000" />
+      <workItem from="1563489499466" duration="45455000" />
+      <workItem from="1564966618607" duration="599000" />
+      <workItem from="1565005124260" duration="1378000" />
+      <workItem from="1565006948065" duration="117000" />
+      <workItem from="1565431666470" duration="2145000" />
+      <workItem from="1566188746798" duration="9911000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_in_cifar10_train_val_v3_py - 2019.02.08 at 11h 45m 41s.xml">
+      <configuration name="pytest in cifar10_train_val_v3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_cifar10_train_val_v3_py - 2019.02.08 at 15h 01m 17s.xml">
+      <configuration name="pytest in cifar10_train_val_v3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_mobilev3_py - 2019.05.26 at 10h 25m 42s.xml">
+      <configuration name="pytest in mobilev3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_mobilev3_py - 2019.05.26 at 10h 27m 31s.xml">
+      <configuration name="pytest in mobilev3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_mobilev3_py - 2019.05.26 at 10h 27m 57s.xml">
+      <configuration name="pytest in mobilev3.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1439232000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15138593" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25568798" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5417118" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.531961" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32921347" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32827735" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://F:/anaconda/envs/pth04/lib/python3.6/site-packages/torchvision/transforms/transforms.py</url>
+          <line>422</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://F:/anaconda/envs/pth04/lib/python3.6/site-packages/torchvision/transforms/transforms.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://F:/anaconda/envs/pth04/lib/python3.6/site-packages/torchvision/transforms/transforms.py</url>
+          <line>142</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="optimizer.param_groups" />
+        <watch expression="__py_debug_temp_var_221826320" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/xmodels/msnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="e#101#136#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg_params/github_imagenet_cfg.py" />
+    <entry file="file://$PROJECT_DIR$/arch_params/srnet_imagenet_archs.py" />
+    <entry file="file://$PROJECT_DIR$/cfg_params/srnet_imagetnet_cfg.py" />
+    <entry file="file://$PROJECT_DIR$/cfg_params/msnet_imagenet_cfg.py" />
+    <entry file="file://$PROJECT_DIR$/cfg_params/scalenet_imagenet_cfg.py" />
+    <entry file="file://$PROJECT_DIR$/arch_params/scalenet_imagenet_archs.py" />
+    <entry file="file://$PROJECT_DIR$/find_models/find_cifar100_scalenet.py" />
+    <entry file="file://$PROJECT_DIR$/find_models/find_cifar10_scalenet.py" />
+    <entry file="file://$PROJECT_DIR$/cfg_params/scalenet_cifar_cfg.py" />
+    <entry file="file://$PROJECT_DIR$/plot_curves/ScaleNet-paper/xfc-acc-feature-semantic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="85" column="26" lean-forward="true" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
+          <folding>
+            <element signature="e#74#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arch_params/scalenet_cifar_archs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodules/classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="31" />
+          <folding>
+            <element signature="e#72#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-464618107/torch/_C/_TensorBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="3166" column="8" selection-start-line="3166" selection-start-column="8" selection-end-line="3166" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/tensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/nn/modules/batchnorm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="268" column="16" selection-start-line="268" selection-start-column="8" selection-end-line="268" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/nn/parameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="634" column="31" lean-forward="true" selection-start-line="634" selection-start-column="31" selection-end-line="634" selection-end-column="31" />
+          <folding>
+            <element signature="e#462#1794#0" />
+            <element signature="e#579#816#0" />
+            <element signature="e#822#901#0" />
+            <element signature="e#1145#1608#0" />
+            <element signature="e#1702#1794#0" />
+            <element signature="e#1832#2959#0" />
+            <element signature="e#2997#4182#0" />
+            <element signature="e#4220#5396#0" />
+            <element signature="e#5454#6875#0" />
+            <element signature="e#6933#8459#0" />
+            <element signature="e#8517#10039#0" />
+            <element signature="e#10089#10596#0" />
+            <element signature="e#10089#10551#1" />
+            <element signature="e#10652#11771#0" />
+            <element signature="e#11825#12892#0" />
+            <element signature="e#12945#14049#0" />
+            <element signature="e#14237#16501#0" />
+            <element signature="e#14237#15863#1" />
+            <element signature="e#15925#16055#0" />
+            <element signature="e#15942#16054#0" />
+            <element signature="e#16092#16248#0" />
+            <element signature="e#16150#16247#0" />
+            <element signature="e#16634#16923#0" />
+            <element signature="e#16634#16780#1" />
+            <element signature="e#17056#17352#0" />
+            <element signature="e#17056#17202#1" />
+            <element signature="e#17485#17781#0" />
+            <element signature="e#17485#17631#1" />
+            <element signature="e#17863#18951#0" />
+            <element signature="e#17957#18075#0" />
+            <element signature="e#18309#18571#0" />
+            <element signature="e#18326#18446#0" />
+            <element signature="e#18618#18927#0" />
+            <element signature="e#18771#18927#0" />
+            <element signature="e#19064#19527#0" />
+            <element signature="e#19064#19178#1" />
+            <element signature="e#19640#20054#0" />
+            <element signature="e#19640#19754#1" />
+            <element signature="e#20167#20604#0" />
+            <element signature="e#20167#20281#1" />
+            <element signature="e#20687#21138#0" />
+            <element signature="e#20687#20937#1" />
+            <element signature="e#21221#21638#0" />
+            <element signature="e#21221#21471#1" />
+            <element signature="e#21712#22143#0" />
+            <element signature="e#21712#22042#1" />
+            <element signature="e#22217#22755#0" />
+            <element signature="e#22217#22583#1" />
+            <element signature="e#22829#23367#0" />
+            <element signature="e#22829#23195#1" />
+            <element signature="e#23431#23719#0" />
+            <element signature="e#23772#24197#0" />
+            <element signature="e#23772#24069#1" />
+            <element signature="e#24249#24674#0" />
+            <element signature="e#24249#24546#1" />
+            <element signature="e#24762#24830#0" />
+            <element signature="e#24901#25080#0" />
+            <element signature="e#24901#25002#1" />
+            <element signature="e#25147#25222#0" />
+            <element signature="e#25289#25364#0" />
+            <element signature="e#25443#25523#0" />
+            <element signature="e#25585#25836#0" />
+            <element signature="e#25585#25697#1" />
+            <element signature="e#25889#25984#0" />
+            <element signature="e#26398#26962#0" />
+            <element signature="e#26398#26803#1" />
+            <element signature="e#27030#27352#0" />
+            <element signature="e#27030#27215#1" />
+            <element signature="e#27403#27503#0" />
+            <element signature="e#27544#27772#0" />
+            <element signature="e#27544#27730#1" />
+            <element signature="e#27820#28081#0" />
+            <element signature="e#27820#27976#1" />
+            <element signature="e#28122#28197#0" />
+            <element signature="e#28237#28641#0" />
+            <element signature="e#28237#28562#1" />
+            <element signature="e#28676#28743#0" />
+            <element signature="e#28810#29192#0" />
+            <element signature="e#28810#29055#1" />
+            <element signature="e#29247#29347#0" />
+            <element signature="e#29391#29616#0" />
+            <element signature="e#29701#29999#0" />
+            <element signature="e#29701#29870#1" />
+            <element signature="e#30037#30146#0" />
+            <element signature="e#30200#30385#0" />
+            <element signature="e#30427#30635#0" />
+            <element signature="e#30427#30593#1" />
+            <element signature="e#30665#30870#0" />
+            <element signature="e#30665#30838#1" />
+            <element signature="e#30898#31114#0" />
+            <element signature="e#30898#31077#1" />
+            <element signature="e#31163#31219#0" />
+            <element signature="e#31273#31534#0" />
+            <element signature="e#31329#31422#0" />
+            <element signature="e#31586#32078#0" />
+            <element signature="e#31586#31959#1" />
+            <element signature="e#32130#32920#0" />
+            <element signature="e#32130#32802#1" />
+            <element signature="e#32975#33295#0" />
+            <element signature="e#32975#33166#1" />
+            <element signature="e#33356#33744#0" />
+            <element signature="e#33356#33571#1" />
+            <element signature="e#33809#35415#0" />
+            <element signature="e#33809#34717#1" />
+            <element signature="e#34854#35373#0" />
+            <element signature="e#34884#34906#0" />
+            <element signature="e#35073#35117#0" />
+            <element signature="e#35471#36059#0" />
+            <element signature="e#35471#35933#1" />
+            <element signature="e#36112#36261#0" />
+            <element signature="e#36286#36586#0" />
+            <element signature="e#36286#36483#1" />
+            <element signature="e#36613#36905#0" />
+            <element signature="e#36613#36793#1" />
+            <element signature="e#36950#37550#0" />
+            <element signature="e#36950#37307#1" />
+            <element signature="e#37362#37445#0" />
+            <element signature="e#37606#37657#0" />
+            <element signature="e#37794#41678#0" />
+            <element signature="e#37794#40847#1" />
+            <element signature="e#40888#41180#0" />
+            <element signature="e#41043#41180#0" />
+            <element signature="e#41277#41595#0" />
+            <element signature="e#41277#41346#0" />
+            <element signature="e#41832#47806#0" />
+            <element signature="e#41832#45150#1" />
+            <element signature="e#45155#45190#0" />
+            <element signature="e#45366#45641#0" />
+            <element signature="e#45380#45602#0" />
+            <element signature="e#45676#46186#0" />
+            <element signature="e#45712#45991#0" />
+            <element signature="e#45729#45968#0" />
+            <element signature="e#46018#46186#0" />
+            <element signature="e#46222#46945#0" />
+            <element signature="e#46457#46679#0" />
+            <element signature="e#46474#46652#0" />
+            <element signature="e#46739#46945#0" />
+            <element signature="e#46756#46872#0" />
+            <element signature="e#46964#47095#0" />
+            <element signature="e#46981#47074#0" />
+            <element signature="e#47210#47439#0" />
+            <element signature="e#47551#47644#0" />
+            <element signature="e#47942#48143#1" />
+            <element signature="e#48670#50713#0" />
+            <element signature="e#48670#48895#1" />
+            <element signature="e#49527#50463#0" />
+            <element signature="e#49639#49726#0" />
+            <element signature="e#49775#49858#0" />
+            <element signature="e#50795#51054#0" />
+            <element signature="e#50795#50924#1" />
+            <element signature="e#51130#51383#0" />
+            <element signature="e#51130#51259#1" />
+            <element signature="e#51456#52379#0" />
+            <element signature="e#51456#51709#1" />
+            <element signature="e#51756#51877#0" />
+            <element signature="e#51773#51864#0" />
+            <element signature="e#51943#52055#0" />
+            <element signature="e#52074#52314#0" />
+            <element signature="e#52531#56455#0" />
+            <element signature="e#52531#55083#1" />
+            <element signature="e#55376#55523#0" />
+            <element signature="e#55812#56455#0" />
+            <element signature="e#55961#56061#0" />
+            <element signature="e#56620#59373#0" />
+            <element signature="e#56620#58823#1" />
+            <element signature="e#59103#59226#0" />
+            <element signature="e#59469#61240#0" />
+            <element signature="e#59469#60998#1" />
+            <element signature="e#61393#64137#0" />
+            <element signature="e#61393#63915#1" />
+            <element signature="e#64285#67114#0" />
+            <element signature="e#64285#66223#1" />
+            <element signature="e#66461#66658#0" />
+            <element signature="e#66475#66621#0" />
+            <element signature="e#66713#66904#0" />
+            <element signature="e#66730#66859#0" />
+            <element signature="e#66941#67034#0" />
+            <element signature="e#67303#70218#0" />
+            <element signature="e#67303#69375#1" />
+            <element signature="e#69848#70007#0" />
+            <element signature="e#70315#70574#0" />
+            <element signature="e#70348#70507#0" />
+            <element signature="e#70678#71106#0" />
+            <element signature="e#70678#70856#1" />
+            <element signature="e#71203#71749#0" />
+            <element signature="e#71203#71431#1" />
+            <element signature="e#71847#72342#0" />
+            <element signature="e#71847#72054#1" />
+            <element signature="e#72494#73239#0" />
+            <element signature="e#72494#72690#0" />
+            <element signature="e#72960#73159#0" />
+            <element signature="e#72980#73105#0" />
+            <element signature="e#73386#73842#0" />
+            <element signature="e#73386#73577#0" />
+            <element signature="e#73954#74395#0" />
+            <element signature="e#73954#74137#1" />
+            <element signature="e#74501#74924#0" />
+            <element signature="e#74501#74672#1" />
+            <element signature="e#75086#75485#0" />
+            <element signature="e#75086#75248#1" />
+            <element signature="e#75641#76116#0" />
+            <element signature="e#75641#75841#0" />
+            <element signature="e#76273#76968#0" />
+            <element signature="e#76273#76500#1" />
+            <element signature="e#77017#77965#0" />
+            <element signature="e#77017#77504#1" />
+            <element signature="e#78059#80135#0" />
+            <element signature="e#78059#79966#1" />
+            <element signature="e#80232#85816#0" />
+            <element signature="e#80232#82023#1" />
+            <element signature="e#82144#82699#0" />
+            <element signature="e#82536#82699#0" />
+            <element signature="e#82553#82667#0" />
+            <element signature="e#82736#83009#0" />
+            <element signature="e#83055#83245#0" />
+            <element signature="e#83097#83245#0" />
+            <element signature="e#83114#83244#0" />
+            <element signature="e#83264#83656#0" />
+            <element signature="e#83302#83656#0" />
+            <element signature="e#83316#83608#0" />
+            <element signature="e#85558#85816#0" />
+            <element signature="e#85584#85789#0" />
+            <element signature="e#85882#86693#0" />
+            <element signature="e#85882#86474#1" />
+            <element signature="e#86760#87573#0" />
+            <element signature="e#86760#87332#1" />
+            <element signature="e#87706#89860#0" />
+            <element signature="e#87706#89397#1" />
+            <element signature="e#89897#90496#0" />
+            <element signature="e#89897#90443#1" />
+            <element signature="e#90550#93783#0" />
+            <element signature="e#90550#92432#1" />
+            <element signature="e#92670#93783#0" />
+            <element signature="e#92796#93061#0" />
+            <element signature="e#93105#93370#0" />
+            <element signature="e#93414#93656#0" />
+            <element signature="e#93863#93990#0" />
+            <element signature="e#93863#93930#1" />
+            <element signature="e#94045#94993#0" />
+            <element signature="e#94045#94853#1" />
+            <element signature="e#95178#95567#0" />
+            <element signature="e#95178#95247#1" />
+            <element signature="e#95619#96364#0" />
+            <element signature="e#95619#96288#1" />
+            <element signature="e#96419#96489#0" />
+            <element signature="e#96561#97345#0" />
+            <element signature="e#96561#96790#1" />
+            <element signature="e#96825#97219#0" />
+            <element signature="e#97428#98308#0" />
+            <element signature="e#97428#97674#1" />
+            <element signature="e#97708#98182#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/nn/modules/conv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="76" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodules/eff_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodels/scalenet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="e#552#747#1" />
+            <element signature="e#813#15190#0" />
+            <element signature="e#830#1014#0" />
+            <element signature="e#1124#1346#1" />
+            <element signature="e#1608#7127#0" />
+            <element signature="e#1840#1960#0" />
+            <element signature="e#4124#5924#0" />
+            <element signature="e#4171#4415#0" />
+            <element signature="e#4477#5924#0" />
+            <element signature="e#4867#5240#0" />
+            <element signature="e#5283#5924#0" />
+            <element signature="e#5300#5418#0" />
+            <element signature="e#5495#5627#0" />
+            <element signature="e#5744#5867#0" />
+            <element signature="e#5951#7127#0" />
+            <element signature="e#5994#6358#0" />
+            <element signature="e#6417#6790#0" />
+            <element signature="e#6485#6790#0" />
+            <element signature="e#6485#6525#0" />
+            <element signature="e#6848#7127#0" />
+            <element signature="e#7055#7127#0" />
+            <element signature="e#7163#15190#0" />
+            <element signature="e#7238#7306#0" />
+            <element signature="e#7370#8373#0" />
+            <element signature="e#7628#7937#0" />
+            <element signature="e#7805#7859#0" />
+            <element signature="e#7972#8373#0" />
+            <element signature="e#8028#8196#0" />
+            <element signature="e#8262#8305#0" />
+            <element signature="e#8419#8899#0" />
+            <element signature="e#8945#9283#0" />
+            <element signature="e#9329#10145#0" />
+            <element signature="e#9561#9715#0" />
+            <element signature="e#9750#10145#0" />
+            <element signature="e#9806#9968#0" />
+            <element signature="e#10034#10077#0" />
+            <element signature="e#10191#10614#0" />
+            <element signature="e#10660#11060#0" />
+            <element signature="e#11106#11469#0" />
+            <element signature="e#11535#12178#0" />
+            <element signature="e#11535#11601#0" />
+            <element signature="e#12224#12728#0" />
+            <element signature="e#12774#13070#0" />
+            <element signature="e#13364#14188#0" />
+            <element signature="e#13411#13572#0" />
+            <element signature="e#13634#14124#0" />
+            <element signature="e#14215#15190#0" />
+            <element signature="e#14267#15055#0" />
+            <element signature="e#14313#14422#0" />
+            <element signature="e#14487#14655#0" />
+            <element signature="e#14530#14611#0" />
+            <element signature="e#14720#14947#0" />
+            <element signature="e#14763#14897#0" />
+            <element signature="e#15228#25398#0" />
+            <element signature="e#15245#15429#0" />
+            <element signature="e#15794#20028#0" />
+            <element signature="e#16023#16143#0" />
+            <element signature="e#17801#18972#0" />
+            <element signature="e#17848#17993#0" />
+            <element signature="e#18055#18972#0" />
+            <element signature="e#18341#18540#0" />
+            <element signature="e#18583#18972#0" />
+            <element signature="e#18600#18718#0" />
+            <element signature="e#18795#18923#0" />
+            <element signature="e#18999#20028#0" />
+            <element signature="e#19042#19273#0" />
+            <element signature="e#19332#19709#0" />
+            <element signature="e#19400#19709#0" />
+            <element signature="e#19400#19443#0" />
+            <element signature="e#19767#20028#0" />
+            <element signature="e#19956#20028#0" />
+            <element signature="e#20064#25398#0" />
+            <element signature="e#20064#20142#0" />
+            <element signature="e#20226#20294#0" />
+            <element signature="e#20366#21199#0" />
+            <element signature="e#20366#20393#0" />
+            <element signature="e#20589#20756#0" />
+            <element signature="e#20791#21199#0" />
+            <element signature="e#20847#21022#0" />
+            <element signature="e#21088#21131#0" />
+            <element signature="e#21245#21687#0" />
+            <element signature="e#21245#21271#0" />
+            <element signature="e#21733#22002#0" />
+            <element signature="e#22048#22701#0" />
+            <element signature="e#22225#22327#0" />
+            <element signature="e#22362#22701#0" />
+            <element signature="e#22418#22524#0" />
+            <element signature="e#22590#22633#0" />
+            <element signature="e#22747#23077#0" />
+            <element signature="e#23150#23469#0" />
+            <element signature="e#23515#23730#0" />
+            <element signature="e#24024#24688#0" />
+            <element signature="e#24071#24212#0" />
+            <element signature="e#24274#24624#0" />
+            <element signature="e#24715#25398#0" />
+            <element signature="e#24767#25263#0" />
+            <element signature="e#24813#24922#0" />
+            <element signature="e#24987#25155#0" />
+            <element signature="e#25030#25111#0" />
+            <element signature="e#25435#29446#0" />
+            <element signature="e#25613#27999#0" />
+            <element signature="e#26472#26810#0" />
+            <element signature="e#26519#26810#0" />
+            <element signature="e#26855#27199#0" />
+            <element signature="e#26902#27137#0" />
+            <element signature="e#27244#27487#0" />
+            <element signature="e#27291#27487#0" />
+            <element signature="e#28035#29446#0" />
+            <element signature="e#28035#28099#0" />
+            <element signature="e#28296#28370#0" />
+            <element signature="e#28569#28697#0" />
+            <element signature="e#28612#28697#0" />
+            <element signature="e#28747#28924#0" />
+            <element signature="e#28979#29032#0" />
+            <element signature="e#29087#29140#0" />
+            <element signature="e#29195#29248#0" />
+            <element signature="e#29298#29426#0" />
+            <element signature="e#29341#29426#0" />
+            <element signature="e#29481#31387#0" />
+            <element signature="e#29481#29541#0" />
+            <element signature="e#29972#30653#0" />
+            <element signature="e#30318#30346#0" />
+            <element signature="e#30395#30498#0" />
+            <element signature="e#30547#30576#0" />
+            <element signature="e#30625#30653#0" />
+            <element signature="e#30689#31387#0" />
+            <element signature="e#30898#31080#0" />
+            <element signature="e#31129#31175#0" />
+            <element signature="e#31421#54072#0" />
+            <element signature="e#31482#31598#0" />
+            <element signature="e#32685#38391#0" />
+            <element signature="e#32746#32861#0" />
+            <element signature="e#33869#33971#0" />
+            <element signature="e#34020#34125#0" />
+            <element signature="e#34769#34849#0" />
+            <element signature="e#35230#35339#0" />
+            <element signature="e#35824#36183#0" />
+            <element signature="e#36313#36626#0" />
+            <element signature="e#36671#36892#0" />
+            <element signature="e#37320#37471#0" />
+            <element signature="e#37608#37768#0" />
+            <element signature="e#38029#38171#0" />
+            <element signature="e#38202#38363#0" />
+            <element signature="e#38561#39328#0" />
+            <element signature="e#38677#38979#0" />
+            <element signature="e#39366#40029#0" />
+            <element signature="e#39403#40029#0" />
+            <element signature="e#39448#39659#0" />
+            <element signature="e#39581#39602#0" />
+            <element signature="e#39724#39782#0" />
+            <element signature="e#39842#40029#0" />
+            <element signature="e#39892#39934#0" />
+            <element signature="e#40068#40419#0" />
+            <element signature="e#40135#40419#0" />
+            <element signature="e#40180#40296#0" />
+            <element signature="e#40361#40419#0" />
+            <element signature="e#40479#45698#0" />
+            <element signature="e#40531#42010#0" />
+            <element signature="e#40608#40755#0" />
+            <element signature="e#40814#40972#0" />
+            <element signature="e#41154#41577#0" />
+            <element signature="e#41284#41577#0" />
+            <element signature="e#41709#41980#0" />
+            <element signature="e#41796#41938#0" />
+            <element signature="e#42076#45698#0" />
+            <element signature="e#42076#42108#0" />
+            <element signature="e#42791#43990#0" />
+            <element signature="e#43121#43990#0" />
+            <element signature="e#43464#43706#0" />
+            <element signature="e#43521#43610#0" />
+            <element signature="e#43757#43990#0" />
+            <element signature="e#43814#43898#0" />
+            <element signature="e#44025#45030#0" />
+            <element signature="e#44124#45030#0" />
+            <element signature="e#44133#44258#0" />
+            <element signature="e#44504#44746#0" />
+            <element signature="e#44561#44650#0" />
+            <element signature="e#44797#45030#0" />
+            <element signature="e#44854#44938#0" />
+            <element signature="e#45286#45627#0" />
+            <element signature="e#45386#45586#0" />
+            <element signature="e#45386#45448#0" />
+            <element signature="e#45766#46391#0" />
+            <element signature="e#45916#46154#0" />
+            <element signature="e#45959#46154#0" />
+            <element signature="e#46427#46721#0" />
+            <element signature="e#46784#47172#0" />
+            <element signature="e#46869#46977#0" />
+            <element signature="e#47218#47437#0" />
+            <element signature="e#47315#47396#0" />
+            <element signature="e#47346#47396#0" />
+            <element signature="e#47482#47698#0" />
+            <element signature="e#47578#47658#0" />
+            <element signature="e#47609#47658#0" />
+            <element signature="e#47739#47878#0" />
+            <element signature="e#47793#47823#0" />
+            <element signature="e#47918#48056#0" />
+            <element signature="e#47971#48001#0" />
+            <element signature="e#48115#52203#0" />
+            <element signature="e#48185#48217#0" />
+            <element signature="e#48417#49029#0" />
+            <element signature="e#48500#49029#0" />
+            <element signature="e#48573#48802#0" />
+            <element signature="e#48873#49029#0" />
+            <element signature="e#49076#50098#0" />
+            <element signature="e#49134#50098#0" />
+            <element signature="e#49207#49675#0" />
+            <element signature="e#49311#49437#0" />
+            <element signature="e#49521#49675#0" />
+            <element signature="e#49746#49901#0" />
+            <element signature="e#49987#50098#0" />
+            <element signature="e#50144#51167#0" />
+            <element signature="e#50202#51167#0" />
+            <element signature="e#50275#50743#0" />
+            <element signature="e#50379#50505#0" />
+            <element signature="e#50589#50743#0" />
+            <element signature="e#50814#50970#0" />
+            <element signature="e#51056#51167#0" />
+            <element signature="e#51215#51933#0" />
+            <element signature="e#51273#51933#0" />
+            <element signature="e#51346#51510#0" />
+            <element signature="e#51581#51736#0" />
+            <element signature="e#51822#51933#0" />
+            <element signature="e#52261#54072#0" />
+            <element signature="e#52330#52361#0" />
+            <element signature="e#52561#52835#0" />
+            <element signature="e#52643#52835#0" />
+            <element signature="e#52886#53159#0" />
+            <element signature="e#52968#53159#0" />
+            <element signature="e#53212#53565#0" />
+            <element signature="e#53374#53565#0" />
+            <element signature="e#53622#53894#0" />
+            <element signature="e#53704#53894#0" />
+            <element signature="e#54156#54168#0" />
+            <element signature="e#57207#57752#0" />
+            <element signature="e#57765#58292#0" />
+            <element signature="e#58305#58799#0" />
+            <element signature="e#58812#59199#0" />
+            <element signature="e#59964#59977#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodels/xresnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2736">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="e#72#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodels/dxnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#72#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodels/scale_resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="396" column="34" selection-start-line="396" selection-start-column="34" selection-end-line="396" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torchvision/models/resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" selection-start-line="9" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodels/tvm_resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-666">
+          <caret line="56" column="58" lean-forward="true" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+          <folding>
+            <element signature="e#74#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/nn/modules/activation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#160#864#1" />
+            <element signature="e#2221#3898#0" />
+            <element signature="e#2221#3427#1" />
+            <element signature="e#3503#3617#0" />
+            <element signature="e#3657#3731#0" />
+            <element signature="e#3767#3898#0" />
+            <element signature="e#3929#5917#0" />
+            <element signature="e#3929#5023#1" />
+            <element signature="e#5127#5614#0" />
+            <element signature="e#5206#5318#0" />
+            <element signature="e#5365#5477#0" />
+            <element signature="e#5654#5720#0" />
+            <element signature="e#5756#5917#0" />
+            <element signature="e#5947#6653#0" />
+            <element signature="e#5947#6452#1" />
+            <element signature="e#6501#6543#0" />
+            <element signature="e#6579#6653#0" />
+            <element signature="e#6683#7176#0" />
+            <element signature="e#6683#7109#1" />
+            <element signature="e#7149#7176#0" />
+            <element signature="e#7203#7699#0" />
+            <element signature="e#7203#7635#1" />
+            <element signature="e#7675#7699#0" />
+            <element signature="e#7725#8693#0" />
+            <element signature="e#7725#8319#1" />
+            <element signature="e#8378#8463#0" />
+            <element signature="e#8503#8548#0" />
+            <element signature="e#8584#8693#0" />
+            <element signature="e#8720#9850#0" />
+            <element signature="e#8720#9558#1" />
+            <element signature="e#9607#9666#0" />
+            <element signature="e#9706#9740#0" />
+            <element signature="e#9776#9850#0" />
+            <element signature="e#9876#10625#0" />
+            <element signature="e#9876#10396#1" />
+            <element signature="e#10438#10488#0" />
+            <element signature="e#10528#10557#0" />
+            <element signature="e#10593#10625#0" />
+            <element signature="e#10658#11632#0" />
+            <element signature="e#10658#11382#1" />
+            <element signature="e#11427#11488#0" />
+            <element signature="e#11528#11566#0" />
+            <element signature="e#11602#11632#0" />
+            <element signature="e#11664#12916#0" />
+            <element signature="e#11664#12473#1" />
+            <element signature="e#12543#12652#0" />
+            <element signature="e#12692#12753#0" />
+            <element signature="e#12789#12916#0" />
+            <element signature="e#12949#13457#0" />
+            <element signature="e#12949#13391#1" />
+            <element signature="e#13431#13457#0" />
+            <element signature="e#13488#14690#0" />
+            <element signature="e#13488#14351#1" />
+            <element signature="e#14407#14499#0" />
+            <element signature="e#14539#14590#0" />
+            <element signature="e#14626#14690#0" />
+            <element signature="e#14723#15724#0" />
+            <element signature="e#14723#15482#1" />
+            <element signature="e#15527#15588#0" />
+            <element signature="e#15628#15666#0" />
+            <element signature="e#15702#15724#0" />
+            <element signature="e#15752#17198#0" />
+            <element signature="e#15752#16823#1" />
+            <element signature="e#16886#17034#0" />
+            <element signature="e#17074#17108#0" />
+            <element signature="e#17144#17198#0" />
+            <element signature="e#17229#17719#0" />
+            <element signature="e#17229#17655#1" />
+            <element signature="e#17695#17719#0" />
+            <element signature="e#17752#18237#0" />
+            <element signature="e#17752#18171#1" />
+            <element signature="e#18211#18237#0" />
+            <element signature="e#18267#19157#0" />
+            <element signature="e#18267#18972#1" />
+            <element signature="e#19015#19069#0" />
+            <element signature="e#19109#19157#0" />
+            <element signature="e#19187#20467#0" />
+            <element signature="e#19187#20144#1" />
+            <element signature="e#20188#20242#0" />
+            <element signature="e#20287#20379#0" />
+            <element signature="e#20419#20467#0" />
+            <element signature="e#20499#21255#0" />
+            <element signature="e#20499#21099#1" />
+            <element signature="e#21139#21255#0" />
+            <element signature="e#21288#22294#0" />
+            <element signature="e#21288#21964#1" />
+            <element signature="e#22008#22065#0" />
+            <element signature="e#22110#22202#0" />
+            <element signature="e#22242#22294#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/nn/modules/pooling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="893" column="6" selection-start-line="893" selection-start-column="6" selection-end-line="893" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="476" selection-start-line="476" selection-end-line="476" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodules/relu_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+          <folding>
+            <element signature="e#73#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg_params/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodels/_init_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arch_params/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#1#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg_params/actres_cifar_cfg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#212#2824#0" />
+            <element signature="e#2054#2072#0" />
+            <element signature="e#2211#2332#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arch_params/actres_cifar_archs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/configure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_val_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="71" column="43" lean-forward="true" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodels/activeresnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#73#320#1" />
+            <element signature="e#486#878#0" />
+            <element signature="e#1119#2040#0" />
+            <element signature="e#1211#1688#0" />
+            <element signature="e#1724#2040#0" />
+            <element signature="e#2076#3384#0" />
+            <element signature="e#2168#2943#0" />
+            <element signature="e#2979#3384#0" />
+            <element signature="e#3957#4220#0" />
+            <element signature="e#4272#4502#0" />
+            <element signature="e#5079#5471#0" />
+            <element signature="e#5888#6493#0" />
+            <element signature="e#5987#6222#0" />
+            <element signature="e#6563#6725#0" />
+            <element signature="e#6563#6624#1" />
+            <element signature="e#6771#7038#0" />
+            <element signature="e#6889#6970#0" />
+            <element signature="e#6920#6970#0" />
+            <element signature="e#7083#7347#0" />
+            <element signature="e#7200#7280#0" />
+            <element signature="e#7231#7280#0" />
+            <element signature="e#7397#7646#0" />
+            <element signature="e#7429#7518#0" />
+            <element signature="e#7559#7646#0" />
+            <element signature="e#7712#8546#0" />
+            <element signature="e#7894#7969#0" />
+            <element signature="e#8017#8160#0" />
+            <element signature="e#8067#8160#0" />
+            <element signature="e#8204#8546#0" />
+            <element signature="e#8254#8546#0" />
+            <element signature="e#8301#8402#0" />
+            <element signature="e#8445#8546#0" />
+            <element signature="e#8611#9006#0" />
+            <element signature="e#8793#8865#0" />
+            <element signature="e#8921#9006#0" />
+            <element signature="e#9042#9332#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_curves/ScaleNet-paper/params_compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_curves/ScaleNet-paper/acc-width.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="29" column="88" selection-start-line="29" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmodels/efficientnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="131" column="84" selection-start-line="131" selection-start-column="84" selection-end-line="131" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Miniconda3/envs/pth04/Lib/site-packages/torch/serialization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="736" column="53" lean-forward="true" selection-start-line="736" selection-start-column="53" selection-end-line="736" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_curves/ScaleNet-paper/plot-error-loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#74#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_curves/plot-error-loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="197" column="9" lean-forward="true" selection-start-line="197" selection-start-column="9" selection-end-line="197" selection-end-column="9" />
+          <folding>
+            <element signature="e#74#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_curves/plot-error-loss-2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="192" column="27" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
+          <folding>
+            <element signature="e#3670#3714#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_curves/ScaleNet-paper/flops_compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="117" column="29" lean-forward="true" selection-start-line="117" selection-end-line="118" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/cat.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/cat_cam--vivonet-(320, 320)-top0.783-pid320-tidNone.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/gradient-camera-block.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1319">
+          <caret line="331" column="53" lean-forward="true" selection-start-line="331" selection-start-column="53" selection-end-line="331" selection-end-column="53" />
+          <folding>
+            <element signature="e#723#5871#0" />
+            <element signature="e#723#914#1" />
+            <element signature="e#969#1142#0" />
+            <element signature="e#1187#1214#0" />
+            <element signature="e#1253#1274#0" />
+            <element signature="e#1311#5871#0" />
+            <element signature="e#1368#1396#0" />
+            <element signature="e#1549#2610#0" />
+            <element signature="e#1614#2461#0" />
+            <element signature="e#1766#2014#0" />
+            <element signature="e#2111#2461#0" />
+            <element signature="e#2240#2322#0" />
+            <element signature="e#2373#2461#0" />
+            <element signature="e#2652#4043#0" />
+            <element signature="e#2717#3894#0" />
+            <element signature="e#2869#3080#0" />
+            <element signature="e#3146#3838#0" />
+            <element signature="e#3209#3838#0" />
+            <element signature="e#3437#3838#0" />
+            <element signature="e#3585#3675#0" />
+            <element signature="e#3742#3838#0" />
+            <element signature="e#4085#5871#0" />
+            <element signature="e#4150#5722#0" />
+            <element signature="e#4302#4513#0" />
+            <element signature="e#4579#5666#0" />
+            <element signature="e#4642#5666#0" />
+            <element signature="e#4824#5598#0" />
+            <element signature="e#4889#5598#0" />
+            <element signature="e#5146#5598#0" />
+            <element signature="e#5313#5411#0" />
+            <element signature="e#5494#5598#0" />
+            <element signature="e#5901#8498#0" />
+            <element signature="e#5998#6238#0" />
+            <element signature="e#6278#6302#0" />
+            <element signature="e#6373#8498#0" />
+            <element signature="e#7036#7184#0" />
+            <element signature="e#7194#7218#0" />
+            <element signature="e#7456#7472#0" />
+            <element signature="e#7813#7846#0" />
+            <element signature="e#8532#9075#0" />
+            <element signature="e#8673#8809#0" />
+            <element signature="e#9166#9690#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
