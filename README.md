@@ -1,18 +1,24 @@
 # ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
-# CAM Camparision of ScaleNet and DenseNet
+# CAM Camparision of ScaleNet & DenseNet
 ![Multi-Scale Input](images/multi-scale-show-5.jpg)
-top: scalenet  bottom:densenet
+`top: scalenet  bottom:densenet`
+
+# Requirements
+Pytorch >= 0.4
+TensorboardX
 
 # How to Train ScaleNet
 
-model architecture params is in folder: ./arch_params
+model architecture params are in folder: ./arch_params
 
-model training configs is in folder: ./cfg_params 
+model training configs are in folder: ./cfg_params 
 
 for example, when trainining ImageNet, net1 = 'vo21 || vo69 || vo72 || vo76',  
 check './arch_params/scalenet_imagenet_params.py'
+
+data root, checkpoints path, tensorboard-logs-path are in xxxmodel_xxxdata_cfg.py  
 
 ## Train by Terminal Commands
 
