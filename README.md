@@ -1,7 +1,7 @@
 # ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
-# the CAM Camparision between ScaleNet and DenseNet
+# CAM Camparision of ScaleNet and DenseNet
 ![Multi-Scale Input](images/multi-scale-show-5.jpg)
 top: scalenet  bottom:densenet
 
