@@ -65,3 +65,5 @@ print('\n=> Your Args is :', args, '\n')
 
 # Pre-trained ScaleNet models on ImageNet
 uploading ... coming soon!
+BaiduYunPan: 
+GoogleDrive:
