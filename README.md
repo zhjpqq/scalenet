@@ -64,6 +64,8 @@ print('\n=> Your Args is :', args, '\n')
 
 
 # Pre-trained ScaleNet models on ImageNet
-uploading ... coming soon!
-BaiduYunPan: 
-GoogleDrive:
+![pre-trained-models](images/pre-trained-modes.jpg)
+
+BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg 
+
+GoogleDrive: uploading ... coming soon!
