@@ -52,7 +52,7 @@ args.gpu_ids = [0, 1, 2, 3, 5, 6]
 print('\n=> Your Args is :', args, '\n')
 ```
 
-# Pre-trained ScaleNet on ImageNet
+# Pre-trained Models on ImageNet
 ![pre-trained-models](images/pre-trained-modes.jpg)
 
 BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg 
