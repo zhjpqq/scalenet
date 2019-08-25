@@ -39,9 +39,9 @@ nohup python run_main.py -name 'scalenet' -arch 'net1' -cfg 'cfgnet1' -exp 'exp.
 
 ```
 
-
 ## Train by Pycharm Client
-Find the following lines in 'run_main.py', and remove the comments on these lines:
+Find the following lines in 'run_main.py', and remove the comments on these lines.
+Then run this file in Pycharm.
 ```
 args.arch_name = 'scalenet'
 args.arch_list = ['net1']
@@ -51,7 +51,7 @@ args.gpu_ids = [0, 1, 2, 3, 5, 6]
 print('\n=> Your Args is :', args, '\n')
 ```
 
-# Pre-trained ScaleNet models on ImageNet
+# Pre-trained ScaleNet on ImageNet
 ![pre-trained-models](images/pre-trained-modes.jpg)
 
 BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg 
