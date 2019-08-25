@@ -39,6 +39,7 @@ nohup python run_main.py -name 'scalenet' -arch 'net1' -cfg 'cfgnet1' -exp 'exp.
 
 ```
 
+
 ## Train by Pycharm Client
 Find the following lines in 'run_main.py', and remove the comments on these lines:
 ```
@@ -50,6 +51,14 @@ args.gpu_ids = [0, 1, 2, 3, 5, 6]
 print('\n=> Your Args is :', args, '\n')
 ```
 
+# Pre-trained ScaleNet models on ImageNet
+![pre-trained-models](images/pre-trained-modes.jpg)
+
+BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg 
+
+GoogleDrive: uploading ... coming soon!
+
+
 # Other Features
 
 - Unified Training Framework for Classification.
@@ -58,14 +67,4 @@ print('\n=> Your Args is :', args, '\n')
 
 - Unified Model Factory, including Pytorch-official models and New Models in 2019.  
 
-- New Models in 2019: ScaleNet, EfficientNet, MobieNet-V3, HighResolutionNet etc..
-
-- Many Usefull tools in xtils.py and /tools, eg CAM, FLOPS, Params etc ..
-
-
-# Pre-trained ScaleNet models on ImageNet
-![pre-trained-models](images/pre-trained-modes.jpg)
-
-BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg 
-
-GoogleDrive: uploading ... coming soon!
+- Including New Models in 2019: ScaleNet, EfficientNet, MobieNet-V3, HighResolutionNet etc..
