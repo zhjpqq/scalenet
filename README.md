@@ -1,6 +1,4 @@
 
-[TOC]
-
 # ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
@@ -71,3 +69,6 @@ GoogleDrive: uploading ... coming soon!
 - Unified Model Factory, including Pytorch-official models and New Models in 2019.  
 
 - Including New Models in 2019: ScaleNet, EfficientNet, MobieNet-V3, HighResolutionNet etc..
+
+
+[TOC]
