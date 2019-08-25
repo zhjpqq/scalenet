@@ -1,3 +1,6 @@
+
+[TOC]
+
 # ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
