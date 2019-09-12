@@ -73,4 +73,6 @@ GoogleDrive: uploading ... coming soon!
 - Including New Models in 2019: ScaleNet, EfficientNet, MobieNet-V3, HighResolutionNet etc..
 
 
-[TOC]
+# Update Logs
+
+- Add different up-/down-sampling methods to ScaleNet 增加不同上采样/下采样方法的对比
