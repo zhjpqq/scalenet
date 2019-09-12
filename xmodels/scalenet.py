@@ -6,6 +6,7 @@ import numpy as np
 import math, torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torchvision as tv
 from xmodules.downsample import DownSampleA, DownSampleB, DownSampleC, DownSampleD, \
     DownSampleE, DownSampelH, DownSampleO
 from xmodules.rockblock import RockBlock, RockBlockM, RockBlockU, RockBlockV, RockBlockR, RockBlockG, RockBlockN
@@ -16,9 +17,32 @@ from xmodules.affineblock import AfineBlock
   ScaleNet => AffineBlock + RockBlock + DoubleCouple + SingleCouple 
                + Summary(+merge +split) + Boost + BottleNeck 
                + Cat/Para-Transform + Channels(++expand)
+    
+  update: 2019-9-3
+  1. 使用 Interpolation(scale=2) + Conv2d(stride=1) 代替 DeConv2d(stride=2)，进行上采样
+     upksp=110时，时间与deconv()相同；upksp=311时，时间2倍于deconv.
+     
+  2. 使用conv(stride=1) + maxpool(stride=2) 代替 conv(stride=2) 进行下采样
 """
 
 inplace = [False, True][1]
+
+
+class Interpolate(nn.Module):
+
+    def __init__(self, scale=0., mode='nearest'):
+        super(Interpolate, self).__init__()
+        assert scale != 0.
+        self.scale = scale
+        self.mode = mode
+
+    def forward(self, x):
+        x = F.interpolate(x, scale_factor=self.scale, mode=self.mode)
+        return x
+
+    def __repr__(self):
+        return self.__class__.__name__ + \
+               '(factor_scale=%s, mode=%s)' % (self.scale, self.mode)
 
 
 class DoubleCouple(nn.Module):
@@ -35,7 +59,10 @@ class DoubleCouple(nn.Module):
 
     def __init__(self, depth, expand, growth, slink='A', after=True, down=False, dfunc='A',
                  dstyle=('maxpool', 'convk3m', 'convk2'), classify=0, nclass=1000,
-                 last_branch=1, last_down=False, last_dfuc='D', version=1):
+                 last_branch=1, last_down=False, last_dfuc='D',
+                 upscale='deconv', upmode='nearest', upksp='311',
+                 downscale='conv', downksp='311',
+                 version=1):
 
         super(DoubleCouple, self).__init__()
         assert last_branch <= 3, '<last_branch> of DoubleCouple should be <= 3...'
@@ -43,6 +70,7 @@ class DoubleCouple(nn.Module):
         assert last_dfuc != 'O', '<last_dfuc> of DoubleCouple should not be "O", ' \
                                  'choose others in <down_func_dict>'
         assert set(dstyle).issubset(self.down_style), '<dstyle> should be in <down_style>, but %s.' % dstyle
+        assert upscale in ['deconv', 'interp']
         assert version in [1, 2, 3], '<version> now expected in [1, 2, 3], but %s.' % version
         self.depth = depth
         self.expand = expand
@@ -61,6 +89,13 @@ class DoubleCouple(nn.Module):
         self.last_dfuc = self.down_func_dict[last_dfuc]
         self.classify = classify
         self.nclass = nclass
+        self.downscale = downscale
+        downksp = [int(x) for x in str(downksp)]
+        self.downksp = downksp
+        self.upscale = upscale
+        self.upmode = upmode
+        upksp = [int(x) for x in str(upksp)]
+        self.upksp = upksp
         self.version = version
         self.active_fc = False
 
@@ -70,15 +105,54 @@ class DoubleCouple(nn.Module):
             deck, decop = 3, 1
 
         self.bn1 = nn.BatchNorm2d(depth)
-        self.conv1 = nn.Conv2d(depth, depth + growtha, 3, stride=2, padding=1, bias=False)
+        if downscale == 'conv':
+            self.conv1 = nn.Conv2d(depth, depth + growtha, 3, stride=2, padding=1, bias=False)
+        elif downscale == 'pool':
+            self.conv1 = nn.Sequential(
+                nn.Conv2d(depth, depth + growtha, downksp[0], stride=downksp[1], padding=downksp[2], bias=False),
+                nn.MaxPool2d(2, 2, 0)
+            )
+        else:
+            raise NotImplementedError('Unknown <downscale: %s>' % downscale)
+
         self.bn2 = nn.BatchNorm2d(depth + growtha)
-        self.conv2 = nn.Conv2d(depth + growtha, depth + 2 * growtha, 3, stride=2, padding=1, bias=False)
+        if downscale == 'conv':
+            self.conv2 = nn.Conv2d(depth + growtha, depth + 2 * growtha, 3, stride=2, padding=1, bias=False)
+        elif downscale == 'pool':
+            self.conv2 = nn.Sequential(
+                nn.Conv2d(depth + growtha, depth + 2 * growtha, downksp[0], stride=downksp[1], padding=downksp[2],
+                          bias=False),
+                nn.MaxPool2d(2, 2, 0)
+            )
+        else:
+            raise NotImplementedError('Unknown <downscale: %s>' % downscale)
+
         self.bn3 = nn.BatchNorm2d(depth + 2 * growtha)
-        self.deconv3 = nn.ConvTranspose2d(depth + 2 * growtha, depth + growtha, deck, stride=2, padding=1, bias=False,
-                                          output_padding=decop, dilation=1)
+        if upscale == 'deconv':
+            self.deconv3 = nn.ConvTranspose2d(depth + 2 * growtha, depth + growtha, deck, stride=2, padding=1,
+                                              bias=False,
+                                              output_padding=decop, dilation=1)
+        elif upscale == 'interp':
+            self.deconv3 = nn.Sequential(
+                Interpolate(scale=2, mode=self.upmode),
+                nn.Conv2d(depth + 2 * growtha, depth + growtha, kernel_size=upksp[0],
+                          stride=upksp[1], padding=upksp[2], dilation=1, bias=False),
+            )
+        else:
+            raise NotImplementedError('Unknown <upscale: %s>' % upscale)
+
         self.bn4 = nn.BatchNorm2d(depth + growtha)
-        self.deconv4 = nn.ConvTranspose2d(depth + growtha, depth, deck, stride=2, padding=1, bias=False,
-                                          output_padding=decop, dilation=1)
+        if upscale == 'deconv':
+            self.deconv4 = nn.ConvTranspose2d(depth + growtha, depth, deck, stride=2, padding=1, bias=False,
+                                              output_padding=decop, dilation=1)
+        elif upscale == 'interp':
+            self.deconv4 = nn.Sequential(
+                Interpolate(scale=2, mode=self.upmode),
+                nn.Conv2d(depth + growtha, depth, kernel_size=upksp[0],
+                          stride=upksp[1], padding=upksp[2], dilation=1, bias=False),
+            )
+        else:
+            raise NotImplementedError('Unknown <upscale: %s>' % upscale)
 
         if self.classify > 0:
             self.classifier = XClassifier(depth + 2 * growtha, nclass)
@@ -226,43 +300,6 @@ class DoubleCouple(nn.Module):
             res4 = self.deconv4(F.relu(self.bn4(res3), inplace))
             res4 = res4 + x1
 
-        # cat-style
-        elif self.slink == 'G':
-            # Note: x2, x3 在当前block内不生效，全部累加到本stage的最后一个block内, 在downsize的时候生效
-            # only x1 for calculate, x2 / x3 all moved to next block until the last block
-            # Not good! x2, x3 be wasted .
-            res1 = self.conv1(F.relu(self.bn1(x1), inplace))
-            res2 = self.conv2(F.relu(self.bn2(res1), inplace))
-            res3 = self.deconv3(F.relu(self.bn3(res2), inplace))
-            res4 = self.deconv4(F.relu(self.bn4(res3), inplace))
-            out = res2
-
-            res1 = res1 if x2 is None else res1 + x2
-            res2 = res2 if x3 is None else res2 + x3
-            res3 = res3 + res1
-            res4 = res4 + x1
-
-        elif self.slink == 'H':
-            # B的变体，但在向后累加时，丢掉本block的res1，只有res3.
-            res1 = self.conv1(F.relu(self.bn1(x1), inplace))
-            res2 = self.conv2(F.relu(self.bn2(res1), inplace))
-            res3 = self.deconv3(F.relu(self.bn3(res2), inplace))
-            res4 = self.deconv4(F.relu(self.bn4(res3), inplace))
-            out = res2
-
-            # res1 = res1 if x2 is None else res1 + x2
-            res2 = res2 if x3 is None else res2 + x3
-            res3 = res3 if x3 is None else res3 + x2
-            res4 = res4 + x1
-
-        elif self.slink == 'N':
-            # No Shortcuts Used
-            res1 = self.conv1(F.relu(self.bn1(x1), inplace))
-            res2 = self.conv2(F.relu(self.bn2(res1), inplace))
-            res3 = self.deconv3(F.relu(self.bn3(res2), inplace))
-            res4 = self.deconv4(F.relu(self.bn4(res3), inplace))
-            out = res2
-
         else:
             raise NotImplementedError('Unknown Slink for DoubleCouple : %s ' % self.slink)
 
@@ -326,13 +363,16 @@ class SingleCouple(nn.Module):
     down_style = {'avgpool', 'maxpool', 'convk2', 'convk3', 'convk2a', 'convk2m', 'convk3a', 'convk3m'}
 
     def __init__(self, depth, expand, growth, slink='A', after=True, down=False, dfunc='A',
-                 dstyle=('maxpool', 'convk3m', 'convk2'), classify=0, nclass=1000, last_branch=1,
-                 last_down=False, last_dfuc='D', version=1):
+                 dstyle=('maxpool', 'convk3m', 'convk2'), classify=0, nclass=1000,
+                 last_branch=1, last_down=False, last_dfuc='D',
+                 upscale='deconv', upmode='nearest', upksp='311', downscale='conv', downksp='311',
+                 version=1):
         super(SingleCouple, self).__init__()
         assert last_branch <= 2, '<last_branch> of SingleCouple should be <= 2'
         assert len(growth) == 2, 'len of <growth> of SingleCouple should be 2'
         assert last_dfuc != 'O', '<last_dfuc> of SingleCouple should not be "O", ' \
                                  'choose others in <down_func_dict>'
+        assert upscale in ['deconv', 'interp']
         assert set(dstyle).issubset(self.down_style), '<dstyle> should be in <down_style>, but %s.' % dstyle
         assert version in [1, 2, 3], '<version> now expected in [1, 2, 3], but %s.' % version
         self.depth = depth
@@ -351,6 +391,13 @@ class SingleCouple(nn.Module):
         self.last_dfuc = self.down_func_dict[last_dfuc]
         self.classify = classify
         self.nclass = nclass
+        self.upscale = upscale
+        self.upmode = upmode
+        upksp = [int(x) for x in str(upksp)]
+        self.upksp = upksp
+        self.downscale = downscale
+        downksp = [int(x) for x in str(downksp)]
+        self.downksp = downksp
         self.version = version
         self.active_fc = False
 
@@ -360,10 +407,23 @@ class SingleCouple(nn.Module):
             deck, decop = 3, 1
 
         self.bn1 = nn.BatchNorm2d(depth)
-        self.conv1 = nn.Conv2d(depth, depth + growtha, 3, stride=2, padding=1, bias=False)
+        if downscale == 'conv':
+            self.conv1 = nn.Conv2d(depth, depth + growtha, 3, stride=2, padding=1, bias=False)
+        elif downscale == 'pool':
+            self.conv1 = nn.Sequential(
+                nn.Conv2d(depth, depth + growtha, downksp[0], stride=downksp[1], padding=downksp[2], bias=False),
+                nn.MaxPool2d(2, 2, 0)
+            )
+
         self.bn2 = nn.BatchNorm2d(depth + growtha)
-        self.deconv2 = nn.ConvTranspose2d(depth + growtha, depth, deck, stride=2, padding=1, bias=False,
-                                          output_padding=decop)
+        if upscale == 'deconv':
+            self.deconv2 = nn.ConvTranspose2d(depth + growtha, depth, deck, stride=2, padding=1, bias=False,
+                                              output_padding=decop)
+        elif upscale == 'interp':
+            self.deconv2 = nn.Sequential(
+                Interpolate(scale=2, mode=self.upmode),
+                nn.Conv2d(depth + growtha, depth, upksp[0], stride=upksp[1], padding=upksp[2], bias=False),
+            )
 
         if self.classify > 0:
             self.classifier = XClassifier(depth + growtha, nclass)
@@ -697,6 +757,11 @@ class ScaleNet(nn.Module):
                  rock='U',
                  branch=3,
                  depth=64,
+                 upscale='deconv',
+                 upmode='nearest',
+                 upksp='311',
+                 downscale='conv',
+                 downksp='311',
                  layers=(2, 2, 2, 2),
                  blocks=('D', 'D', 'S', 'S'),
                  slink=('A', 'A', 'A', 'A'),
@@ -736,9 +801,19 @@ class ScaleNet(nn.Module):
         elif dataset == 'imagenet':
             self.insize = 64 if insize == 0 else insize
             assert stages <= 5, 'imagenet stages should <= 5'
+        assert upscale in ['deconv', 'interp'], 'Unknown <upscale: %s> method!' % upscale
+        assert upmode in ['nearest', 'bilinear', 'area'], 'Unknown <upmode: %s> method!' % upmode
+        assert upksp in ['311', '211', '110'], 'Unknown <upksp: %s> method!' % upksp
+        assert downscale in ['conv', 'pool'], 'Unknown <downscale: %s> method!' % downscale
+        assert downksp in ['311', '211', '110'], 'Unknown <downksp: %s> method!' % downksp
 
         self.branch = branch
         self.rock = self.rocker[rock]
+        self.upscale = upscale
+        self.upmode = upmode
+        self.upksp = upksp
+        self.downscale = downscale
+        self.downksp = downksp
         self.depth = depth
         self.stages = stages
         self.layers = layers
@@ -843,11 +918,15 @@ class ScaleNet(nn.Module):
             layers.append(
                 block(depth=indepth, expand=0, growth=growth, slink=slink, after=True,
                       down=False, dfunc=dfunc, dstyle=dstyle, classify=cfy, nclass=self.nclass,
-                      last_branch=last_branch, last_down=False, last_dfuc='None', version=self.version))
+                      last_branch=last_branch, last_down=False, last_dfuc='None',
+                      upscale=self.upscale, upmode=self.upmode, upksp=self.upksp,
+                      downscale=self.downscale, downksp=self.downksp, version=self.version))
         layers.append(
             block(depth=indepth, expand=expand, growth=growth, slink=slink, after=after,
                   down=True, dfunc=dfunc, dstyle=dstyle, classify=cfy, nclass=self.nclass,
-                  last_branch=last_branch, last_down=last_down, last_dfuc=last_dfuc, version=self.version))
+                  last_branch=last_branch, last_down=last_down, last_dfuc=last_dfuc,
+                  upscale=self.upscale, upmode=self.upmode, upksp=self.upksp,
+                  downscale=self.downscale, downksp=self.downksp, version=self.version))
         return nn.Sequential(*layers)
 
     def _init_params(self):
@@ -1003,6 +1082,7 @@ class ScaleNet(nn.Module):
             x = self.affine(x)
         x = self.pyramid(x)
         for s in range(self.stages):
+            # print('current stage --> %s' % s)
             x = getattr(self, 'stage%s' % (s + 1))(x)
         x = self.summary(x)  # x <=> pred
         x = [p for p in x if p is not None]
@@ -1189,115 +1269,162 @@ if __name__ == '__main__':
 
     torch.manual_seed(1)
 
+    # check file .\ClassifyNeXt\find_models\find_imgnet_scalenet.py
+    # check file .\ClassifyNeXt\arch_params\scalenet_imagenet_archs.py
+
     # # imageNet
-    # exp5 = {'stages': 5, 'branch': 3, 'rock': 'U', 'depth': 16, 'kldloss': False,
-    #         'layers': (6, 5, 4, 3, 2), 'blocks': ('D', 'D', 'D', 'S', 'S'), 'slink': ('A', 'A', 'A', 'A', 'A'),
-    #         'growth': (12, 12, 12, 12, 12), 'classify': (1, 1, 1, 1, 1),
-    #         'expand': (1 * 16, 2 * 16, 4 * 16, 8 * 16), 'dfunc': ('O', 'D', 'O', 'A'),
-    #         'fcboost': 'none', 'nclass': 1000, 'summer': 'merge',
-    #         'last_branch': 1, 'last_down': True, 'last_dfuc': 'A', 'last_expand': 15,
-    #         'afisok': False, 'afkeys': ('af1', 'af2'), 'convon': True,
-    #         'convlayers': 1, 'convdepth': 4}
-    #
-    # exp4 = {'stages': 4, 'branch': 3, 'rock': 'U', 'depth': 16, 'kldloss': False,
-    #         'layers': (6, 5, 4, 3), 'blocks': ('D', 'D', 'D', 'S'), 'slink': ('A', 'A', 'A', 'A'),
-    #         'growth': (10, 15, 20, 30), 'classify': (0, 0, 1, 1), 'expand': (10, 20, 30),
-    #         'dfunc': ('O', 'D', 'O'), 'fcboost': 'none', 'nclass': 1000, 'summer': 'split',
-    #         'last_branch': 2, 'last_down': False, 'last_dfuc': 'A', 'last_expand': 15,
+    vo53 = {'stages': 1, 'branch': 1, 'rock': 'N', 'upscale': 'deconv', 'depth': 64, 'kldloss': False,
+            'layers': (25,), 'blocks': ('D',), 'slink': ('A',), 'growth': (6,),
+            'classify': (0,), 'expand': (), 'dfunc': (), 'afisok': False,
+            'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
+            'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
+            'last_expand': 520 - 64, 'version': 3}  # 5.08M  5.26G  103L  0.61s  520fc  69.54%
+
+    vo37 = {'stages': 2, 'branch': 1, 'rock': 'U', 'upscale': 'deconv', 'depth': 80, 'kldloss': False,
+            'layers': (8, 8), 'blocks': ('D', 'D'), 'slink': ('A', 'A'),
+            'growth': (0, 0), 'classify': (0, 0), 'expand': (1 * 80,), 'afisok': False,
+            'dfunc': ('O',), 'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
+            'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
+            'last_expand': 512 - 160, 'version': 3}  # 10.11M  4.74G  68L  0.46s  512fc  73.08%
+
+    vo21 = {'stages': 3, 'branch': 1, 'rock': 'U', 'upscale': 'deconv', 'depth': 80, 'kldloss': False,
+            'layers': (4, 5, 5), 'blocks': ('D', 'D', 'S'), 'slink': ('A', 'A', 'A'),
+            'growth': (0, 0, 0), 'classify': (0, 0, 0), 'expand': (1 * 80, 2 * 120), 'afisok': False,
+            'dfunc': ('O', 'O'), 'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
+            'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
+            'last_expand': 1746 - 400, 'version': 3}  # 25.01M  4.64G  54L  0.46s  1746fc  74.62%
+
+    vo72 = {'stages': 3, 'branch': 1, 'rock': 'N', 'upscale': 'deconv', 'depth': 80, 'kldloss': False,
+            'layers': (4, 5, 6), 'blocks': ('D', 'D', 'S'), 'slink': ('A', 'A', 'A'),
+            'growth': (-8, -20, -50), 'classify': (0, 0, 0), 'expand': (1 * 120, 2 * 120), 'afisok': False,
+            'dfunc': ('O', 'O'), 'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
+            'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
+            'last_expand': 1700 - 440, 'version': 3}  # 30.51M  5.41G  59L  0.51s  1700fc  74.68%
+
+    vo80 = {'stages': 1, 'branch': 1, 'rock': 'N', 'depth': 64, 'kldloss': False,
+            'downscale': 'pool', 'downksp': '311', 'upscale': 'interp', 'upksp': '110',
+            'layers': (25,), 'blocks': ('D',), 'slink': ('A',), 'growth': (6,),
+            'classify': (0,), 'expand': (), 'dfunc': (), 'afisok': False,
+            'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
+            'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
+            'last_expand': 520 - 64, 'version': 3}  # 3.12M  4.70G  103L  1.20s  520fc
+
+    vo81 = {'stages': 3, 'branch': 1, 'rock': 'N', 'depth': 80, 'kldloss': False,
+            'downscale': 'pool', 'downksp': '311', 'upscale': 'interp', 'upksp': '110',
+            'layers': (4, 5, 6), 'blocks': ('D', 'D', 'S'), 'slink': ('A', 'A', 'A'),
+            'growth': (-8, -20, -50), 'classify': (0, 0, 0), 'expand': (1 * 120, 2 * 120), 'afisok': False,
+            'dfunc': ('O', 'O'), 'dstyle': ('maxpool', 'convk2m', 'convk2'), 'fcboost': 'none',
+            'nclass': 1000, 'summer': 'split', 'last_branch': 1, 'last_down': True, 'last_dfuc': 'E',
+            'last_expand': 1700 - 440, 'version': 3}  # 19.35M  4.85G  59L  0.85s  1700fc
+
+    model = ScaleNet(**vo53)
+
+    # train_which & eval_which 在组合上必须相互匹配
+    # model.train_which(part=['conv+rock', 'xfc+boost', 'xfc-only', 'boost-only'][1])
+    model.set_eval_which(part=['conv+rock', 'conv+rock+xfc', 'conv+rock+boost', 'conv+rock+xfc+boost'][1])
+    # print(model.stage1[1].conv1.training)
+    # print(model.stage1[1].classifier.training)
+    # print(model.stage2[0].classifier.training)
+    # print(model.summary.classifier1.training)
+
+    # model = tv.models.resnet18()
+    # resnet18-11.68M-1.81G-18L-0.39s
+    # resnet34-21.80M-3.67G-37L-0.70s
+    # resnet50-25.55M-4.10G-54L-25.19%-0.93s
+    # resnet101-44.55M-7.83G-105L-24.10%-1.75s
+
+    # from xmodels import tvm_densenet as tvmd
+    # model = tvmd.densenet169()
+    # model = tvmd.densenet201()
+    # model = tvmd.densenet161()
+    # dense169-14.15M-3.40G-169L-25.76%-1.27s
+    # dense201-20.01M-4.34G-201L-25.33%-1.57s
+    # dense161-28.68M-7.79G-161L-23.97%-2.19S
+    # dense264-33.34M-5.82G-264L
+
+    # model.eval()
+    print('\n', model, '\n')
+    # utils.tensorboard_add_model(model, x)
+    xtils.calculate_layers_num(model, layers=('conv2d', 'deconv2d', 'fc'))
+    xtils.calculate_FLOPs_scale(model, input_size=224, multiply_adds=False)
+    xtils.calculate_params_scale(model, format='million')
+    xtils.calculate_time_cost(model, insize=224, toc=1, use_gpu=False, pritout=True)
+
+    # # # cifar10
+    # exp4 = {'stages': 4, 'depth': 16, 'branch': 3, 'rock': 'U', 'kldloss': False,
+    #         'layers': (6, 5, 4, 3), 'blocks': ('D', 'D', 'S', 'S'), 'slink': ('A', 'A', 'A', 'A'),
+    #         'growth': (3, 4, 5, 6), 'classify': (1, 1, 1, 1), 'dfunc': ('O', 'O', 'D'), 'expand': (10, 20, 40),
+    #         'fcboost': 'none', 'nclass': 10, 'summer': 'merge',
+    #         'last_branch': 2, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 5,
     #         'afisok': True, 'afkeys': ('af1', 'af2'), 'convon': True,
     #         'convlayers': 1, 'convdepth': 4}
     #
-    # exp3 = {'stages': 3, 'branch': 3, 'rock': 'U', 'depth': 16, 'kldloss': False,
-    #         'layers': (3, 3, 1), 'blocks': ('D', 'D', 'S'), 'slink': ('A', 'A', 'A'),
-    #         'growth': (5, 5, 5), 'classify': (0, 0, 0), 'expand': (1 * 16, 2 * 16),
-    #         'dfunc': ('D', 'O'), 'fcboost': 'none', 'nclass': 1000, 'summer': 'merge',
-    #         'last_branch': 1, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 256,
+    # exp3 = {'stages': 3, 'depth': 16, 'branch': 3, 'rock': 'R', 'kldloss': False,
+    #         'layers': (3, 3, 3), 'blocks': ('D', 'D', 'D'), 'slink': ('A', 'A', 'A'),
+    #         'growth': (2, 3, 5), 'classify': (0, 0, 0), 'expand': (1 * 16, 2 * 16),
+    #         'dfunc': ('A', 'O'), 'fcboost': 'none', 'nclass': 10, 'summer': 'split',
+    #         'last_branch': 3, 'last_down': False, 'last_dfuc': 'D', 'last_expand': 30,
+    #         'afisok': True, 'afkeys': ('af1', 'af2'), 'convon': True,
+    #         'convlayers': 1, 'convdepth': 4}
+    #
+    # exp2 = {'stages': 2, 'depth': 16, 'branch': 3, 'rock': 'U', 'kldloss': False,
+    #         'layers': (2, 2), 'blocks': ('D', 'S'), 'slink': ('A', 'A'), 'growth': (3, 5),
+    #         'classify': (0, 0), 'dfunc': ('O',), 'expand': (16,),
+    #         'fcboost': 'none', 'nclass': 10, 'summer': 'split',
+    #         'last_branch': 2, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 111,
     #         'afisok': False, 'afkeys': ('af1', 'af2'), 'convon': True,
-    #         'convlayers': 2, 'convdepth': 4}
+    #         'convlayers': 1, 'convdepth': 4}
     #
-    # model = ScaleNet(**exp4)
+    # exp1 = {'stages': 1, 'depth': 16, 'branch': 3, 'rock': 'U', 'kldloss': False,
+    #         'layers': (10,), 'blocks': ('D',), 'slink': ('A',), 'growth': (4,),
+    #         'classify': (0,), 'dfunc': (), 'expand': (),
+    #         'fcboost': 'none', 'nclass': 10, 'summer': 'convt',
+    #         'last_branch': 3, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 32,
+    #         'afisok': False}
+    #
+    # vp1 = {'stages': 1, 'branch': 1, 'rock': 'N', 'depth': 16, 'kldloss': False,
+    #        'downscale': 'pool', 'downksp': '311', 'upscale': 'interp', 'upksp': '110',
+    #        'layers': (25,), 'blocks': ('D',), 'slink': ('A',), 'growth': (6,),
+    #        'classify': (0,), 'expand': (), 'dfunc': (), 'afisok': False, 'fcboost': 'none',
+    #        'dstyle': ('maxpool', 'convk2m', 'convk2'), 'nclass': 10, 'summer': 'split',
+    #        'last_branch': 1, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 32,
+    #        'version': 3}
+    #
+    # vp2 = {'stages': 2, 'depth': 16, 'branch': 1, 'rock': 'N', 'kldloss': False,
+    #        'downscale': 'pool', 'downksp': '311', 'upscale': 'interp', 'upksp': '110',
+    #        'layers': (15, 10), 'blocks': ('D', 'S'), 'slink': ('A', 'A'), 'growth': (4, 6),
+    #        'classify': (0, 0), 'dfunc': ('O',), 'expand': (16,), 'afisok': False,
+    #        'fcboost': 'none', 'nclass': 10, 'summer': 'split',
+    #        'last_branch': 1, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 32,
+    #        'version': 3}
+    #
+    # vp3 = {'stages': 3, 'depth': 16, 'branch': 1, 'rock': 'N', 'kldloss': False,
+    #        'downscale': 'pool', 'downksp': '311', 'upscale': 'interp', 'upksp': '110',
+    #        'layers': (10, 12, 16), 'blocks': ('D', 'D', 'S'), 'slink': ('A', 'A', 'A'),
+    #        'growth': (2, 3, 5), 'classify': (0, 0, 0), 'expand': (1 * 16, 2 * 16),
+    #        'dfunc': ('O', 'O'), 'fcboost': 'none', 'nclass': 10, 'summer': 'split',
+    #        'last_branch': 1, 'last_down': False, 'last_dfuc': 'D', 'last_expand': 30,
+    #        'afisok': False, 'version': 3}
+    #
+    # model = ScaleNet(**vp3)
     # print('\n', model, '\n')
-    #
-    # # train_which & eval_which 在组合上必须相互匹配
-    # # model.train_which(part=['conv+rock', 'xfc+boost', 'xfc-only', 'boost-only'][1])
-    # model.eval_which(part=['conv+rock', 'conv+rock+xfc', 'conv+rock+boost', 'conv+rock+xfc+boost'][1])
-    # # print(model.stage1[1].conv1.training)
-    # # print(model.stage1[1].classifier.training)
-    # # print(model.stage2[0].classifier.training)
-    # # print(model.summary.classifier1.training)
-    #
-    # x = torch.randn(4, 3, 256, 256)
+    # # model.set_train_which(part=['conv+rock', 'xfc+boost', 'xfc-only', 'boost-only'][1])
+    # model.set_eval_which(part=['conv+rock', 'conv+rock+xfc', 'conv+rock+boost', 'conv+rock+xfc+boost'][1])
     # # utils.tensorboard_add_model(model, x)
-    # utils.calculate_params_scale(model, format='million')
-    # utils.calculate_layers_num(model, layers=('conv2d', 'deconv2d', 'fc'))
-    # y = model(x)
-    # print('有效分类支路：', len(y), '\t共有blocks：', sum(model.layers))
-    # print(':', [yy.shape for yy in y if yy is not None])
-    # print(':', [yy.max(1) for yy in y if yy is not None])
-
-    # print('\n xxxxxxxxxxxxxxxxx \n')
-    # for n, m in model.named_modules(prefix='stage'):
-    #     print(n,'-->', m)
-    #     if hasattr(m, 'active_fc'):
-    #         print('OK-->', n, m)
-    #     if isinstance(m, (DoubleCouple, SingleCouple)):
-    #         m.active_fc = False
-
-    # cifar10
-    exp4 = {'stages': 4, 'depth': 16, 'branch': 3, 'rock': 'U', 'kldloss': False,
-            'layers': (6, 5, 4, 3), 'blocks': ('D', 'D', 'S', 'S'), 'slink': ('A', 'A', 'A', 'A'),
-            'growth': (3, 4, 5, 6), 'classify': (1, 1, 1, 1), 'dfunc': ('O', 'O', 'D'), 'expand': (10, 20, 40),
-            'fcboost': 'none', 'nclass': 10, 'summer': 'merge',
-            'last_branch': 2, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 5,
-            'afisok': True, 'afkeys': ('af1', 'af2'), 'convon': True,
-            'convlayers': 1, 'convdepth': 4}
-
-    exp3 = {'stages': 3, 'depth': 16, 'branch': 3, 'rock': 'R', 'kldloss': False,
-            'layers': (3, 3, 3), 'blocks': ('D', 'D', 'D'), 'slink': ('A', 'A', 'A'),
-            'growth': (2, 3, 5), 'classify': (0, 0, 0), 'expand': (1 * 16, 2 * 16),
-            'dfunc': ('A', 'O'), 'fcboost': 'none', 'nclass': 10, 'summer': 'split',
-            'last_branch': 3, 'last_down': False, 'last_dfuc': 'D', 'last_expand': 30,
-            'afisok': True, 'afkeys': ('af1', 'af2'), 'convon': True,
-            'convlayers': 1, 'convdepth': 4}
-
-    exp2 = {'stages': 2, 'depth': 16, 'branch': 3, 'rock': 'U', 'kldloss': False,
-            'layers': (2, 2), 'blocks': ('D', 'S'), 'slink': ('A', 'A'), 'growth': (3, 5),
-            'classify': (0, 0), 'dfunc': ('O',), 'expand': (16,),
-            'fcboost': 'none', 'nclass': 10, 'summer': 'split',
-            'last_branch': 2, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 111,
-            'afisok': False, 'afkeys': ('af1', 'af2'), 'convon': True,
-            'convlayers': 1, 'convdepth': 4}
-
-    exp1 = {'stages': 1, 'depth': 16, 'branch': 3, 'rock': 'R', 'kldloss': False,
-            'layers': (300,), 'blocks': ('D',), 'slink': ('A',), 'growth': (4,),
-            'classify': (0,), 'dfunc': (), 'expand': (),
-            'fcboost': 'none', 'nclass': 10, 'summer': 'convt',
-            'last_branch': 3, 'last_down': True, 'last_dfuc': 'D', 'last_expand': 32,
-            'afisok': False}
-
-    model = ScaleNet(**exp3)
-    print('\n', model, '\n')
-    # model.set_train_which(part=['conv+rock', 'xfc+boost', 'xfc-only', 'boost-only'][1])
-    model.set_eval_which(part=['conv+rock', 'conv+rock+xfc', 'conv+rock+boost', 'conv+rock+xfc+boost'][3])
-    # utils.tensorboard_add_model(model, x)
-    xtils.calculate_params_scale(model, format='million')
-    xtils.calculate_layers_num(model, layers=('conv2d', 'deconv2d', 'fc'))
-    x = torch.randn(4, 3, 32, 32)
-    tic, toc = time.time(), 3
-    y = [model(x) for _ in range(toc)][0]
-    toc = (time.time() - tic) / toc
-    print('有效分类支路：', len(y), '\t共有blocks：', sum(model.layers), '\t处理时间: %.5f 秒' % toc)
-    print(len(y), sum(model.layers), ':', [(yy.shape, yy.max(1)) for yy in y if yy is not None])
-
-    # 查看模型的权值衰减曲线
-    # from config.configure import Config
+    # xtils.calculate_layers_num(model, layers=('conv2d', 'deconv2d', 'fc'))
+    # xtils.calculate_FLOPs_scale(model, input_size=32, multiply_adds=False, use_gpu=False)
+    # xtils.calculate_params_scale(model, format='million')
+    # xtils.calculate_time_cost(model, insize=32, toc=3, use_gpu=False, pritout=True)
     #
-    # cfg = Config()
-    # cfg.decay_fly = {'flymode': ['nofly', 'stepall'][1],
-    #                  'a': 0, 'b': 1, 'f': utils.Curves(3).func2, 'wd_bn': None,
-    #                  'weight_decay': 0.0001, 'wd_start': 0.0001, 'wd_end': 0.0005}
-    # model.visual_weight_decay(cfg=cfg, visual=True)
-
-    # # 查看模型的可学习参数列表
-    # for n, p in model.named_parameters():
-    #     print('---->', n, '\t', p.size())
+    # # # 查看模型的权值衰减曲线
+    # # # from config.configure import Config
+    # # #
+    # # # cfg = Config()
+    # # # cfg.decay_fly = {'flymode': ['nofly', 'stepall'][1],
+    # # #                  'a': 0, 'b': 1, 'f': utils.Curves(3).func2, 'wd_bn': None,
+    # # #                  'weight_decay': 0.0001, 'wd_start': 0.0001, 'wd_end': 0.0005}
+    # # # model.visual_weight_decay(cfg=cfg, visual=True)
+    # #
+    # # # # 查看模型的可学习参数列表
+    # # # for n, p in model.named_parameters():
+    # # #     print('---->', n, '\t', p.size())
