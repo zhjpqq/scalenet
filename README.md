@@ -1,4 +1,9 @@
 
+# Update Logs
+
+- 2019-9-12  Add different up-/down-sampling methods to ScaleNet 增加不同上采样/下采样方法的对比
+
+
 # ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
@@ -72,7 +77,3 @@ GoogleDrive: uploading ... coming soon!
 
 - Including New Models in 2019: ScaleNet, EfficientNet, MobieNet-V3, HighResolutionNet etc..
 
-
-# Update Logs
-
-- Add different up-/down-sampling methods to ScaleNet 增加不同上采样/下采样方法的对比
