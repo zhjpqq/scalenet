@@ -1,7 +1,9 @@
 
 # Update Logs
 
-- 2019-9-12  Add different up-/down-sampling methods to ScaleNet 增加不同上采样/下采样方法的对比
+- 2019-9-12  Add different up-/down-sampling methods to ScaleNet. 增加不同上采样/下采样方法的对比.
+
+- 2019-9-19  Add a new CNN  architecture, called `WaveNet`, to xmodel factory, which combines Conv-DeConv couple with DenseNet structure. 增加WaveNet, 将Conv-DeConv结构与DeseNet相结合.
 
 
 # ScaleNet Architecture
