@@ -552,14 +552,10 @@ if __name__ == '__main__':
 
     model = WaveNet(**wv3s)
     print('\n', model, '\n')
+	out = model(torch.randn(4, 3, 32, 32))
+
     # utils.tensorboard_add_model(model, x)
     xtils.calculate_params_scale(model, format='million')
-    xtils.calculate_FLOPs_scale(model, input_size=32, use_gpu=False, multiply_adds=True)
+    xtils.calculate_FLOPs_scale(model, input_size=32, use_gpu=False, multiply_adds=False)
     xtils.calculate_layers_num(model, layers=('conv2d', 'deconv2d', 'fc'))
-    x = torch.randn(4, 3, 32, 32)
-    tic, toc = time.time(), 1
-    y = [model(x) for _ in range(toc)][0]
-    toc = (time.time() - tic) / toc
-    print('有效分类支路：', len(y), '\t共有blocks：', sum(model.layers), '\t处理时间: %.5f 秒' % toc)
-    print('每个输出预测的尺寸:', [(yy.shape,) for yy in y if yy is not None])
-    print('每个输出预测的得分:', [(yy.max(1),) for yy in y if yy is not None])
+    xtils.calculate_time_cost(model, insize=32, toc=3, use_gpu=False)
