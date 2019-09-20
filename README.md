@@ -3,8 +3,8 @@
 
 - 2019-9-12  Add different up-/down-sampling methods to ScaleNet. 在ScaleNet上增加不同上采样/下采样方法的对比.
 
-- 2019-9-19  Add a new CNN  model named `WaveNet`, which combines `Conv-DeConv` couple with DenseNet architecture. ... 
-  增加新模型 WaveNet, 将`Conv-DeConv` Couple与DeseNet结构相结合.
+- 2019-9-19  Add a new CNN  model named `WaveNet`, which combines `Conv-DeConv` couple with DenseNet architecture. ... ... 
+  增加新模型 WaveNet, 将`Conv-DeConv`结构与DeseNet结构相结合.
 
 
 # ScaleNet Architecture
