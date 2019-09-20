@@ -12,9 +12,9 @@
 
 # CAM Camparision of ScaleNet & DenseNet
 ![Multi-Scale Input](images/multi-scale-show-5.jpg)
-####*`top: scalenet  bottom:densenet`*
+### *`top-line: scalenet  bottom-line:densenet`*
 ![single-traffic-cams](images/single-traffic-cams.jpg)
-####*`top: scalenet  bottom:densenet`*
+### *`top-WhiteFont: scalenet  bottom-CyanFont:densenet`*
 
 # Requirements
 
