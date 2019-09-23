@@ -14,19 +14,19 @@
 # 一、ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
-# CAM Camparision of ScaleNet & DenseNet
+# 二、CAM Camparision of ScaleNet & DenseNet
 ![Multi-Scale Input](images/multi-scale-show-5.jpg)
 #### `top-row: scalenet , bottom-row:densenet`
 ![single-traffic-cams](images/single-traffic-cams.jpg)
 #### `top-(WhiteFont): scalenet  ,  bottom-(CyanFont):densenet`
 
-# Requirements
+# 三、Requirements
 
 Pytorch >= 0.4
 
 TensorboardX
 
-# 二、 How to Train ScaleNet
+# 四、 How to Train ScaleNet
 
 model architecture params are in folder: ./arch_params
 
@@ -74,7 +74,7 @@ EfficentNet: xmodels.fficientnet.py  which is forked from  https://github.com/lu
 
 ![val-curves](images/top1_acc_compare.png)
 
-# 三、Pre-trained Models on ImageNet
+# 五、Pre-trained Models on ImageNet
 ![pre-trained-models](images/pre-trained-modes.jpg)
 
 BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg 
@@ -82,7 +82,7 @@ BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg
 GoogleDrive: uploading ... coming soon!
 
 
-# 四、Other Features
+# 六、Other Features
 
 - Unified Training Framework for Classification.
 
