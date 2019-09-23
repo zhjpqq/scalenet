@@ -6,6 +6,10 @@
 - 2019-9-19  Add a new CNN  model named `WaveNet`, which combines `Conv-DeConv` couple with DenseNet architecture. ... ... 
   增加新模型 WaveNet, 将`Conv-DeConv`结构与DeseNet结构相结合.
 
+- 2019-9-23  Add val-precision curves of ScaleNet-vo21 & ResNet-50 & Efficient-b0/-b1..  增加验证曲线.
+
+- Todo: add a training schedule and data augmentation of EfficientNet.
+
 
 # ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
@@ -61,6 +65,11 @@ args.exp_version = 'exp.net1'
 args.gpu_ids = [0, 1, 2, 3, 5, 6]
 print('\n=> Your Args is :', args, '\n')
 ```
+
+## Validation curves of ScaleNet & ResNet & EfficientNet
+ResNet: xmodels.tvm_resnet.py  whichi is forked from pytorch-official
+EfficentNet: xmodels.fficientnet.py  which is forked from  https://github.com/lukemelas/EfficientNet-PyTorch
+![val-curves](images/top1_acc_compare.png)
 
 # Pre-trained Models on ImageNet
 ![pre-trained-models](images/pre-trained-modes.jpg)
