@@ -67,8 +67,11 @@ print('\n=> Your Args is :', args, '\n')
 ```
 
 ## Validation curves of ScaleNet & ResNet & EfficientNet
+
 ResNet: xmodels.tvm_resnet.py  whichi is forked from pytorch-official
+
 EfficentNet: xmodels.fficientnet.py  which is forked from  https://github.com/lukemelas/EfficientNet-PyTorch
+
 ![val-curves](images/top1_acc_compare.png)
 
 # Pre-trained Models on ImageNet
