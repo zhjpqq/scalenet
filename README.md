@@ -11,7 +11,7 @@
 - Todo: add a training schedule and data augmentation of EfficientNet.
 
 
-# ScaleNet Architecture
+# 一、ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
 # CAM Camparision of ScaleNet & DenseNet
@@ -26,7 +26,7 @@ Pytorch >= 0.4
 
 TensorboardX
 
-# How to Train ScaleNet
+# 二、 How to Train ScaleNet
 
 model architecture params are in folder: ./arch_params
 
@@ -74,7 +74,7 @@ EfficentNet: xmodels.fficientnet.py  which is forked from  https://github.com/lu
 
 ![val-curves](images/top1_acc_compare.png)
 
-# Pre-trained Models on ImageNet
+# 三、Pre-trained Models on ImageNet
 ![pre-trained-models](images/pre-trained-modes.jpg)
 
 BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg 
@@ -82,7 +82,7 @@ BaiduYunPan: https://pan.baidu.com/s/1EbLnt0X-nIndwRlh6zNN8Q   key：9qpg
 GoogleDrive: uploading ... coming soon!
 
 
-# Other Features
+# 四、Other Features
 
 - Unified Training Framework for Classification.
 
