@@ -6,7 +6,7 @@
 - 2019-9-19  Add a new CNN  model named `WaveNet`, which combines `Conv-DeConv` couple with DenseNet architecture. ... ... 
   增加新模型 WaveNet, 将`Conv-DeConv`结构与DeseNet结构相结合.
 
-- 2019-9-25  Add val-precision curves of Efficient-b0 & ScaleNet-vo21 & ResNet-50 ....  增加EfficientNet训练曲线的对比.
+- 2019-9-25  Add val-precision curves of Efficient-b0 & ScaleNet-vo21/-vo69 & ResNet-50 ....  增加EfficientNet-B0训练曲线的对比.
 
 - Todo: add a training schedule and data augmentation of EfficientNet.
 
