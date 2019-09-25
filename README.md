@@ -72,7 +72,7 @@ ResNet: xmodels.tvm_resnet.py  whichi is forked from pytorch-official
 
 EfficentNet: xmodels.fficientnet.py  which is forked from  https://github.com/lukemelas/EfficientNet-PyTorch
 
-![val-curves](images/top1_acc_compare.png)
+![val-curves](images/compare-with-effb0-resnet50.png)
 
 # 五、Pre-trained Models on ImageNet
 ![pre-trained-models](images/pre-trained-modes.jpg)
