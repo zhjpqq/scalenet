@@ -14,19 +14,13 @@
 # 一、ScaleNet Architecture
 ![ScaleNet Architecture](images/scalenet-architecture.jpg)
 
-# 二、CAM Camparision of ScaleNet & DenseNet
-![Multi-Scale Input](images/multi-scale-show-5.jpg)
-#### `top-row: scalenet , bottom-row:densenet`
-![single-traffic-cams](images/single-traffic-cams.jpg)
-#### `top-(WhiteFont): scalenet  ,  bottom-(CyanFont):densenet`
+# 二、Requirements
 
-# 三、Requirements
-
-Pytorch >= 0.4
+Pytorch ≥ 0.4
 
 TensorboardX
 
-# 四、 How to Train ScaleNet
+# 三、 How to Train ScaleNet
 
 model architecture params are in folder: ./arch_params
 
@@ -66,15 +60,28 @@ args.gpu_ids = [0, 1, 2, 3, 5, 6]
 print('\n=> Your Args is :', args, '\n')
 ```
 
-## Validation curves of ScaleNet & ResNet & EfficientNet
+## Validation curves of ScaleNet & EfficientNet & ResNet
 
 ResNet: ./xmodels.tvm_resnet.py ， which  is forked from pytorch-official
 
 EfficentNet: ./xmodels/efficientnet.py ， which is forked from  https://github.com/lukemelas/EfficientNet-PyTorch
 
-![val-curves](images/compare-with-effb0-resnet50.png)
+| model  | Input | Layers  | Params  | FLOPs  | Stages  |  Top1-Accuracy  | GPU-time |
+| ------- | ------- | ------- | ------- | ------- | ------- | ------ | ------- |
+| EfficientNet-B0  | 224  | 82   | 5.29M  | 0.39G  |  5 | 68.69%  |    0.01082s  |
+| ScaleNet-vo69    | 224  | 103  | 5.08M  | 4.77G  | **1**  |  71.34% | 0.01567s   |
+| ResNet-50        | 224  | 54   | 25.56M  | 4.11G  | 4  | 76.36%  |  0.00778s  |
+| ScaleNet-vo21    | 224  | 54   | 25.02M  | 4.64G  | 4  | 74.62%  |  0.00799s     |
 
+![val-curves](images/compare-with-effb0-resnet50.png)
+---------------
 ![val-curves](images/compare-with-effb0-vo69.png)
+
+# 四、CAM Camparision of ScaleNet & DenseNet
+![Multi-Scale Input](images/multi-scale-show-5.jpg)
+#### `top-row: scalenet , bottom-row:densenet`
+![single-traffic-cams](images/single-traffic-cams.jpg)
+#### `top-(WhiteFont): scalenet  ,  bottom-(CyanFont):densenet`
 
 # 五、Pre-trained Models on ImageNet
 ![pre-trained-models](images/pre-trained-modes.jpg)
