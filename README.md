@@ -101,3 +101,9 @@ GoogleDrive: uploading ... coming soon!
 
 - Including New Models in 2019: ScaleNet, EfficientNet, MobieNet-V3, HighResolutionNet etc..
 
+# 七、Paper Citation
+
+Paper and Citation can be downloaded here: 
+
+https://ieeexplore.ieee.org/document/8863492
+
