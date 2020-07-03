@@ -181,10 +181,6 @@ def load_cifar10(data_root, bsize_train, bsize_val, augment, num_workers=8, resu
 
 
 def load_cifar100(data_root, bsize_train, bsize_val, augment, num_workers=8, result='loader', **kwargs):
-    # titanxp_root /data/dataset/cifar-100-python/
-    # 1080ti_root  /data0/cifar100/
-    # K40_root     ?
-
     mean = [x / 255 for x in [129.3, 124.1, 112.4]]
     std = [x / 255 for x in [68.2, 65.4, 70.4]]
 

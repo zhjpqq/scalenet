@@ -848,7 +848,7 @@ def get_xfc_which(it, xfc_which):
 
 def get_current_device(device=0):
     if isinstance(device, int):
-        device_list = ['1080Ti', 'titan', 'mic251', 'dellcpu', 'new-device']
+        device_list = ['xlab2', 'new-device']
         device = device_list[device]
     elif isinstance(device, str):
         device = device
@@ -860,10 +860,7 @@ def get_current_device(device=0):
 def get_pretrained_models():
     device = get_current_device()
 
-    model_dir = {'1080Ti': '/datah/zhangjp/PreTrainedModels',
-                 'titan': '/data/zhangjp/PreTrainedModels',
-                 'mic251': '/DATA/251/jpzhang/Projects/PreTrainedModels',
-                 'dellcpu': 'E://PreTrainedModels',
+    model_dir = {'xlab2': '/xdata/zhangjp/PreTrainedModels',
                  'new-device': ''}
     model_dir = model_dir[device]
     return model_dir
@@ -871,24 +868,17 @@ def get_pretrained_models():
 
 def get_data_root(data='imagenet || cifar10 || cifar100 || svhn || ***'):
     device = get_current_device()
-
     class Dataset(object):
         imagenet = {
-            '1080Ti': ['/ImageNet2012/', '/data0/ImageNet_ILSVRC2012'][0],
-            'titan': '/data/dataset/ImageNet2012',
-            'mic251': '/data1/jpzhang/datasets/imagenet/',
+            'xlab2': '/home/dataset/imagenet',
             'new-device': '',
         }
         cifar10 = {
-            '1080Ti': '/data0/cifar10/',
-            'titan': '/data/dataset/cifar-10-batches-py/',
-            'mic251': '/data1/jpzhang/datasets/cifar10/',
+            'xlab2': '/home/dataset/cifar-10',
             'new-device': '',
         }
         cifar100 = {
-            '1080Ti': '/data0/cifar100/',
-            'titan': '/data/dataset/cifar-100-python/',
-            'mic251': '/data1/jpzhang/datasets/cifar100/',
+            'xlab2': '/home/dataset/cifar-100',
             'new-device': '',
         }
         svhn = {
@@ -897,7 +887,6 @@ def get_data_root(data='imagenet || cifar10 || cifar100 || svhn || ***'):
             'mic251': '',
             'new-device': '',
         }
-
     data_root = getattr(Dataset(), data.lower())[device]
     return data_root
 
@@ -907,14 +896,10 @@ def get_base_dir(k='ckpt || log'):
 
     assert k in ['ckpt', 'log']
     ckpt_base_dir = {'local': '.',
-                     '1080Ti': '/data1/zhangjp/classify/checkpoints',
-                     'titan': '/backup/zhangjp/classify/checkpoints',
-                     'mic251': '/DATA/251/jpzhang/Projects/checkpoints',
+                     'xlab2': '/xdata/zhangjp/classify/checkpoint',
                      'new-device': ''}
     log_base_dir = {'local': '.',
-                    '1080Ti': '/data1/zhangjp/classify/runs',
-                    'titan': '/backup/zhangjp/classify/runs',
-                    'mic251': '/DATA/251/jpzhang/Projects/runs',
+                    'xlab2': '/xdata/zhangjp/classify/runs',
                     'new-device': ''}
     if k == 'ckpt':
         return ckpt_base_dir[device]

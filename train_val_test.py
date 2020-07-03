@@ -7,7 +7,8 @@ import time
 import os
 import torch
 from torch import nn
-from tensorboardX import SummaryWriter
+# from tensorboardX import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
 
 import xtils
 from xtils import AverageMeter, accuracy, adjust_learning_rate

@@ -211,7 +211,7 @@ cfgbo = {
     # data config
     'dataset': 'cifar100',
     'data_info': {'train_size': train_size, 'val_size': 10000, 'test_size': 5000},
-    'data_root': xtils.get_data_root(data='cifar10'),
+    'data_root': xtils.get_data_root(data='cifar100'),
     'data_augment': {'train': '1crop-flip', 'val': 'no-aug'},
     'data_kwargs': {},
     'data_workers': 4,

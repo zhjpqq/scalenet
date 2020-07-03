@@ -9,7 +9,6 @@ from .hrnet import HRNets
 from .efficientnet import EFFNets
 
 from .scalenet import ScaleNet
-from .vivonet import VivoNet
 from .richnet import RichNet
 from .wavenet import WaveNet
 from .nameinet import NameiNet
@@ -32,7 +31,6 @@ msnet = MultiScaleNet
 srnet = ScaleResNet
 
 scalenet = ScaleNet
-vivonet = VivoNet
 richnet = RichNet
 wavenet = WaveNet
 nameinet = NameiNet

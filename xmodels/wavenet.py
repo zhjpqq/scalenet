@@ -552,7 +552,7 @@ if __name__ == '__main__':
 
     model = WaveNet(**wv3s)
     print('\n', model, '\n')
-	out = model(torch.randn(4, 3, 32, 32))
+    out = model(torch.randn(4, 3, 32, 32))
 
     # utils.tensorboard_add_model(model, x)
     xtils.calculate_params_scale(model, format='million')
